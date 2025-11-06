@@ -1,0 +1,25 @@
+{
+  "updatedAt": "2025-11-06T12:31:43.746Z",
+  "temas": [
+    {
+      "tema": "a-bela-e-a-fera",
+      "linhas": [
+        "04-luxo",
+        "03-premium",
+        "02-classico",
+        "01-essencial"
+      ],
+      "count": 136
+    },
+    {
+      "tema": "hot-wheels",
+      "linhas": [
+        "04-luxo",
+        "03-premium",
+        "02-classico",
+        "01-essencial"
+      ],
+      "count": 127
+    }
+  ]
+}
