@@ -10,14 +10,16 @@ header h1{font-size:22px;margin:0;text-transform:capitalize}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 16px}
 .pill{background:#122325;border:1px solid #1b3135;color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer}
 .pill.active{background:var(--brand);border-color:var(--brand2);color:#fff}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
 .card{background:var(--card);border:1px solid #152326;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
 .imgbox{position:relative;aspect-ratio:1/1;overflow:hidden;background:#0c1517}
-.imgbox img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
-.imgbox:hover img{transform:scale(1.02)}
+.imgbox img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+.imgbox:hover img{transform:scale(1.01)}
 .badge{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.65);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid rgba(255,255,255,.2)}
 .price{position:absolute;bottom:8px;left:8px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;padding:8px 10px;border-radius:12px;font-weight:700}
 .price small{display:block;opacity:.9;font-weight:600;text-decoration:line-through}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.2);cursor:pointer}
+.nav.r{right:8px}.nav.l{left:8px}
 .content{padding:12px 12px 14px;display:flex;flex-direction:column;gap:8px}
 .desc{color:#d7e7e4;font-size:14px;line-height:1.35;min-height:38px}
 .tags{color:#7aa9a1;font-size:12px}
@@ -28,6 +30,7 @@ header h1{font-size:22px;margin:0;text-transform:capitalize}
 .muted{color:var(--muted)}
 footer{opacity:.7;text-align:center;font-size:12px;margin:22px 0}
 .empty{padding:48px 0;text-align:center;color:var(--muted)}
+.counter{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.55);color:#fff;padding:6px 10px;border-radius:12px;font-size:12px;border:1px solid rgba(255,255,255,.2)}
 .saving{font-size:12px;color:#b6e3da}
 </style></head><body>
 <div class="wrap">
@@ -49,103 +52,163 @@ const qs = new URLSearchParams(location.search);
 const tema = qs.get('tema') || 'kit-a-bela-e-a-fera';
 
 const CONFIG = {
-  BUNDLE_EXTRA_PCT: 0.08,      // desconto adicional para o kit (conjunto)
-  MIN_MARGIN_PCT: 0.35,        // margem mínima global
-  DESCONTO_EXIBIR_PCT: 0.15    // desconto para gerar o "DE"
+  BUNDLE_EXTRA_PCT: 0.08,
+  MIN_MARGIN_PCT: 0.35,
+  DESCONTO_EXIBIR_PCT: 0.15
 };
 
-const state = { precos:{}, items:[], filtro:'todos' };
+const state = { precos:{}, items:[], grupos:[], filtro:'todos' };
 function grana(v){ return v==null ? null : Number(v).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}); }
 function byId(id){ return document.getElementById(id); }
+
+function roundSuffix(v){ const suf=0.90; const base=Math.floor(v); let out=base+suf; if(out<v) out=base+1+suf; return Math.round(out*100)/100; }
+
+function priceSingleSku(sku){
+  sku = (sku||'').toUpperCase().trim();
+  const p = state.precos[sku]; if(!p) return null;
+  return { por:p.preco_por, de:p.preco_de, pct: Math.max(0, Math.round((1-p.preco_por/p.preco_de)*100)) };
+}
+function priceBundleSkus(skuStr){
+  const skus = String(skuStr||'').toUpperCase().split(';').map(s=>s.trim()).filter(Boolean);
+  const found = skus.map(s=>state.precos[s]).filter(Boolean);
+  if(!found.length) return null;
+  const sumPor  = found.reduce((a,b)=>a+(b.preco_por||0),0);
+  const sumCost = found.reduce((a,b)=>a+(b.custo||0),0);
+  let por = sumPor * (1 - CONFIG.BUNDLE_EXTRA_PCT);
+  const minPor = sumCost * (1 + CONFIG.MIN_MARGIN_PCT);
+  if(por < minPor) por = minPor;
+  por = roundSuffix(por);
+  let de = por/(1 - CONFIG.DESCONTO_EXIBIR_PCT);
+  de = roundSuffix(de);
+  if(de <= por) de = roundSuffix(por*1.05);
+  const save = Math.max(0, sumPor - por);
+  const pct  = Math.max(0, Math.round((1 - por/de)*100));
+  return { por, de, pct, save, sumPor };
+}
+
+function keyFor(it){
+  const isConj = (it.tags||'').toLowerCase().includes('conjunto');
+  if(isConj && it.sku){
+    const arr = it.sku.toUpperCase().split(';').map(s=>s.trim()).filter(Boolean).sort();
+    return 'CONJ|'+arr.join('+');
+  }
+  if(it.sku) return 'SKU|'+String(it.sku).toUpperCase().trim();
+  // fallback por texto (improvável, mas evita “perdas”)
+  const sig=(it.descricao_curta||it.produto||it.nome_arquivo||'').split('—')[0].trim().toLowerCase();
+  return 'TXT|'+sig;
+}
+
+function agrupar(items){
+  const map={};
+  items.forEach(it=>{
+    const k = keyFor(it);
+    if(!map[k]) map[k]={rep:it, imagens:[], linhas:new Set()};
+    map[k].imagens.push(it.url_jsdelivr);
+    map[k].linhas.add((it.linha||'').toLowerCase());
+    // preferir “Conjunto” como representante do grupo quando existir
+    const isConj=(it.tags||'').toLowerCase().includes('conjunto');
+    const repIsConj=(map[k].rep.tags||'').toLowerCase().includes('conjunto');
+    if(isConj && !repIsConj) map[k].rep=it;
+  });
+  // construir grupos com preço + metadados
+  return Object.values(map).map(g=>{
+    const it=g.rep;
+    const isConj=(it.tags||'').toLowerCase().includes('conjunto');
+    const pricing = isConj ? priceBundleSkus(it.sku) : priceSingleSku(it.sku);
+    return {
+      tema: it.tema,
+      linha: it.linha,
+      desc: it.descricao_curta||'',
+      tags: it.tags||'',
+      url_whatsapp: it.url_whatsapp,
+      isConj,
+      sku: it.sku||'',
+      imagens: g.imagens,
+      linhas: Array.from(g.linhas),
+      pricing
+    };
+  });
+}
 
 async function boot(){
   byId('ttl').textContent = tema.replaceAll('-',' ');
   const [catRes, preRes] = await Promise.all([ fetch(BASE_RAW+'/catalogo/'+encodeURIComponent(tema)+'.json'), fetch(PRECOS_URL) ]);
   const items = await catRes.json();
   const precosArr = await preRes.json();
-  const precos = {}; precosArr.forEach(p => { precos[(p.sku||'').toUpperCase()] = p; });
-  state.precos = precos; state.items  = items;
-  desenharFiltros(items);
+  const precos = {}; (precosArr||[]).forEach(p => { precos[(p.sku||'').toUpperCase()] = p; });
+  state.precos = precos;
+  state.items  = items;
+  state.grupos = agrupar(items);
+  desenharFiltros(state.grupos);
   render();
 }
-function desenharFiltros(items){
-  const linhas = new Set(items.map(it => (it.linha||'').toLowerCase()).filter(Boolean));
+
+function desenharFiltros(grupos){
+  const linhas = new Set(grupos.map(g => (g.linha||'').toLowerCase()).filter(Boolean));
   const box = byId('filters'); box.innerHTML = '';
   const pills = [['todos','Todos'], ...[...linhas].sort().map(x=>[x,x.replace('kit ','')])];
   pills.forEach(([val,label])=>{
     const el = document.createElement('button');
     el.className='pill'+(state.filtro===val?' active':'');
-    el.textContent=label; el.onclick=()=>{ state.filtro=val; render(); };
+    el.textContent=label;
+    el.onclick=()=>{ state.filtro=val; render(); };
     box.appendChild(el);
   });
 }
-function roundSuffix(v){
-  const suf = 0.90;                     // mesmo sufixo do Apps Script (pode ajustar)
-  const base = Math.floor(v);
-  let out = base + suf;
-  if(out < v) out = base + 1 + suf;
-  return Math.round(out*100)/100;
-}
-function priceSingle(it){
-  const sku = (it.sku||'').toString().trim().toUpperCase();
-  const p = state.precos[sku]; if(!p) return null;
-  return { por:p.preco_por, de:p.preco_de, pct: Math.max(0, Math.round((1-p.preco_por/p.preco_de)*100)) };
-}
-function priceBundle(it){
-  const skus = (it.sku||'').toString().toUpperCase().split(';').map(s=>s.trim()).filter(Boolean);
-  const found = skus.map(s=>state.precos[s]).filter(Boolean);
-  if(!found.length) return null;
-  const sumPor  = found.reduce((a,b)=>a+(b.preco_por||0),0);
-  const sumCost = found.reduce((a,b)=>a+(b.custo||0),0);
 
-  let por = sumPor * (1 - CONFIG.BUNDLE_EXTRA_PCT);
-  const minPor = sumCost * (1 + CONFIG.MIN_MARGIN_PCT);
-  if(por < minPor) por = minPor;
-  por = roundSuffix(por);
-
-  let de = por/(1 - CONFIG.DESCONTO_EXIBIR_PCT);
-  de = roundSuffix(de);
-  if(de <= por) de = roundSuffix(por*1.05);
-
-  const save = Math.max(0, sumPor - por);
-  const pct  = Math.max(0, Math.round((1 - por/de)*100));
-  return { por, de, pct, save, sumPor };
-}
 function render(){
   const grid = byId('grid'); grid.innerHTML='';
   const empty = byId('empty'); empty.style.display='none';
 
-  let view = state.items.slice();
+  let view = state.grupos.slice();
   if(state.filtro!=='todos'){
     const f = state.filtro.toLowerCase();
-    view = view.filter(it => (it.linha||'').toLowerCase().includes(f));
+    view = view.filter(g => (g.linha||'').toLowerCase().includes(f) || g.linhas.includes(f));
   }
   if(!view.length){ empty.style.display='block'; return; }
 
-  view.forEach(it=>{
-    const isConj = (it.tags||'').toLowerCase().includes('conjunto');
-    const p = isConj ? priceBundle(it) : priceSingle(it);
-
+  view.forEach((g,idx)=>{
     const card = document.createElement('div');
     card.className='card';
+
+    const total = g.imagens.length;
+    const first = g.imagens[0];
+    const conjBadge = g.isConj ? '<div class="badge">Conjunto</div>' : '';
+    const priceHtml = g.pricing ? '<div class="price"><small>'+ (g.pricing.de?(''+(g.pricing.de).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})):'') +'</small>'+ (g.pricing.por).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) +' '+(g.pricing.pct?'<span style="font-weight:600">('+g.pricing.pct+'% OFF)</span>':'')+'</div>' : '';
+
     card.innerHTML = `
-      <div class="imgbox">
-        <img loading="lazy" src="${it.url_jsdelivr}" alt="${it.descricao_curta||''}">
-        ${ isConj ? '<div class="badge">Conjunto</div>' : '' }
-        ${ p ? '<div class="price"><small>'+grana(p.de)+'</small>'+grana(p.por)+' '+(p.pct?'<span style="font-weight:600">('+p.pct+'% OFF)</span>':'')+'</div>' : '' }
+      <div class="imgbox" data-idx="${idx}" data-i="0">
+        <img src="${first}" alt="">
+        ${conjBadge}
+        ${priceHtml}
+        <div class="counter">${total} foto${total>1?'s':''}</div>
+        ${ total>1 ? '<div class="nav l" title="Anterior">❮</div><div class="nav r" title="Próxima">❯</div>' : '' }
       </div>
       <div class="content">
-        <div class="desc">${it.descricao_curta||''}</div>
-        ${ isConj && p ? '<div class="saving">Comprando separados sairia por <b>'+grana(p.sumPor)+'</b>. No kit completo sai por <b>'+grana(p.por)+'</b> (economize <b>'+grana(p.save)+'</b>).</div>' : '' }
-        <div class="tags">${it.tags||''}</div>
+        <div class="desc">${g.desc}</div>
+        ${ g.isConj && g.pricing ? '<div class="saving">Comprando separados sairia por <b>'+ (g.pricing.sumPor).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) +'</b>. No kit completo sai por <b>'+ (g.pricing.por).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) +'</b> (economize <b>'+ (g.pricing.save).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) +'</b>).</div>' : '' }
+        <div class="tags">${g.tags}</div>
         <div class="row">
-          <a class="btn" target="_blank" href="${it.url_whatsapp}">Pedir no WhatsApp</a>
-          <a class="btn sec" target="_blank" href="${it.url_jsdelivr}">Abrir imagem</a>
+          <a class="btn" target="_blank" href="${g.url_whatsapp}">Pedir no WhatsApp</a>
+          <a class="btn sec" target="_blank" href="${first}">Abrir imagem</a>
         </div>
       </div>`;
+
+    // navegação entre imagens dentro do card
+    if(total>1){
+      const box=card.querySelector('.imgbox');
+      const img=box.querySelector('img');
+      const left=box.querySelector('.nav.l');
+      const right=box.querySelector('.nav.r');
+      function show(i){ if(i<0) i=total-1; if(i>=total) i=0; box.dataset.i=i; img.src=g.imagens[i]; }
+      left && (left.onclick=()=>show( (parseInt(box.dataset.i)||0)-1 ));
+      right && (right.onclick=()=>show( (parseInt(box.dataset.i)||0)+1 ));
+    }
+
     grid.appendChild(card);
   });
 }
+
 boot().catch(err=>{
   byId('grid').innerHTML = '<div class="empty">Erro ao carregar dados.</div>';
   console.error(err);
