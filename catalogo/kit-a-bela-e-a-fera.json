@@ -1,742 +1,823 @@
 {
-  "tema": "Kit A Bela e a Fera",
   "slug": "kit-a-bela-e-a-fera",
-  "cards": [
+  "tema": "Kit A Bela e a Fera",
+  "linha": "Kit 04 - Luxo",
+  "grupos": [
     {
       "titulo": "LLPC L K a bela e a fera LifestyleConjunto",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/LLPC-L-K-a-bela-e-a-fera-LifestyleConjunto.jpg"
-      ],
-      "sku": "LLPC-TB-L; LLPC-ML-L; LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/LLPC-L-K-a-bela-e-a-fera-LifestyleConjunto.jpg/LLPC-L-K-a-bela-e-a-fera-LifestyleConjunto.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB L a bela e a fera Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-TB-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-TB-L-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TB L a bela e a fera",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC TB L a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-Detalhe.jpg"
-      ],
-      "sku": "LLPC-TB-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-a-bela-e-a-fera-Verso.jpg/LLPC-TB-L-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB L a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-a-bela-e-a-fera-Variação.jpg/LLPC-TB-L-a-bela-e-a-fera-Variação.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB L a bela e a fera Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-TB-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-a-bela-e-a-fera-Hero.jpg/LLPC-TB-L-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB L a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-a-bela-e-a-fera-Escala.jpg/LLPC-TB-L-a-bela-e-a-fera-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB L a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-a-bela-e-a-fera-Detalhe.jpg/LLPC-TB-L-a-bela-e-a-fera-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC ML PC a bela e a fera Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-PC-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-ML-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Porta Cofre Luxo/LLPC-ML-PC-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-ML-PC-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC ML PC a bela e a fera",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC ML PC a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-PC-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-PC-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-PC-a-bela-e-a-fera-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-PC-a-bela-e-a-fera-Escala.jpg"
-      ],
-      "sku": "LLPC-ML-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Porta Cofre Luxo/LLPC-ML-PC-a-bela-e-a-fera-Verso.jpg/LLPC-ML-PC-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC ML PC a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Porta Cofre Luxo/LLPC-ML-PC-a-bela-e-a-fera-Variação.jpg/LLPC-ML-PC-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC ML PC a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Porta Cofre Luxo/LLPC-ML-PC-a-bela-e-a-fera-Detalhe.jpg/LLPC-ML-PC-a-bela-e-a-fera-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC ML PC a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Porta Cofre Luxo/LLPC-ML-PC-a-bela-e-a-fera-Escala.jpg/LLPC-ML-PC-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC ML PC a bela e a fera Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-PC-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-ML-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Porta Cofre Luxo/LLPC-ML-PC-a-bela-e-a-fera-Hero.jpg/LLPC-ML-PC-a-bela-e-a-fera-Hero.jpg"
+      ]
     },
     {
       "titulo": "LLPC ML CS a bela e a fera Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-ML-CS-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-ML-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Cenário Shaker Luxo/LLPC-ML-CS-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-ML-CS-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC ML CS a bela e a fera",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC ML CS a bela e a fera Detalhe",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-ML-CS-a-bela-e-a-fera-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-ML-CS-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-ML-CS-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-ML-CS-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg"
-      ],
-      "sku": "LLPC-ML-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Cenário Shaker Luxo/LLPC-ML-CS-a-bela-e-a-fera-Detalhe.jpg/LLPC-ML-CS-a-bela-e-a-fera-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC ML CS a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Cenário Shaker Luxo/LLPC-ML-CS-a-bela-e-a-fera-Escala.jpg/LLPC-ML-CS-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC ML CS a bela e a fera Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-ML-CS-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-ML-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Cenário Shaker Luxo/LLPC-ML-CS-a-bela-e-a-fera-Hero.jpg/LLPC-ML-CS-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC ML CS a bela e a fera Verso",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Cenário Shaker Luxo/LLPC-ML-CS-a-bela-e-a-fera-Verso.jpg/LLPC-ML-CS-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC ML CS a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Maleta Cenário Shaker Luxo/LLPC-ML-CS-a-bela-e-a-fera-Variação.jpg/LLPC-ML-CS-a-bela-e-a-fera-Variação.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL L PS a bela e a fera Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-L-PS-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL L PS a bela e a fera",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL L PS a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Escala.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Verso.jpg/LLPC-CL-L-PS-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL L PS a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Variação.jpg/LLPC-CL-L-PS-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL L PS a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-L-PS-a-bela-e-a-fera-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL L PS a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Escala.jpg/LLPC-CL-L-PS-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL L PS a bela e a fera Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-Hero.jpg/LLPC-CL-L-PS-a-bela-e-a-fera-Hero.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL L P a bela e a fera Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-P-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa em Pé Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-L-P-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL L P a bela e a fera",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL L P a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa em Pé Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Verso.jpg/LLPC-CL-L-P-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL L P a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa em Pé Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Variação.jpg/LLPC-CL-L-P-a-bela-e-a-fera-Variação.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL L P a bela e a fera Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa em Pé Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Hero.jpg/LLPC-CL-L-P-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL L P a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa em Pé Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Escala.jpg/LLPC-CL-L-P-a-bela-e-a-fera-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL L P a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa em Pé Luxo/LLPC-CL-L-P-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-L-P-a-bela-e-a-fera-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL L C a bela e a fera Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Cenário Luxo /LLPC-CL-L-C-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-L-C-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL L C a bela e a fera",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL L C a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Cenário Luxo /LLPC-CL-L-C-a-bela-e-a-fera-Verso.jpg/LLPC-CL-L-C-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL L C a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Cenário Luxo /LLPC-CL-L-C-a-bela-e-a-fera-Variação.jpg/LLPC-CL-L-C-a-bela-e-a-fera-Variação.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL L C a bela e a fera Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Cenário Luxo /LLPC-CL-L-C-a-bela-e-a-fera-Hero.jpg/LLPC-CL-L-C-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL L C a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Cenário Luxo /LLPC-CL-L-C-a-bela-e-a-fera-Escala.jpg/LLPC-CL-L-C-a-bela-e-a-fera-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL L C a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 04 - Luxo/Caixa Cenário Luxo /LLPC-CL-L-C-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-L-C-a-bela-e-a-fera-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC P K a bela e a fera LifestyleConjunto",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/LLPC-P-K-a-bela-e-a-fera-LifestyleConjunto.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P; LLPC-TB-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/LLPC-P-K-a-bela-e-a-fera-LifestyleConjunto.jpg/LLPC-P-K-a-bela-e-a-fera-LifestyleConjunto.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P BD a bela e a fera Ângulo3 4",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-BD-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Porta Bis Duplo Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-P-BD-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL P BD a bela e a fera",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL P BD a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Porta Bis Duplo Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Verso.jpg/LLPC-CL-P-BD-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P BD a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Porta Bis Duplo Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Variação.jpg/LLPC-CL-P-BD-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P BD a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Porta Bis Duplo Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Escala.jpg/LLPC-CL-P-BD-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P BD a bela e a fera Hero",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Porta Bis Duplo Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Hero.jpg/LLPC-CL-P-BD-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P BD a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Porta Bis Duplo Premium/LLPC-CL-P-BD-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-P-BD-a-bela-e-a-fera-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P T a bela e a fera Ângulo3 4",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-P-T-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL P T a bela e a fera",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL P T a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-a-bela-e-a-fera-Verso.jpg/LLPC-CL-P-T-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P T a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-a-bela-e-a-fera-Escala.jpg/LLPC-CL-P-T-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P T a bela e a fera Frontal",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-Frontal.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-a-bela-e-a-fera-Frontal.jpg/LLPC-CL-P-T-a-bela-e-a-fera-Frontal.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P T a bela e a fera Hero",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-a-bela-e-a-fera-Hero.jpg/LLPC-CL-P-T-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P T a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-P-T-a-bela-e-a-fera-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P MK a bela e a fera Ângulo3 4",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Milk Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-P-MK-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL P MK a bela e a fera",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL P MK a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Milk Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Verso.jpg/LLPC-CL-P-MK-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P MK a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Milk Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Variação.jpg/LLPC-CL-P-MK-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P MK a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Milk Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Escala.jpg/LLPC-CL-P-MK-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P MK a bela e a fera Hero",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Milk Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Hero.jpg/LLPC-CL-P-MK-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P MK a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Milk Premium/LLPC-CL-P-MK-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-P-MK-a-bela-e-a-fera-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P P a bela e a fera Ângulo3 4",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Pirâmide Premium/LLPC-CL-P-P-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-P-P-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL P P a bela e a fera",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL P P a bela e a fera Detalhe",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-Verso.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Pirâmide Premium/LLPC-CL-P-P-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-P-P-a-bela-e-a-fera-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P P a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Pirâmide Premium/LLPC-CL-P-P-a-bela-e-a-fera-Escala.jpg/LLPC-CL-P-P-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P P a bela e a fera Frontal",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-Frontal.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Pirâmide Premium/LLPC-CL-P-P-a-bela-e-a-fera-Frontal.jpg/LLPC-CL-P-P-a-bela-e-a-fera-Frontal.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P P a bela e a fera Hero",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Pirâmide Premium/LLPC-CL-P-P-a-bela-e-a-fera-Hero.jpg/LLPC-CL-P-P-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P P a bela e a fera Verso",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Caixa Pirâmide Premium/LLPC-CL-P-P-a-bela-e-a-fera-Verso.jpg/LLPC-CL-P-P-a-bela-e-a-fera-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB P a bela e a fera Ângulo3 4",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-TB-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-TB-P-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TB P a bela e a fera",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC TB P a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-Detalhe.jpg"
-      ],
-      "sku": "LLPC-TB-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-a-bela-e-a-fera-Verso.jpg/LLPC-TB-P-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB P a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-a-bela-e-a-fera-Variação.jpg/LLPC-TB-P-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB P a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-a-bela-e-a-fera-Escala.jpg/LLPC-TB-P-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB P a bela e a fera Hero",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-TB-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-a-bela-e-a-fera-Hero.jpg/LLPC-TB-P-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB P a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-a-bela-e-a-fera-Detalhe.jpg/LLPC-TB-P-a-bela-e-a-fera-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC C K a bela e a fera LyfestyleConjunto",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/LLPC-C-K-a-bela-e-a-fera-LyfestyleConjunto.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C; LLPC-TB-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/LLPC-C-K-a-bela-e-a-fera-LyfestyleConjunto.jpg/LLPC-C-K-a-bela-e-a-fera-LyfestyleConjunto.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL C BD a bela e a fera Ângulo3 4",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-BD-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Porta Bis Duplo Clássico/LLPC-CL-C-BD-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-C-BD-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL C BD a bela e a fera",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL C BD a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-BD-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-BD-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-BD-a-bela-e-a-fera-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-BD-a-bela-e-a-fera-Escala.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Porta Bis Duplo Clássico/LLPC-CL-C-BD-a-bela-e-a-fera-Verso.jpg/LLPC-CL-C-BD-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C BD a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Porta Bis Duplo Clássico/LLPC-CL-C-BD-a-bela-e-a-fera-Variação.jpg/LLPC-CL-C-BD-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C BD a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Porta Bis Duplo Clássico/LLPC-CL-C-BD-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-C-BD-a-bela-e-a-fera-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C BD a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Porta Bis Duplo Clássico/LLPC-CL-C-BD-a-bela-e-a-fera-Escala.jpg/LLPC-CL-C-BD-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL C BD a bela e a fera Hero",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-BD-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Porta Bis Duplo Clássico/LLPC-CL-C-BD-a-bela-e-a-fera-Hero.jpg/LLPC-CL-C-BD-a-bela-e-a-fera-Hero.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL C T a bela e a fera Ângulo3 4",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-C-T-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-C-T-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL C T a bela e a fera",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL C T a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-C-T-a-bela-e-a-fera-Verso.jpg/LLPC-CL-C-T-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C T a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-C-T-a-bela-e-a-fera-Variação.jpg/LLPC-CL-C-T-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C T a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-C-T-a-bela-e-a-fera-Escala.jpg/LLPC-CL-C-T-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL C T a bela e a fera Hero",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-C-T-a-bela-e-a-fera-Hero.jpg/LLPC-CL-C-T-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C T a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-C-T-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-C-T-a-bela-e-a-fera-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL C MK a bela e a fera Ângulo3 4",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-C-MK-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-C-MK-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL C MK a bela e a fera",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL C MK a bela e a fera Detalhe",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-Verso.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-C-MK-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-C-MK-a-bela-e-a-fera-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C MK a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-C-MK-a-bela-e-a-fera-Escala.jpg/LLPC-CL-C-MK-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL C MK a bela e a fera Hero",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-C-MK-a-bela-e-a-fera-Hero.jpg/LLPC-CL-C-MK-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C MK a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-C-MK-a-bela-e-a-fera-Variação.jpg/LLPC-CL-C-MK-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C MK a bela e a fera Verso",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-C-MK-a-bela-e-a-fera-Verso.jpg/LLPC-CL-C-MK-a-bela-e-a-fera-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL C P a bela e a fera Ângulo3 4",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Pirâmide Clássico/LLPC-CL-C-P-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-C-P-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL C P a bela e a fera",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL C P a bela e a fera Detalhe",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-Verso.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Pirâmide Clássico/LLPC-CL-C-P-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-C-P-a-bela-e-a-fera-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C P a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Pirâmide Clássico/LLPC-CL-C-P-a-bela-e-a-fera-Escala.jpg/LLPC-CL-C-P-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL C P a bela e a fera Hero",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Pirâmide Clássico/LLPC-CL-C-P-a-bela-e-a-fera-Hero.jpg/LLPC-CL-C-P-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C P a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Pirâmide Clássico/LLPC-CL-C-P-a-bela-e-a-fera-Variação.jpg/LLPC-CL-C-P-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C P a bela e a fera Verso",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Caixa Pirâmide Clássico/LLPC-CL-C-P-a-bela-e-a-fera-Verso.jpg/LLPC-CL-C-P-a-bela-e-a-fera-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB C a bela e a fera Ângulo3 4",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-TB-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-TB-C-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TB C a bela e a fera",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC TB C a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-Detalhe.jpg"
-      ],
-      "sku": "LLPC-TB-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-a-bela-e-a-fera-Verso.jpg/LLPC-TB-C-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB C a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-a-bela-e-a-fera-Variação.jpg/LLPC-TB-C-a-bela-e-a-fera-Variação.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB C a bela e a fera Hero",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-TB-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-a-bela-e-a-fera-Hero.jpg/LLPC-TB-C-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB C a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-a-bela-e-a-fera-Escala.jpg/LLPC-TB-C-a-bela-e-a-fera-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB C a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-a-bela-e-a-fera-Detalhe.jpg/LLPC-TB-C-a-bela-e-a-fera-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC E K a bela e a fera LifestyleConjunto",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/LLPC-E-K-a-bela-e-a-fera-LifestyleConjunto.jpg"
-      ],
-      "sku": "LLPC-TT-C; LLPC-F-C; LLPC-CL-MT-E; LLPC-TB-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /LLPC-E-K-a-bela-e-a-fera-LifestyleConjunto.jpg/LLPC-E-K-a-bela-e-a-fera-LifestyleConjunto.jpg"
+      ]
     },
     {
       "titulo": "LLPC TT E a bela e a fera Ângulo3 4",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topper%20Essencial/LLPC-TT-E-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-TT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Topper Essencial/LLPC-TT-E-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-TT-E-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TT E a bela e a fera",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC TT E a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topper%20Essencial/LLPC-TT-E-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topper%20Essencial/LLPC-TT-E-a-bela-e-a-fera-Escala.jpg"
-      ],
-      "sku": "LLPC-TT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Topper Essencial/LLPC-TT-E-a-bela-e-a-fera-Verso.jpg/LLPC-TT-E-a-bela-e-a-fera-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC TT E a bela e a fera Hero",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topper%20Essencial/LLPC-TT-E-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-TT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Topper Essencial/LLPC-TT-E-a-bela-e-a-fera-Hero.jpg/LLPC-TT-E-a-bela-e-a-fera-Hero.jpg"
+      ]
     },
     {
-      "titulo": "LLPC F E a bela e a fera",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC TT E a bela e a fera Escala",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Forminha%20Essencial/LLPC-F-E-a-bela-e-a-fera-Verso.jpg"
-      ],
-      "sku": "LLPC-F-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Topper Essencial/LLPC-TT-E-a-bela-e-a-fera-Escala.jpg/LLPC-TT-E-a-bela-e-a-fera-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC F E a bela e a fera Verso",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Forminha Essencial/LLPC-F-E-a-bela-e-a-fera-Verso.jpg/LLPC-F-E-a-bela-e-a-fera-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC F E a bela e a fera Hero",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Forminha%20Essencial/LLPC-F-E-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-F-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Forminha Essencial/LLPC-F-E-a-bela-e-a-fera-Hero.jpg/LLPC-F-E-a-bela-e-a-fera-Hero.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL E T a bela e a fera",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL E T a bela e a fera Variação",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Escala.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Tubete Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Variação.jpg/LLPC-CL-E-T-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E T a bela e a fera Verso",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Tubete Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Verso.jpg/LLPC-CL-E-T-a-bela-e-a-fera-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E T a bela e a fera Ângulo",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-%C3%82ngulo.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Tubete Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Ângulo.jpg/LLPC-CL-E-T-a-bela-e-a-fera-Ângulo.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E T a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Tubete Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-E-T-a-bela-e-a-fera-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E T a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Tubete Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Escala.jpg/LLPC-CL-E-T-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E T a bela e a fera Hero",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Tubete Essencial/LLPC-CL-E-T-a-bela-e-a-fera-Hero.jpg/LLPC-CL-E-T-a-bela-e-a-fera-Hero.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E P a bela e a fera Ângulo3 4",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Pirâmide Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-E-P-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E P a bela e a fera Hero",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Pirâmide Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Hero.jpg/LLPC-CL-E-P-a-bela-e-a-fera-Hero.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL E P a bela e a fera",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL E P a bela e a fera Variação",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Escala.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Pirâmide Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Variação.jpg/LLPC-CL-E-P-a-bela-e-a-fera-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E P a bela e a fera Verso",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Pirâmide Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Verso.jpg/LLPC-CL-E-P-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E P a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Pirâmide Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-E-P-a-bela-e-a-fera-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E P a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Pirâmide Essencial/LLPC-CL-E-P-a-bela-e-a-fera-Escala.jpg/LLPC-CL-E-P-a-bela-e-a-fera-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E MK a bela e a fera Ângulo3 4",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Milk Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-E-MK-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL E MK a bela e a fera",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL E MK a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK--a-bela-e-a-fera-Varia%C3%A7%C3%A3o.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Milk Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-Verso.jpg/LLPC-CL-E-MK-a-bela-e-a-fera-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E MK a bela e a fera Hero",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Milk Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-Hero.jpg/LLPC-CL-E-MK-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E MK a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Milk Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-E-MK-a-bela-e-a-fera-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E MK a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Milk Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-Escala.jpg/LLPC-CL-E-MK-a-bela-e-a-fera-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E MK a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa Milk Essencial/LLPC-CL-E-MK--a-bela-e-a-fera-Variação.jpg/LLPC-CL-E-MK--a-bela-e-a-fera-Variação.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E CP a bela e a fera Ângulo3 4",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa em Pé Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-CL-E-CP-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL E CP a bela e a fera",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC CL E CP a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa em Pé Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Verso.jpg/LLPC-CL-E-CP-a-bela-e-a-fera-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E CP a bela e a fera Lateral",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Lateral.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa em Pé Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Lateral.jpg/LLPC-CL-E-CP-a-bela-e-a-fera-Lateral.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E CP a bela e a fera Hero",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa em Pé Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Hero.jpg/LLPC-CL-E-CP-a-bela-e-a-fera-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E CP a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa em Pé Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Escala.jpg/LLPC-CL-E-CP-a-bela-e-a-fera-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E CP a bela e a fera Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Caixa em Pé Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-Detalhe.jpg/LLPC-CL-E-CP-a-bela-e-a-fera-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB E a bela e a fera Ângulo3 4",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-TB-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Topo de Bolo Essencial /LLPC-TB-E-a-bela-e-a-fera-Ângulo3-4.jpg/LLPC-TB-E-a-bela-e-a-fera-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TB E a bela e a fera",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
+      "titulo": "LLPC TB E a bela e a fera Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-Varia%C3%A7%C3%A3o%20.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-DETALHE.jpg"
-      ],
-      "sku": "LLPC-TB-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Topo de Bolo Essencial /LLPC-TB-E-a-bela-e-a-fera-Verso.jpg/LLPC-TB-E-a-bela-e-a-fera-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB E a bela e a fera Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Topo de Bolo Essencial /LLPC-TB-E-a-bela-e-a-fera-Variação .jpg/LLPC-TB-E-a-bela-e-a-fera-Variação .jpg"
+      ]
     },
     {
       "titulo": "LLPC TB E a bela e a fera HERO",
-      "linha": "Kit 01 - Essencial ",
-      "tema": "Kit A Bela e a Fera",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-HERO.jpg"
-      ],
-      "sku": "LLPC-TB-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Topo de Bolo Essencial /LLPC-TB-E-a-bela-e-a-fera-HERO.jpg/LLPC-TB-E-a-bela-e-a-fera-HERO.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB E a bela e a fera Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Topo de Bolo Essencial /LLPC-TB-E-a-bela-e-a-fera-Escala.jpg/LLPC-TB-E-a-bela-e-a-fera-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB E a bela e a fera DETALHE",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit A Bela e a Fera/Kit 01 - Essencial /Topo de Bolo Essencial /LLPC-TB-E-a-bela-e-a-fera-DETALHE.jpg/LLPC-TB-E-a-bela-e-a-fera-DETALHE.jpg"
+      ]
     }
   ]
 }
