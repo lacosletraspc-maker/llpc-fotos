@@ -18,10 +18,8 @@ const precosUrl = base + '/precos.json';
 const temaUrl = base + '/catalogo/' + slug + '.json';
 
 const PHONE = '5519989848246';
-
 const moeda = v => (v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-
-function wa(text){ return 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(text); }
+const wa = text => 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(text);
 
 function card(g, precos){
   const p = precos[g.sku] || null;
