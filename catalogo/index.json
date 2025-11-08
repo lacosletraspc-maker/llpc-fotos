@@ -1,14 +1,16 @@
-[
-  {
-    "tema": "Kit A Bela e a Fera",
-    "slug": "kit-a-bela-e-a-fera",
-    "thumb": "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/LLPC-L-K-a-bela-e-a-fera-LifestyleConjunto.jpg",
-    "total": 75
-  },
-  {
-    "tema": "Kit Hot Wheels",
-    "slug": "kit-hot-wheels",
-    "thumb": "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/LLPC-K-L-hot-wheels-LifestyleConjunto.jpg",
-    "total": 73
-  }
-]
+{
+  "temas": [
+    {
+      "slug": "kit-a-bela-e-a-fera",
+      "titulo": "Kit A Bela e a Fera",
+      "linha": "Kit 04 - Luxo",
+      "qtd": 136
+    },
+    {
+      "slug": "kit-hot-wheels",
+      "titulo": "Kit Hot Wheels",
+      "linha": "Kit 04 - Luxo",
+      "qtd": 127
+    }
+  ]
+}
