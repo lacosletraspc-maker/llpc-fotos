@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<html lang="pt-BR"><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>LLPC • Catálogo de temas</title>
 <link rel="stylesheet" href="./style.css"/>
 <div class="container">
@@ -10,26 +9,17 @@
   <footer>LLPC • Laços & Letras Papelaria Criativa</footer>
 </div>
 <script type="module">
-const base = location.pathname.replace(/\/[^/]*$/,''); // /llpc-fotos
 async function fetchCatalogList(){
   try{
-    const r = await fetch(base + '/catalogo/index.json');
-    if (!r.ok) throw new Error('index.json não encontrado');
+    const r = await fetch('catalogo/index.json'); // relativo
+    if(!r.ok) throw new Error('index.json não encontrado'); 
     return await r.json();
-  }catch(e){
-    console.error(e);
-    return [];
-  }
+  }catch(e){ console.error(e); return []; }
 }
-function cardTema(t){
-  return `
+function cardTema(t){ return `
   <a class="card" href="./lp-tema.html?tema=${encodeURIComponent(t.slug)}">
     <div class="imgbox"><img src="${t.thumb||''}" alt=""/></div>
     <div class="meta"><h3>${t.tema}</h3><div class="row"><span class="badge">${t.total} produtos</span></div></div>
-  </a>`;
-}
-(async()=>{
-  const temas = await fetchCatalogList();
-  document.getElementById('temas').innerHTML = temas.map(cardTema).join('');
-})();
+  </a>`; }
+(async()=>{ const temas=await fetchCatalogList(); document.getElementById('temas').innerHTML = temas.map(cardTema).join(''); })();
 </script></html>
