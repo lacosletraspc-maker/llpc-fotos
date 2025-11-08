@@ -1,83 +1,87 @@
 <!doctype html>
-<html lang="pt-BR"><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>LLPC • Tema</title>
-<link rel="stylesheet" href="./style.css"/>
-<div class="container">
-  <a href="./" style="color:#9ff0d2">← Temas</a>
-  <h1 id="h1"></h1>
-  <div id="chips" class="row" style="margin:6px 0 16px; flex-wrap:wrap"></div>
-  <div id="grid" class="grid"></div>
-  <footer>LLPC • Laços & Letras Papelaria Criativa</footer>
-</div>
-<script type="module">
-const qs = new URLSearchParams(location.search);
-const slug = qs.get('tema') || '';
-const PHONE = '5519989848246';
-const moeda = v => (v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-const wa = text => 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(text);
+<link rel="stylesheet" href="style.css?v=1762636295139">
+</head>
+<body>
+  <nav class="topbar"><a href="./">← Temas</a></nav>
+  <main class="container">
+    <h1 id="h1">Tema</h1>
+    <div class="tabs" id="tabs"></div>
+    <section id="grid" class="grid"></section>
+    <footer>LLPC • Laços & Letras Papelaria Criativa</footer>
+  </main>
+<script>
+function qs(s){return document.querySelector(s)}
+function qsp(p){return new URLSearchParams(location.search).get(p)||''}
+function slugify(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
 
-function card(g, precos){
-  const p = g.sku ? (precos[g.sku] || null) : null;
-  const imgs = g.imagens||[]; const total = imgs.length;
-  const priceFrom = p? p.pub : null; const priceTo = p? p.wha : null;
-
-  const el = document.createElement('div'); el.className='card';
-  el.innerHTML = `
-    <div class="imgbox">
-      <a class="nav l">‹</a>
-      <img src="${imgs[0]||''}" alt=""/>
-      <a class="nav r">›</a>
-      <span class="count">${total} foto${total>1?'s':''}</span>
-      ${priceTo?('<span class="price">'+moeda(priceTo)+' <small>('+(Math.round((1-(priceTo/(priceFrom||1)))*100))+'% OFF)</small></span>'):''}
-    </div>
-    <div class="meta">
-      <div style="font-weight:700; margin-bottom:6px">${g.titulo} — ${g.linha} | LLPC</div>
-      ${p?('<div style="color:#9fb5b1; margin-bottom:12px">Comprando separados sairia por <b>'+moeda(p.pub)+'</b>. No WhatsApp sai por <b>'+moeda(p.wha)+'</b>.</div>'):''}
-      <div class="row" style="margin-bottom:12px">
-        <label class="switch"><input type="checkbox" id="ck-${g.sku}"/> <span>Kit completo</span></label>
-        <input type="number" min="1" step="1" value="1" class="qty" id="qt-${g.sku}" title="Quantidade"/>
-      </div>
-      <div class="row">
-        <a class="btn" id="wa-${g.sku}">Pedir no WhatsApp</a>
-        <a class="btn secondary" target="_blank" href="${imgs[0]||'#'}">Abrir imagem</a>
-      </div>
-    </div>`;
-
-  let i=0; const img=el.querySelector('img'), L=el.querySelector('.nav.l'), R=el.querySelector('.nav.r');
-  function show(d){ i=(i+d+total)%total; img.src=imgs[i]; }
-  L.addEventListener('click', e=>{e.preventDefault(); show(-1);},{passive:false});
-  R.addEventListener('click', e=>{e.preventDefault(); show(+1);},{passive:false});
-  el.querySelector('.imgbox').addEventListener('touchstart', (ev)=>{
-    const sx=ev.changedTouches[0].clientX; function end(ev2){ const dx=ev2.changedTouches[0].clientX-sx; if(Math.abs(dx)>40) show(dx<0?+1:-1); el.removeEventListener('touchend', end); }
-    el.addEventListener('touchend', end, {passive:true});
-  }, {passive:true});
-
-  const btn=el.querySelector('#wa-'+g.sku), ck=el.querySelector('#ck-'+g.sku), qt=el.querySelector('#qt-'+g.sku);
-  function msg(){
-    const isKit=ck.checked; const qty=Math.max(1, parseInt(qt.value||'1',10));
-    const header='*Pedido LLPC*%0A';
-    const item=isKit?('Quero *KIT COMPLETO* do tema *'+(g.tema||'')+'* — '+g.linha+' — '+g.titulo+'.') : ('Quero *'+qty+'x* — '+g.titulo+' — '+g.linha+' — tema '+(g.tema||'')+'.');
-    const price=p?('%0A*Preço WhatsApp:* '+moeda(p.wha)):''; 
-    const sku=g.sku?('%0A*SKU:* '+g.sku):''; const link=imgs[0]?('%0AImagem: '+imgs[0]):'';
-    return header+item+price+sku+link;
-  }
-  function upd(){ btn.href = wa(msg()); }
-  upd(); ck.addEventListener('change', upd); qt.addEventListener('input', upd);
-
-  return el;
-}
-
-(async()=>{
+(async ()=>{
+  const slug = qsp('tema') || '';
+  const bust='?v=' + Date.now();
   try{
-    const [temar, precos] = await Promise.all([
-      fetch('catalogo/'+slug+'.json'),  // relativo
-      fetch('precos.json')              // relativo
+    const [temaRes, precRes] = await Promise.all([
+      fetch('catalogo/'+slug+'.json'+bust, {cache:'no-store'}),
+      fetch('precos.json'+bust,            {cache:'no-store'})
     ]);
-    if(!temar.ok) throw new Error('Tema não encontrado');
-    const tema=await temar.json(); const prec=precos.ok? await precos.json():{};
-    document.getElementById('h1').textContent = tema.tema;
-    const chips=new Set(tema.cards.map(c=>c.linha)); document.getElementById('chips').innerHTML=[...chips].map(x=>'<span class="badge">'+x+'</span>').join(' ');
-    const grid=document.getElementById('grid'); for(const g of tema.cards){ grid.appendChild(card(g,prec)); }
-  }catch(err){ document.getElementById('grid').innerHTML='<div class="empty">Erro ao carregar dados.</div>'; console.error(err); }
+    if(!temaRes.ok) throw new Error('Tema não encontrado');
+    const tema = await temaRes.json();
+    const prec = precRes.ok ? await precRes.json() : {};
+    qs('#h1').textContent = tema.tema || slug;
+
+    // Abas por linha (se existirem)
+    const linhas = Array.from(new Set((tema.cards||[]).map(c=>c.linha).filter(Boolean)));
+    const tabs = qs('#tabs');
+    tabs.innerHTML='';
+    const all = document.createElement('button');
+    all.className='pill pill-on'; all.textContent='Todos'; all.dataset.f='__all';
+    tabs.appendChild(all);
+    for(const l of linhas){
+      const b=document.createElement('button'); b.className='pill'; b.textContent=l; b.dataset.f=l; tabs.appendChild(b);
+    }
+
+    function render(filtro){
+      const g = qs('#grid'); g.innerHTML='';
+      for(const c of (tema.cards||[])){
+        if(filtro && filtro!=='__all' && c.linha!==filtro) continue;
+        const imgs = (c.imagens||[]).slice(0, Math.min(7, c.imagens.length||0));
+        const de    = c.preco?.de ?? prec[c.sku]?.de ?? '';
+        const por   = c.preco?.por ?? prec[c.sku]?.por ?? '';
+        const off   = c.preco?.off ?? prec[c.sku]?.off ?? '';
+        const card=document.createElement('article');
+        card.className='card photo-card';
+        card.innerHTML = \`
+          <div class="photo-box">
+            <img src="\${imgs[0]||''}" alt="">
+            <span class="badge">\${off?off+'% OFF':''}</span>
+          </div>
+          <div class="card-body">
+            <h3>\${c.titulo||c.produto||''}</h3>
+            <div class="price">\${de?'<s>R$ '+de+'</s>':''} \${por?'<b>R$ '+por+'</b>':''}</div>
+            <p class="tags">\${(c.tags||[]).join(', ')}</p>
+            <div class="actions">
+              <a class="btn" target="_blank" href="\${c.whatsapp||tema.whatsapp||'#'}">Pedir no WhatsApp</a>
+              \${imgs[0]?'<a class="btn btn-ghost" target="_blank" href="'+imgs[0]+'">Abrir imagem</a>':''}
+            </div>
+          </div>\`;
+        g.appendChild(card);
+      }
+    }
+    tabs.addEventListener('click', (ev)=>{
+      const b=ev.target.closest('button.pill'); if(!b) return;
+      for(const x of tabs.querySelectorAll('.pill')) x.classList.remove('pill-on');
+      b.classList.add('pill-on');
+      render(b.dataset.f);
+    });
+    render('__all');
+  }catch(e){
+    qs('#grid').innerHTML = '<p class="empty">Erro ao carregar dados.</p>';
+    console.error(e);
+  }
 })();
-</script></html>
+</script>
+</body>
+</html>
