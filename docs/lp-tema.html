@@ -1,216 +1,118 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"/>
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>LLPC • Ver fotos do tema</title>
-<style>
-:root{--brand:#0f766e;--brand2:#158f80;--bg:#0b1214;--card:#10191b;--text:#e8f1ef;--muted:#9fb6b1}
-html,body{background:var(--bg);color:var(--text);margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
-.wrap{max-width:1120px;margin:24px auto;padding:0 16px}
-header{display:flex;align-items:center;gap:12px;margin:8px 0 16px}
-header h1{font-size:22px;margin:0;text-transform:capitalize}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 16px}
-.pill{background:#122325;border:1px solid #1b3135;color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer}
-.pill.active{background:var(--brand);border-color:var(--brand2);color:#fff}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid #152326;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-.imgbox{position:relative;aspect-ratio:1/1;overflow:hidden;background:#0c1517}
-.imgbox img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
-.imgbox:hover img{transform:scale(1.01)}
-.badge{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.65);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid rgba(255,255,255,.2)}
-.price{position:absolute;bottom:8px;left:8px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;padding:8px 10px;border-radius:12px;font-weight:700}
-.price small{display:block;opacity:.9;font-weight:600;text-decoration:line-through}
-.nav{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.2);cursor:pointer}
-.nav.r{right:8px}.nav.l{left:8px}
-.content{padding:12px 12px 14px;display:flex;flex-direction:column;gap:8px}
-.desc{color:#d7e7e4;font-size:14px;line-height:1.35;min-height:38px}
-.tags{color:#7aa9a1;font-size:12px}
-.row{display:flex;gap:8px}
-.btn{flex:1;background:#133a37;border:1px solid #24534f;color:#dff5f1;padding:10px 12px;border-radius:10px;text-align:center;text-decoration:none;font-weight:700}
-.btn:hover{filter:brightness(1.05)}
-.btn.sec{background:#0e1b1d;border-color:#1a3033;color:#b8cfcb}
-.muted{color:var(--muted)}
-footer{opacity:.7;text-align:center;font-size:12px;margin:22px 0}
-.empty{padding:48px 0;text-align:center;color:var(--muted)}
-.counter{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.55);color:#fff;padding:6px 10px;border-radius:12px;font-size:12px;border:1px solid rgba(255,255,255,.2)}
-.saving{font-size:12px;color:#b6e3da}
-</style></head><body>
-<div class="wrap">
-  <header>
-    <a href="./" style="color:#89c9be;text-decoration:none;font-weight:700">← Temas</a>
-    <h1 id="ttl">LLPC • Fotos do tema</h1>
-  </header>
-  <div class="filters" id="filters"></div>
-  <div class="grid" id="grid"></div>
-  <div class="empty" id="empty" style="display:none">Nada encontrado para este filtro.</div>
+<title>LLPC • Tema</title>
+<link rel="stylesheet" href="./style.css"/>
+<div class="container">
+  <a href="./" style="color:#9ff0d2">← Temas</a>
+  <h1 id="h1"></h1>
+  <div id="chips" class="row" style="margin:6px 0 16px; flex-wrap:wrap"></div>
+  <div id="grid" class="grid"></div>
   <footer>LLPC • Laços & Letras Papelaria Criativa</footer>
 </div>
-<script>
-const OWNER='lacosletraspc-maker', REPO='llpc-fotos', BRANCH='main';
-const BASE_RAW='https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main';
-const PRECOS_URL = BASE_RAW + '/precos/precos.json';
-
+<script type="module">
 const qs = new URLSearchParams(location.search);
-const tema = qs.get('tema') || 'kit-a-bela-e-a-fera';
+const slug = qs.get('tema') || '';
+const base = location.pathname.replace(/\/[^/]*$/,'');
+const precosUrl = base + '/precos.json';
+const temaUrl = base + '/catalogo/' + slug + '.json';
 
-const CONFIG = {
-  BUNDLE_EXTRA_PCT: 0.08,
-  MIN_MARGIN_PCT: 0.35,
-  DESCONTO_EXIBIR_PCT: 0.15
-};
+const PHONE = '5519989848246';
 
-const state = { precos:{}, items:[], grupos:[], filtro:'todos' };
-function grana(v){ return v==null ? null : Number(v).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}); }
-function byId(id){ return document.getElementById(id); }
+const moeda = v => (v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 
-function roundSuffix(v){ const suf=0.90; const base=Math.floor(v); let out=base+suf; if(out<v) out=base+1+suf; return Math.round(out*100)/100; }
+function wa(text){ return 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(text); }
 
-function priceSingleSku(sku){
-  sku = (sku||'').toUpperCase().trim();
-  const p = state.precos[sku]; if(!p) return null;
-  return { por:p.preco_por, de:p.preco_de, pct: Math.max(0, Math.round((1-p.preco_por/p.preco_de)*100)) };
-}
-function priceBundleSkus(skuStr){
-  const skus = String(skuStr||'').toUpperCase().split(';').map(s=>s.trim()).filter(Boolean);
-  const found = skus.map(s=>state.precos[s]).filter(Boolean);
-  if(!found.length) return null;
-  const sumPor  = found.reduce((a,b)=>a+(b.preco_por||0),0);
-  const sumCost = found.reduce((a,b)=>a+(b.custo||0),0);
-  let por = sumPor * (1 - CONFIG.BUNDLE_EXTRA_PCT);
-  const minPor = sumCost * (1 + CONFIG.MIN_MARGIN_PCT);
-  if(por < minPor) por = minPor;
-  por = roundSuffix(por);
-  let de = por/(1 - CONFIG.DESCONTO_EXIBIR_PCT);
-  de = roundSuffix(de);
-  if(de <= por) de = roundSuffix(por*1.05);
-  const save = Math.max(0, sumPor - por);
-  const pct  = Math.max(0, Math.round((1 - por/de)*100));
-  return { por, de, pct, save, sumPor };
-}
+function card(g, precos){
+  const p = precos[g.sku] || null;
+  const imgs = g.imagens||[];
+  const total = imgs.length;
+  const priceFrom = p ? p.pub : null;
+  const priceTo   = p ? p.wha : null;
 
-function keyFor(it){
-  const isConj = (it.tags||'').toLowerCase().includes('conjunto');
-  if(isConj && it.sku){
-    const arr = it.sku.toUpperCase().split(';').map(s=>s.trim()).filter(Boolean).sort();
-    return 'CONJ|'+arr.join('+');
-  }
-  if(it.sku) return 'SKU|'+String(it.sku).toUpperCase().trim();
-  // fallback por texto (improvável, mas evita “perdas”)
-  const sig=(it.descricao_curta||it.produto||it.nome_arquivo||'').split('—')[0].trim().toLowerCase();
-  return 'TXT|'+sig;
-}
+  const el = document.createElement('div');
+  el.className='card';
 
-function agrupar(items){
-  const map={};
-  items.forEach(it=>{
-    const k = keyFor(it);
-    if(!map[k]) map[k]={rep:it, imagens:[], linhas:new Set()};
-    map[k].imagens.push(it.url_jsdelivr);
-    map[k].linhas.add((it.linha||'').toLowerCase());
-    // preferir “Conjunto” como representante do grupo quando existir
-    const isConj=(it.tags||'').toLowerCase().includes('conjunto');
-    const repIsConj=(map[k].rep.tags||'').toLowerCase().includes('conjunto');
-    if(isConj && !repIsConj) map[k].rep=it;
-  });
-  // construir grupos com preço + metadados
-  return Object.values(map).map(g=>{
-    const it=g.rep;
-    const isConj=(it.tags||'').toLowerCase().includes('conjunto');
-    const pricing = isConj ? priceBundleSkus(it.sku) : priceSingleSku(it.sku);
-    return {
-      tema: it.tema,
-      linha: it.linha,
-      desc: it.descricao_curta||'',
-      tags: it.tags||'',
-      url_whatsapp: it.url_whatsapp,
-      isConj,
-      sku: it.sku||'',
-      imagens: g.imagens,
-      linhas: Array.from(g.linhas),
-      pricing
-    };
-  });
-}
+  el.innerHTML = `
+  <div class="imgbox">
+    <a class="nav l">‹</a>
+    <img src="${imgs[0]||''}" alt=""/>
+    <a class="nav r">›</a>
+    <span class="count">${total} foto${total>1?'s':''}</span>
+    ${priceTo?'<span class="price">'+moeda(priceTo)+' <small>('+(Math.round((1-(priceTo/(priceFrom||1)))*100))+'% OFF)</small></span>':''}
+  </div>
+  <div class="meta">
+    <div style="font-weight:700; margin-bottom:6px">${g.titulo} — ${g.linha} | LLPC</div>
+    ${p?('<div style="color:#9fb5b1; margin-bottom:12px">Comprando separados sairia por <b>'+moeda(p.pub)+'</b>. No WhatsApp sai por <b>'+moeda(p.wha)+'</b>.</div>'): ''}
+    <div class="row" style="margin-bottom:12px">
+      <label class="switch"><input type="checkbox" id="ck-${g.sku}"/> <span>Kit completo</span></label>
+      <input type="number" min="1" step="1" value="1" class="qty" id="qt-${g.sku}" title="Quantidade"/>
+    </div>
+    <div class="row">
+      <a class="btn" id="wa-${g.sku}">Pedir no WhatsApp</a>
+      <a class="btn secondary" target="_blank" href="${imgs[0]||'#'}">Abrir imagem</a>
+    </div>
+  </div>`;
 
-async function boot(){
-  byId('ttl').textContent = tema.replaceAll('-',' ');
-  const [catRes, preRes] = await Promise.all([ fetch(BASE_RAW+'/catalogo/'+encodeURIComponent(tema)+'.json'), fetch(PRECOS_URL) ]);
-  const items = await catRes.json();
-  const precosArr = await preRes.json();
-  const precos = {}; (precosArr||[]).forEach(p => { precos[(p.sku||'').toUpperCase()] = p; });
-  state.precos = precos;
-  state.items  = items;
-  state.grupos = agrupar(items);
-  desenharFiltros(state.grupos);
-  render();
-}
-
-function desenharFiltros(grupos){
-  const linhas = new Set(grupos.map(g => (g.linha||'').toLowerCase()).filter(Boolean));
-  const box = byId('filters'); box.innerHTML = '';
-  const pills = [['todos','Todos'], ...[...linhas].sort().map(x=>[x,x.replace('kit ','')])];
-  pills.forEach(([val,label])=>{
-    const el = document.createElement('button');
-    el.className='pill'+(state.filtro===val?' active':'');
-    el.textContent=label;
-    el.onclick=()=>{ state.filtro=val; render(); };
-    box.appendChild(el);
-  });
-}
-
-function render(){
-  const grid = byId('grid'); grid.innerHTML='';
-  const empty = byId('empty'); empty.style.display='none';
-
-  let view = state.grupos.slice();
-  if(state.filtro!=='todos'){
-    const f = state.filtro.toLowerCase();
-    view = view.filter(g => (g.linha||'').toLowerCase().includes(f) || g.linhas.includes(f));
-  }
-  if(!view.length){ empty.style.display='block'; return; }
-
-  view.forEach((g,idx)=>{
-    const card = document.createElement('div');
-    card.className='card';
-
-    const total = g.imagens.length;
-    const first = g.imagens[0];
-    const conjBadge = g.isConj ? '<div class="badge">Conjunto</div>' : '';
-    const priceHtml = g.pricing ? '<div class="price"><small>'+ (g.pricing.de?(''+(g.pricing.de).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})):'') +'</small>'+ (g.pricing.por).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) +' '+(g.pricing.pct?'<span style="font-weight:600">('+g.pricing.pct+'% OFF)</span>':'')+'</div>' : '';
-
-    card.innerHTML = `
-      <div class="imgbox" data-idx="${idx}" data-i="0">
-        <img src="${first}" alt="">
-        ${conjBadge}
-        ${priceHtml}
-        <div class="counter">${total} foto${total>1?'s':''}</div>
-        ${ total>1 ? '<div class="nav l" title="Anterior">❮</div><div class="nav r" title="Próxima">❯</div>' : '' }
-      </div>
-      <div class="content">
-        <div class="desc">${g.desc}</div>
-        ${ g.isConj && g.pricing ? '<div class="saving">Comprando separados sairia por <b>'+ (g.pricing.sumPor).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) +'</b>. No kit completo sai por <b>'+ (g.pricing.por).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) +'</b> (economize <b>'+ (g.pricing.save).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) +'</b>).</div>' : '' }
-        <div class="tags">${g.tags}</div>
-        <div class="row">
-          <a class="btn" target="_blank" href="${g.url_whatsapp}">Pedir no WhatsApp</a>
-          <a class="btn sec" target="_blank" href="${first}">Abrir imagem</a>
-        </div>
-      </div>`;
-
-    // navegação entre imagens dentro do card
-    if(total>1){
-      const box=card.querySelector('.imgbox');
-      const img=box.querySelector('img');
-      const left=box.querySelector('.nav.l');
-      const right=box.querySelector('.nav.r');
-      function show(i){ if(i<0) i=total-1; if(i>=total) i=0; box.dataset.i=i; img.src=g.imagens[i]; }
-      left && (left.onclick=()=>show( (parseInt(box.dataset.i)||0)-1 ));
-      right && (right.onclick=()=>show( (parseInt(box.dataset.i)||0)+1 ));
+  // navegação + touch mobile
+  let i=0;
+  const img = el.querySelector('img');
+  const left = el.querySelector('.nav.l');
+  const right= el.querySelector('.nav.r');
+  function show(di){ i=(i+di+total)%total; img.src = imgs[i]; }
+  left.addEventListener('click', e=>{e.preventDefault(); show(-1);}, {passive:false});
+  right.addEventListener('click', e=>{e.preventDefault(); show(+1);}, {passive:false});
+  el.querySelector('.imgbox').addEventListener('touchstart', (ev)=>{
+    const start = ev.changedTouches[0].clientX;
+    function end(ev2){
+      const dx = ev2.changedTouches[0].clientX - start;
+      if (Math.abs(dx)>40) show(dx<0?+1:-1);
+      el.removeEventListener('touchend', end);
     }
+    el.addEventListener('touchend', end, {passive:true});
+  }, {passive:true});
 
-    grid.appendChild(card);
-  });
+  const btn = el.querySelector('#wa-'+g.sku);
+  const ck = el.querySelector('#ck-'+g.sku);
+  const qt = el.querySelector('#qt-'+g.sku);
+  function buildMsg(){
+    const isKit = ck.checked;
+    const qty = Math.max(1, parseInt(qt.value||'1',10));
+    const header = '*Pedido LLPC*%0A';
+    const item = isKit
+      ? ('Quero *KIT COMPLETO* do tema *'+(g.tema||'')+'* — '+g.linha+' — '+g.titulo+'.')
+      : ('Quero *'+qty+'x* — '+g.titulo+' — '+g.linha+' — tema '+(g.tema||'')+'.');
+    const price = p ? ('%0A*Preço WhatsApp:* '+moeda(p.wha)) : '';
+    const sku = g.sku ? ('%0A*SKU:* '+g.sku) : '';
+    const link = imgs[0]? ('%0AImagem: '+imgs[0]) : '';
+    return header + item + price + sku + link;
+  }
+  function upd(){ btn.href = wa(buildMsg()); }
+  upd();
+  ck.addEventListener('change', upd);
+  qt.addEventListener('input', upd);
+
+  return el;
 }
 
-boot().catch(err=>{
-  byId('grid').innerHTML = '<div class="empty">Erro ao carregar dados.</div>';
-  console.error(err);
-});
-</script></body></html>
+(async()=>{
+  try{
+    const [temar, precos] = await Promise.all([fetch(temaUrl), fetch(precosUrl)]);
+    if (!temar.ok) throw new Error('Tema não encontrado');
+    const tema = await temar.json();
+    const prec = precos.ok ? await precos.json() : {};
+
+    document.getElementById('h1').textContent = tema.tema;
+    const chips = new Set(tema.cards.map(c=>c.linha));
+    document.getElementById('chips').innerHTML = [...chips].map(x=>'<span class="badge">'+x+'</span>').join(' ');
+
+    const grid = document.getElementById('grid');
+    for (const g of tema.cards){
+      grid.appendChild(card(g, prec));
+    }
+  }catch(err){
+    document.getElementById('grid').innerHTML = '<div class="empty">Erro ao carregar dados.</div>';
+    console.error(err);
+  }
+})();
+</script></html>
