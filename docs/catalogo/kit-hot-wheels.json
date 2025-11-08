@@ -1,717 +1,769 @@
 {
-  "tema": "Kit Hot Wheels",
   "slug": "kit-hot-wheels",
-  "cards": [
+  "tema": "Kit Hot Wheels",
+  "linha": "Kit 04 - Luxo",
+  "grupos": [
     {
       "titulo": "LLPC K L hot wheels LifestyleConjunto",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/LLPC-K-L-hot-wheels-LifestyleConjunto.jpg"
-      ],
-      "sku": "LLPC-TB-L; LLPC-ML-L; LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/LLPC-K-L-hot-wheels-LifestyleConjunto.jpg/LLPC-K-L-hot-wheels-LifestyleConjunto.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB L hot wheels Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-TB-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-hot-wheels-Ângulo3-4.jpg/LLPC-TB-L-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TB L hot wheels",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC TB L hot wheels Detalhe",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-Verso.jpg"
-      ],
-      "sku": "LLPC-TB-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-hot-wheels-Detalhe.jpg/LLPC-TB-L-hot-wheels-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB L hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-hot-wheels-Escala.jpg/LLPC-TB-L-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB L hot wheels Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-TB-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-hot-wheels-Hero.jpg/LLPC-TB-L-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB L hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-hot-wheels-Variação.jpg/LLPC-TB-L-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB L hot wheels Verso",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Topo de Bolo Luxo/LLPC-TB-L-hot-wheels-Verso.jpg/LLPC-TB-L-hot-wheels-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC ML F hot wheels Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Maleta%20Ferramentas%20Luxo/LLPC-ML-F-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-ML-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Maleta Ferramentas Luxo/LLPC-ML-F-hot-wheels-Ângulo3-4.jpg/LLPC-ML-F-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC ML F hot wheels",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC ML F hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Maleta%20Ferramentas%20Luxo/LLPC-ML-F-hot-wheels-Verso.jpg"
-      ],
-      "sku": "LLPC-ML-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Maleta Ferramentas Luxo/LLPC-ML-F-hot-wheels-Verso.jpg/LLPC-ML-F-hot-wheels-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC ML F hot wheels Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Maleta%20Ferramentas%20Luxo/LLPC-ML-F-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-ML-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Maleta Ferramentas Luxo/LLPC-ML-F-hot-wheels-Hero.jpg/LLPC-ML-F-hot-wheels-Hero.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL PS hot wheels",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL PS hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-PS-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-PS-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-PS-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-PS-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-PS-hot-wheels-Verso.jpg/LLPC-CL-PS-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL PS hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-PS-hot-wheels-Variação.jpg/LLPC-CL-PS-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL PS hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-PS-hot-wheels-Escala.jpg/LLPC-CL-PS-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL PS hot wheels Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-PS-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-PS-hot-wheels-Hero.jpg/LLPC-CL-PS-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL PS hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-PS-hot-wheels-Detalhe.jpg/LLPC-CL-PS-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL PS hot wheels Ângulo",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-PS-hot-wheels-%C3%82ngulo.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Pirâmide Shaker Luxo/LLPC-CL-PS-hot-wheels-Ângulo.jpg/LLPC-CL-PS-hot-wheels-Ângulo.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL M hot wheels Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-M-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Milk Luxo/LLPC-CL-M-hot-wheels-Ângulo3-4.jpg/LLPC-CL-M-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL M hot wheels",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL M hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-M-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-M-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-M-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-M-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Milk Luxo/LLPC-CL-M-hot-wheels-Verso.jpg/LLPC-CL-M-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL M hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Milk Luxo/LLPC-CL-M-hot-wheels-Variação.jpg/LLPC-CL-M-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL M hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Milk Luxo/LLPC-CL-M-hot-wheels-Escala.jpg/LLPC-CL-M-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL M hot wheels Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-M-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Milk Luxo/LLPC-CL-M-hot-wheels-Hero.jpg/LLPC-CL-M-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL M hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Milk Luxo/LLPC-CL-M-hot-wheels-Detalhe.jpg/LLPC-CL-M-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL C hot wheels Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-C-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Cenário Luxo/LLPC-CL-C-hot-wheels-Ângulo3-4.jpg/LLPC-CL-C-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL C hot wheels",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL C hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-C-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-C-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-C-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-C-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Cenário Luxo/LLPC-CL-C-hot-wheels-Verso.jpg/LLPC-CL-C-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Cenário Luxo/LLPC-CL-C-hot-wheels-Variação.jpg/LLPC-CL-C-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Cenário Luxo/LLPC-CL-C-hot-wheels-Escala.jpg/LLPC-CL-C-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL C hot wheels Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-C-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Cenário Luxo/LLPC-CL-C-hot-wheels-Hero.jpg/LLPC-CL-C-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL C hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Cenário Luxo/LLPC-CL-C-hot-wheels-Detalhe.jpg/LLPC-CL-C-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL B hot wheels Ângulo3 4",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Blister%20Luxo/LLPC-CL-B-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Blister Luxo/LLPC-CL-B-hot-wheels-Ângulo3-4.jpg/LLPC-CL-B-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL B hot wheels",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL B hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Blister%20Luxo/LLPC-CL-B-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Blister%20Luxo/LLPC-CL-B-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Blister%20Luxo/LLPC-CL-B-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Blister Luxo/LLPC-CL-B-hot-wheels-Verso.jpg/LLPC-CL-B-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL B hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Blister Luxo/LLPC-CL-B-hot-wheels-Escala.jpg/LLPC-CL-B-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL B hot wheels Hero",
-      "linha": "Kit 04 - Luxo",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Blister%20Luxo/LLPC-CL-B-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-L"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Blister Luxo/LLPC-CL-B-hot-wheels-Hero.jpg/LLPC-CL-B-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL B hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 04 - Luxo/Caixa Blister Luxo/LLPC-CL-B-hot-wheels-Detalhe.jpg/LLPC-CL-B-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC K P hot wheels LifestyleConjunto",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/LLPC-K-P-hot-wheels-LifestyleConjunto.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P; LLPC-TB-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/LLPC-K-P-hot-wheels-LifestyleConjunto.jpg/LLPC-K-P-hot-wheels-LifestyleConjunto.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P B hot wheels Ângulo3 4",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Bala%20Premium%20/LLPC-CL-P-B-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Bala Premium /LLPC-CL-P-B-hot-wheels-Ângulo3-4.jpg/LLPC-CL-P-B-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P B hot wheels Hero",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Bala%20Premium%20/LLPC-CL-P-B-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Bala Premium /LLPC-CL-P-B-hot-wheels-Hero.jpg/LLPC-CL-P-B-hot-wheels-Hero.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL P B hot wheels",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL P B hot wheels Escala",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Bala%20Premium%20/LLPC-CL-P-B-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Bala%20Premium%20/LLPC-CL-P-B-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Bala Premium /LLPC-CL-P-B-hot-wheels-Escala.jpg/LLPC-CL-P-B-hot-wheels-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P B hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Bala Premium /LLPC-CL-P-B-hot-wheels-Detalhe.jpg/LLPC-CL-P-B-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P S hot wheels Ângulo3 4",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-S-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Sacolinha Premium /LLPC-CL-P-S-hot-wheels-Ângulo3-4.jpg/LLPC-CL-P-S-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL P S hot wheels",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL P S hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-S-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-S-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-S-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-S-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Sacolinha Premium /LLPC-CL-P-S-hot-wheels-Verso.jpg/LLPC-CL-P-S-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P S hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Sacolinha Premium /LLPC-CL-P-S-hot-wheels-Variação.jpg/LLPC-CL-P-S-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P S hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Sacolinha Premium /LLPC-CL-P-S-hot-wheels-Escala.jpg/LLPC-CL-P-S-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P S hot wheels Hero",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-S-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Sacolinha Premium /LLPC-CL-P-S-hot-wheels-Hero.jpg/LLPC-CL-P-S-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P S hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Sacolinha Premium /LLPC-CL-P-S-hot-wheels-Detalhe.jpg/LLPC-CL-P-S-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P T hot wheels Ângulo3 4",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-hot-wheels-Ângulo3-4.jpg/LLPC-CL-P-T-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL P T hot wheels",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL P T hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-hot-wheels-Verso.jpg/LLPC-CL-P-T-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P T hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-hot-wheels-Variação.jpg/LLPC-CL-P-T-hot-wheels-Variação.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P T hot wheels Hero",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-hot-wheels-Hero.jpg/LLPC-CL-P-T-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P T hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-hot-wheels-Escala.jpg/LLPC-CL-P-T-hot-wheels-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P T hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Tubete Premium/LLPC-CL-P-T-hot-wheels-Detalhe.jpg/LLPC-CL-P-T-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P P hot wheels Ângulo3 4",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Pirâmide Premium /LLPC-CL-P-P-hot-wheels-Ângulo3-4.jpg/LLPC-CL-P-P-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL P P hot wheels",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL P P hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-Escala.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Pirâmide Premium /LLPC-CL-P-P-hot-wheels-Verso.jpg/LLPC-CL-P-P-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P P hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Pirâmide Premium /LLPC-CL-P-P-hot-wheels-Detalhe.jpg/LLPC-CL-P-P-hot-wheels-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P P hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Pirâmide Premium /LLPC-CL-P-P-hot-wheels-Escala.jpg/LLPC-CL-P-P-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P P hot wheels Frontal",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-Frontal.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Pirâmide Premium /LLPC-CL-P-P-hot-wheels-Frontal.jpg/LLPC-CL-P-P-hot-wheels-Frontal.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P P hot wheels Hero",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Caixa Pirâmide Premium /LLPC-CL-P-P-hot-wheels-Hero.jpg/LLPC-CL-P-P-hot-wheels-Hero.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB P hot wheels Ângulo3 4",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-TB-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-hot-wheels-Ângulo3-4.jpg/LLPC-TB-P-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TB P hot wheels",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC TB P hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-Escala.jpg"
-      ],
-      "sku": "LLPC-TB-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-hot-wheels-Verso.jpg/LLPC-TB-P-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB P hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-hot-wheels-Variação.jpg/LLPC-TB-P-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB P hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-hot-wheels-Detalhe.jpg/LLPC-TB-P-hot-wheels-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB P hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-hot-wheels-Escala.jpg/LLPC-TB-P-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB P hot wheels Hero",
-      "linha": "Kit 03 - Premium",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-TB-P"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 03 - Premium/Topo de Bolo Premium/LLPC-TB-P-hot-wheels-Hero.jpg/LLPC-TB-P-hot-wheels-Hero.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL K hot wheels LifestyleConjunto",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/LLPC-CL-K-hot-wheels-LifestyleConjunto.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C; LLPC-TB-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/LLPC-CL-K-hot-wheels-LifestyleConjunto.jpg/LLPC-CL-K-hot-wheels-LifestyleConjunto.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL T hot wheels Ângulo3 4",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-T-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-T-hot-wheels-Ângulo3-4.jpg/LLPC-CL-T-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL T hot wheels",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL T hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-T-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-T-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-T-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-T-hot-wheels-Verso.jpg/LLPC-CL-T-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL T hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-T-hot-wheels-Escala.jpg/LLPC-CL-T-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL T hot wheels Frontal",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-T-hot-wheels-Frontal.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-T-hot-wheels-Frontal.jpg/LLPC-CL-T-hot-wheels-Frontal.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL T hot wheels Hero",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-T-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-T-hot-wheels-Hero.jpg/LLPC-CL-T-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL T hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Tubete Clássico/LLPC-CL-T-hot-wheels-Detalhe.jpg/LLPC-CL-T-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL SC hot wheels Ângulo3 4",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-SC-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Sacolinha Clássico/LLPC-CL-SC-hot-wheels-Ângulo3-4.jpg/LLPC-CL-SC-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL SC hot wheels",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL SC hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-SC-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-SC-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-SC-hot-wheels-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-SC-hot-wheels-Escala.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Sacolinha Clássico/LLPC-CL-SC-hot-wheels-Verso.jpg/LLPC-CL-SC-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL SC hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Sacolinha Clássico/LLPC-CL-SC-hot-wheels-Variação.jpg/LLPC-CL-SC-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL SC hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Sacolinha Clássico/LLPC-CL-SC-hot-wheels-Detalhe.jpg/LLPC-CL-SC-hot-wheels-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL SC hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Sacolinha Clássico/LLPC-CL-SC-hot-wheels-Escala.jpg/LLPC-CL-SC-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL SC hot wheels Hero",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-SC-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Sacolinha Clássico/LLPC-CL-SC-hot-wheels-Hero.jpg/LLPC-CL-SC-hot-wheels-Hero.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL MK hot wheels Ângulo3 4",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-MK-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-MK-hot-wheels-Ângulo3-4.jpg/LLPC-CL-MK-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL MK hot wheels",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL MK hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-MK-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-MK-hot-wheels-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-MK-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-MK-hot-wheels-Varia%C3%A7%C3%A3o.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-MK-hot-wheels-Verso.jpg/LLPC-CL-MK-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL MK hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-MK-hot-wheels-Detalhe.jpg/LLPC-CL-MK-hot-wheels-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL MK hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-MK-hot-wheels-Escala.jpg/LLPC-CL-MK-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL MK hot wheels Hero",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-MK-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-MK-hot-wheels-Hero.jpg/LLPC-CL-MK-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL MK hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Milk Clássico/LLPC-CL-MK-hot-wheels-Variação.jpg/LLPC-CL-MK-hot-wheels-Variação.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P hot wheels Ângulo3 4",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-P-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Pirâmide Clássico /LLPC-CL-P-hot-wheels-Ângulo3-4.jpg/LLPC-CL-P-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL P hot wheels",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL P hot wheels Escala",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-P-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-P-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-P-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-P-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Pirâmide Clássico /LLPC-CL-P-hot-wheels-Escala.jpg/LLPC-CL-P-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL P hot wheels Hero",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-P-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Pirâmide Clássico /LLPC-CL-P-hot-wheels-Hero.jpg/LLPC-CL-P-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P hot wheels Verso",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Pirâmide Clássico /LLPC-CL-P-hot-wheels-Verso.jpg/LLPC-CL-P-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Pirâmide Clássico /LLPC-CL-P-hot-wheels-Variação.jpg/LLPC-CL-P-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL P hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Caixa Pirâmide Clássico /LLPC-CL-P-hot-wheels-Detalhe.jpg/LLPC-CL-P-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB C hot wheels Ângulo3 4",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-TB-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-hot-wheels-Ângulo3-4.jpg/LLPC-TB-C-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TB C hot wheels",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC TB C hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-TB-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-hot-wheels-Verso.jpg/LLPC-TB-C-hot-wheels-Verso.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TB C hot wheels Ângulo",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC TB C hot wheels Variação",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-%C3%82ngulo-Escala.jpg"
-      ],
-      "sku": "LLPC-TB-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-hot-wheels-Variação.jpg/LLPC-TB-C-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB C hot wheels Ângulo Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-hot-wheels-Ângulo-Escala.jpg/LLPC-TB-C-hot-wheels-Ângulo-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB C hot wheels Ângulo Hero",
-      "linha": "Kit 02 - Clássico",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-%C3%82ngulo-Hero.jpg"
-      ],
-      "sku": "LLPC-TB-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-hot-wheels-Ângulo-Hero.jpg/LLPC-TB-C-hot-wheels-Ângulo-Hero.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TT E hot wheels",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC TB C hot wheels Detalhe",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topper%20Essencial/LLPC-TT-E-hot-wheels-Verso.jpg"
-      ],
-      "sku": "LLPC-TT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 02 - Clássico/Topo de Bolo Clássico/LLPC-TB-C-hot-wheels-Detalhe.jpg/LLPC-TB-C-hot-wheels-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TT E hot wheels Verso",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Topper Essencial/LLPC-TT-E-hot-wheels-Verso.jpg/LLPC-TT-E-hot-wheels-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC TT E hot wheels Hero",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topper%20Essencial/LLPC-TT-E-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-TT-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Topper Essencial/LLPC-TT-E-hot-wheels-Hero.jpg/LLPC-TT-E-hot-wheels-Hero.jpg"
+      ]
     },
     {
-      "titulo": "LLPC F E hot wheels",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC F E hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Forminha%20Essencial/LLPC-F-E-hot-wheels-Verso.jpg"
-      ],
-      "sku": "LLPC-F-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Forminha Essencial/LLPC-F-E-hot-wheels-Verso.jpg/LLPC-F-E-hot-wheels-Verso.jpg"
+      ]
     },
     {
       "titulo": "LLPC F E hot wheels Hero",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Forminha%20Essencial/LLPC-F-E-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-F-C"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Forminha Essencial/LLPC-F-E-hot-wheels-Hero.jpg/LLPC-F-E-hot-wheels-Hero.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E T hot wheels Ângulo3 4",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Tubete Essencial/LLPC-CL-E-T-hot-wheels-Ângulo3-4.jpg/LLPC-CL-E-T-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL E T hot wheels",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL E T hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Tubete Essencial/LLPC-CL-E-T-hot-wheels-Verso.jpg/LLPC-CL-E-T-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E T hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Tubete Essencial/LLPC-CL-E-T-hot-wheels-Variação.jpg/LLPC-CL-E-T-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E T hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Tubete Essencial/LLPC-CL-E-T-hot-wheels-Escala.jpg/LLPC-CL-E-T-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E T hot wheels Hero",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Tubete Essencial/LLPC-CL-E-T-hot-wheels-Hero.jpg/LLPC-CL-E-T-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E T hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Tubete Essencial/LLPC-CL-E-T-hot-wheels-Detalhe.jpg/LLPC-CL-E-T-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E S hot wheels Ângulo3 4",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-S-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Sacolinha Essencial/LLPC-CL-E-S-hot-wheels-Ângulo3-4.jpg/LLPC-CL-E-S-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL E S hot wheels",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL E S hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-S-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-S-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-S-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-S-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Sacolinha Essencial/LLPC-CL-E-S-hot-wheels-Verso.jpg/LLPC-CL-E-S-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E S hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Sacolinha Essencial/LLPC-CL-E-S-hot-wheels-Variação.jpg/LLPC-CL-E-S-hot-wheels-Variação.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E S hot wheels Hero",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-S-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Sacolinha Essencial/LLPC-CL-E-S-hot-wheels-Hero.jpg/LLPC-CL-E-S-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E S hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Sacolinha Essencial/LLPC-CL-E-S-hot-wheels-Escala.jpg/LLPC-CL-E-S-hot-wheels-Escala.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E S hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Sacolinha Essencial/LLPC-CL-E-S-hot-wheels-Detalhe.jpg/LLPC-CL-E-S-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E P hot wheels Ângulo3 4",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Pirâmide Essencial/LLPC-CL-E-P-hot-wheels-Ângulo3-4.jpg/LLPC-CL-E-P-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL E P hot wheels",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL E P hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Pirâmide Essencial/LLPC-CL-E-P-hot-wheels-Verso.jpg/LLPC-CL-E-P-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E P hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Pirâmide Essencial/LLPC-CL-E-P-hot-wheels-Variação.jpg/LLPC-CL-E-P-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E P hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Pirâmide Essencial/LLPC-CL-E-P-hot-wheels-Escala.jpg/LLPC-CL-E-P-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E P hot wheels Hero",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Pirâmide Essencial/LLPC-CL-E-P-hot-wheels-Hero.jpg/LLPC-CL-E-P-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E P hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Pirâmide Essencial/LLPC-CL-E-P-hot-wheels-Detalhe.jpg/LLPC-CL-E-P-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E MK hot wheels Ângulo3 4",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-%C3%82ngulo3-4.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Milk Essencial/LLPC-CL-E-MK-hot-wheels-Ângulo3-4.jpg/LLPC-CL-E-MK-hot-wheels-Ângulo3-4.jpg"
+      ]
     },
     {
-      "titulo": "LLPC CL E MK hot wheels",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC CL E MK hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-Detalhe.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-Escala.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Milk Essencial/LLPC-CL-E-MK-hot-wheels-Verso.jpg/LLPC-CL-E-MK-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E MK hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Milk Essencial/LLPC-CL-E-MK-hot-wheels-Variação.jpg/LLPC-CL-E-MK-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E MK hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Milk Essencial/LLPC-CL-E-MK-hot-wheels-Detalhe.jpg/LLPC-CL-E-MK-hot-wheels-Detalhe.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC CL E MK hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Milk Essencial/LLPC-CL-E-MK-hot-wheels-Escala.jpg/LLPC-CL-E-MK-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC CL E MK hot wheels Hero",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-CL-MT-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Caixa Milk Essencial/LLPC-CL-E-MK-hot-wheels-Hero.jpg/LLPC-CL-E-MK-hot-wheels-Hero.jpg"
+      ]
     },
     {
-      "titulo": "LLPC TB E hot wheels",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
+      "titulo": "LLPC TB E hot wheels Verso",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-Verso.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-Varia%C3%A7%C3%A3o.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-Escala.jpg",
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-Detalhe.jpg"
-      ],
-      "sku": "LLPC-TB-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Topo de Bolo Essencial/LLPC-TB-E-hot-wheels-Verso.jpg/LLPC-TB-E-hot-wheels-Verso.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB E hot wheels Variação",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Topo de Bolo Essencial/LLPC-TB-E-hot-wheels-Variação.jpg/LLPC-TB-E-hot-wheels-Variação.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB E hot wheels Escala",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Topo de Bolo Essencial/LLPC-TB-E-hot-wheels-Escala.jpg/LLPC-TB-E-hot-wheels-Escala.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB E hot wheels Hero",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-Hero.jpg"
-      ],
-      "sku": "LLPC-TB-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Topo de Bolo Essencial/LLPC-TB-E-hot-wheels-Hero.jpg/LLPC-TB-E-hot-wheels-Hero.jpg"
+      ]
+    },
+    {
+      "titulo": "LLPC TB E hot wheels Detalhe",
+      "imagens": [
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Topo de Bolo Essencial/LLPC-TB-E-hot-wheels-Detalhe.jpg/LLPC-TB-E-hot-wheels-Detalhe.jpg"
+      ]
     },
     {
       "titulo": "LLPC TB E hot wheels Ângulo",
-      "linha": "Kit 01 - Essencial",
-      "tema": "Kit Hot Wheels",
       "imagens": [
-        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-%C3%82ngulo.jpg"
-      ],
-      "sku": "LLPC-TB-E"
+        "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit Hot Wheels/Kit 01 - Essencial/Topo de Bolo Essencial/LLPC-TB-E-hot-wheels-Ângulo.jpg/LLPC-TB-E-hot-wheels-Ângulo.jpg"
+      ]
     }
   ]
 }
