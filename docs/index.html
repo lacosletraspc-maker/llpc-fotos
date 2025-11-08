@@ -10,26 +10,22 @@
   <footer>LLPC • Laços & Letras Papelaria Criativa</footer>
 </div>
 <script type="module">
-const base = location.pathname.replace(/\/[^/]*$/,''); // /llpc-fotos/
-const repoRaw = location.origin + base; // GitHub Pages
+const base = location.pathname.replace(/\/[^/]*$/,''); // /llpc-fotos ou /llpc-fotos/
 async function fetchCatalogList(){
-  // Heurística: buscar arquivos em /catalogo/ no branch main via lista estática
-  // (Alternativa: manter um index.json — aqui tentamos os conhecidos)
-  const temas = ['kit-a-bela-e-a-fera','kit-hot-wheels'];
-  const found = [];
-  for (const slug of temas){
-    try{
-      const r = await fetch(`${base}/catalogo/${slug}.json`);
-      if (r.ok){ found.push(await r.json()); }
-    }catch{}
+  try{
+    const r = await fetch(base + '/catalogo/index.json');
+    if (!r.ok) throw new Error('index.json não encontrado');
+    return await r.json();
+  }catch(e){
+    console.error(e);
+    return [];
   }
-  return found;
 }
 function cardTema(t){
   return `
   <a class="card" href="./lp-tema.html?tema=${encodeURIComponent(t.slug)}">
-    <div class="imgbox"><img src="${t.cards[0]?.imagens?.[0]||''}" alt=""/></div>
-    <div class="meta"><h3>${t.tema}</h3><div class="row"><span class="badge">${t.cards.length} produtos</span></div></div>
+    <div class="imgbox"><img src="${t.thumb||''}" alt=""/></div>
+    <div class="meta"><h3>${t.tema}</h3><div class="row"><span class="badge">${t.total} produtos</span></div></div>
   </a>`;
 }
 (async()=>{
