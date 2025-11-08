@@ -10,7 +10,7 @@
   <footer>LLPC • Laços & Letras Papelaria Criativa</footer>
 </div>
 <script type="module">
-const base = location.pathname.replace(//[^/]*$/,''); // /llpc-fotos ou /llpc-fotos/
+const base = location.pathname.replace(/\/[^/]*$/,''); // /llpc-fotos ou /llpc-fotos/
 async function fetchCatalogList(){
   try{
     const r = await fetch(base + '/catalogo/index.json');
