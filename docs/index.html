@@ -1,25 +1,35 @@
 <!doctype html>
-<html lang="pt-BR"><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>LLPC • Catálogo de temas</title>
-<link rel="stylesheet" href="./style.css"/>
-<div class="container">
-  <h1>LLPC • Catálogo de temas</h1>
-  <p>Clique no tema para ver todas as fotos com preços e pedir pelo WhatsApp.</p>
-  <div id="temas" class="grid"></div>
-  <footer>LLPC • Laços & Letras Papelaria Criativa</footer>
-</div>
-<script type="module">
-async function fetchCatalogList(){
-  try{
-    const r = await fetch('catalogo/index.json'); // relativo
-    if(!r.ok) throw new Error('index.json não encontrado'); 
-    return await r.json();
-  }catch(e){ console.error(e); return []; }
-}
-function cardTema(t){ return `
-  <a class="card" href="./lp-tema.html?tema=${encodeURIComponent(t.slug)}">
-    <div class="imgbox"><img src="${t.thumb||''}" alt=""/></div>
-    <div class="meta"><h3>${t.tema}</h3><div class="row"><span class="badge">${t.total} produtos</span></div></div>
-  </a>`; }
-(async()=>{ const temas=await fetchCatalogList(); document.getElementById('temas').innerHTML = temas.map(cardTema).join(''); })();
-</script></html>
+<link rel="stylesheet" href="style.css?v=1762636295139">
+</head>
+<body>
+  <main class="container">
+    <h1>LLPC • Catálogo de temas</h1>
+    <p>Clique no tema para ver todas as fotos com preços e pedir pelo WhatsApp.</p>
+    <section id="lista" class="grid"></section>
+    <footer>LLPC • Laços & Letras Papelaria Criativa</footer>
+  </main>
+<script>
+(async ()=>{
+  const bust='?v=' + Date.now();
+  // relativo a /docs/
+  const res = await fetch('catalogo/index.json'+bust, {cache:'no-store'});
+  if(!res.ok){ document.getElementById('lista').innerHTML='<p class="empty">Erro ao carregar lista de temas.</p>'; return; }
+  const data = await res.json();
+  const el = document.getElementById('lista');
+  const base = location.pathname.replace(/[^\\/]*$/, '');
+  for(const t of (data.temas||[])){
+    const a = document.createElement('a');
+    a.href = 'lp-tema.html?tema=' + encodeURIComponent(t.slug);
+    a.className='card';
+    a.innerHTML = '<div class="card-body"><h3>'+t.titulo+'</h3><span class="pill">'+(t.total||0)+' fotos</span></div>';
+    el.appendChild(a);
+  }
+})();
+</script>
+</body>
+</html>
