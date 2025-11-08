@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<html lang="pt-BR"><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>LLPC • Tema</title>
 <link rel="stylesheet" href="./style.css"/>
 <div class="container">
@@ -13,104 +12,72 @@
 <script type="module">
 const qs = new URLSearchParams(location.search);
 const slug = qs.get('tema') || '';
-const base = location.pathname.replace(/\/[^/]*$/,''); // /llpc-fotos
-const precosUrl = base + '/precos.json';
-const temaUrl = base + '/catalogo/' + slug + '.json';
-
 const PHONE = '5519989848246';
 const moeda = v => (v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 const wa = text => 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(text);
 
 function card(g, precos){
   const p = g.sku ? (precos[g.sku] || null) : null;
-  const imgs = g.imagens||[];
-  const total = imgs.length;
-  const priceFrom = p ? p.pub : null;
-  const priceTo   = p ? p.wha : null;
+  const imgs = g.imagens||[]; const total = imgs.length;
+  const priceFrom = p? p.pub : null; const priceTo = p? p.wha : null;
 
-  const el = document.createElement('div');
-  el.className='card';
-
+  const el = document.createElement('div'); el.className='card';
   el.innerHTML = `
-  <div class="imgbox">
-    <a class="nav l">‹</a>
-    <img src="${imgs[0]||''}" alt=""/>
-    <a class="nav r">›</a>
-    <span class="count">${total} foto${total>1?'s':''}</span>
-    ${priceTo?('<span class="price">'+moeda(priceTo)+' <small>('+(Math.round((1-(priceTo/(priceFrom||1)))*100))+'% OFF)</small></span>'):''}
-  </div>
-  <div class="meta">
-    <div style="font-weight:700; margin-bottom:6px">${g.titulo} — ${g.linha} | LLPC</div>
-    ${p?('<div style="color:#9fb5b1; margin-bottom:12px">Comprando separados sairia por <b>'+moeda(p.pub)+'</b>. No WhatsApp sai por <b>'+moeda(p.wha)+'</b>.</div>'): ''}
-    <div class="row" style="margin-bottom:12px">
-      <label class="switch"><input type="checkbox" id="ck-${g.sku}"/> <span>Kit completo</span></label>
-      <input type="number" min="1" step="1" value="1" class="qty" id="qt-${g.sku}" title="Quantidade"/>
+    <div class="imgbox">
+      <a class="nav l">‹</a>
+      <img src="${imgs[0]||''}" alt=""/>
+      <a class="nav r">›</a>
+      <span class="count">${total} foto${total>1?'s':''}</span>
+      ${priceTo?('<span class="price">'+moeda(priceTo)+' <small>('+(Math.round((1-(priceTo/(priceFrom||1)))*100))+'% OFF)</small></span>'):''}
     </div>
-    <div class="row">
-      <a class="btn" id="wa-${g.sku}">Pedir no WhatsApp</a>
-      <a class="btn secondary" target="_blank" href="${imgs[0]||'#'}">Abrir imagem</a>
-    </div>
-  </div>`;
+    <div class="meta">
+      <div style="font-weight:700; margin-bottom:6px">${g.titulo} — ${g.linha} | LLPC</div>
+      ${p?('<div style="color:#9fb5b1; margin-bottom:12px">Comprando separados sairia por <b>'+moeda(p.pub)+'</b>. No WhatsApp sai por <b>'+moeda(p.wha)+'</b>.</div>'):''}
+      <div class="row" style="margin-bottom:12px">
+        <label class="switch"><input type="checkbox" id="ck-${g.sku}"/> <span>Kit completo</span></label>
+        <input type="number" min="1" step="1" value="1" class="qty" id="qt-${g.sku}" title="Quantidade"/>
+      </div>
+      <div class="row">
+        <a class="btn" id="wa-${g.sku}">Pedir no WhatsApp</a>
+        <a class="btn secondary" target="_blank" href="${imgs[0]||'#'}">Abrir imagem</a>
+      </div>
+    </div>`;
 
-  // navegação + touch mobile
-  let i=0;
-  const img = el.querySelector('img');
-  const left = el.querySelector('.nav.l');
-  const right= el.querySelector('.nav.r');
-  function show(di){ i=(i+di+total)%total; img.src = imgs[i]; }
-  left.addEventListener('click', e=>{e.preventDefault(); show(-1);}, {passive:false});
-  right.addEventListener('click', e=>{e.preventDefault(); show(+1);}, {passive:false});
+  let i=0; const img=el.querySelector('img'), L=el.querySelector('.nav.l'), R=el.querySelector('.nav.r');
+  function show(d){ i=(i+d+total)%total; img.src=imgs[i]; }
+  L.addEventListener('click', e=>{e.preventDefault(); show(-1);},{passive:false});
+  R.addEventListener('click', e=>{e.preventDefault(); show(+1);},{passive:false});
   el.querySelector('.imgbox').addEventListener('touchstart', (ev)=>{
-    const start = ev.changedTouches[0].clientX;
-    function end(ev2){
-      const dx = ev2.changedTouches[0].clientX - start;
-      if (Math.abs(dx)>40) show(dx<0?+1:-1);
-      el.removeEventListener('touchend', end);
-    }
+    const sx=ev.changedTouches[0].clientX; function end(ev2){ const dx=ev2.changedTouches[0].clientX-sx; if(Math.abs(dx)>40) show(dx<0?+1:-1); el.removeEventListener('touchend', end); }
     el.addEventListener('touchend', end, {passive:true});
   }, {passive:true});
 
-  const btn = el.querySelector('#wa-'+g.sku);
-  const ck = el.querySelector('#ck-'+g.sku);
-  const qt = el.querySelector('#qt-'+g.sku);
-  function buildMsg(){
-    const isKit = ck.checked;
-    const qty = Math.max(1, parseInt(qt.value||'1',10));
-    const header = '*Pedido LLPC*%0A';
-    const item = isKit
-      ? ('Quero *KIT COMPLETO* do tema *'+(g.tema||'')+'* — '+g.linha+' — '+g.titulo+'.')
-      : ('Quero *'+qty+'x* — '+g.titulo+' — '+g.linha+' — tema '+(g.tema||'')+'.');
-    const price = p ? ('%0A*Preço WhatsApp:* '+moeda(p.wha)) : '';
-    const sku = g.sku ? ('%0A*SKU:* '+g.sku) : '';
-    const link = imgs[0]? ('%0AImagem: '+imgs[0]) : '';
-    return header + item + price + sku + link;
+  const btn=el.querySelector('#wa-'+g.sku), ck=el.querySelector('#ck-'+g.sku), qt=el.querySelector('#qt-'+g.sku);
+  function msg(){
+    const isKit=ck.checked; const qty=Math.max(1, parseInt(qt.value||'1',10));
+    const header='*Pedido LLPC*%0A';
+    const item=isKit?('Quero *KIT COMPLETO* do tema *'+(g.tema||'')+'* — '+g.linha+' — '+g.titulo+'.') : ('Quero *'+qty+'x* — '+g.titulo+' — '+g.linha+' — tema '+(g.tema||'')+'.');
+    const price=p?('%0A*Preço WhatsApp:* '+moeda(p.wha)):'';
+    const sku=g.sku?('%0A*SKU:* '+g.sku):''; const link=imgs[0]?('%0AImagem: '+imgs[0]):'';
+    return header+item+price+sku+link;
   }
-  function upd(){ btn.href = wa(buildMsg()); }
-  upd();
-  ck.addEventListener('change', upd);
-  qt.addEventListener('input', upd);
+  function upd(){ btn.href = wa(msg()); }
+  upd(); ck.addEventListener('change', upd); qt.addEventListener('input', upd);
 
   return el;
 }
 
 (async()=>{
   try{
-    const [temar, precos] = await Promise.all([fetch(temaUrl), fetch(precosUrl)]);
-    if (!temar.ok) throw new Error('Tema não encontrado');
-    const tema = await temar.json();
-    const prec = precos.ok ? await precos.json() : {};
-
+    const [temar, precos] = await Promise.all([
+      fetch('catalogo/'+slug+'.json'),  // relativo
+      fetch('precos.json')              // relativo
+    ]);
+    if(!temar.ok) throw new Error('Tema não encontrado');
+    const tema=await temar.json(); const prec=precos.ok? await precos.json():{};
     document.getElementById('h1').textContent = tema.tema;
-    const chips = new Set(tema.cards.map(c=>c.linha));
-    document.getElementById('chips').innerHTML = [...chips].map(x=>'<span class="badge">'+x+'</span>').join(' ');
-
-    const grid = document.getElementById('grid');
-    for (const g of tema.cards){
-      grid.appendChild(card(g, prec));
-    }
-  }catch(err){
-    document.getElementById('grid').innerHTML = '<div class="empty">Erro ao carregar dados.</div>';
-    console.error(err);
-  }
+    const chips=new Set(tema.cards.map(c=>c.linha)); document.getElementById('chips').innerHTML=[...chips].map(x=>'<span class="badge">'+x+'</span>').join(' ');
+    const grid=document.getElementById('grid'); for(const g of tema.cards){ grid.appendChild(card(g,prec)); }
+  }catch(err){ document.getElementById('grid').innerHTML='<div class="empty">Erro ao carregar dados.</div>'; console.error(err); }
 })();
 </script></html>
