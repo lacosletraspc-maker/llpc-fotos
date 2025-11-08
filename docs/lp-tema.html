@@ -57,7 +57,7 @@ function card(g, precos){
     const isKit=ck.checked; const qty=Math.max(1, parseInt(qt.value||'1',10));
     const header='*Pedido LLPC*%0A';
     const item=isKit?('Quero *KIT COMPLETO* do tema *'+(g.tema||'')+'* — '+g.linha+' — '+g.titulo+'.') : ('Quero *'+qty+'x* — '+g.titulo+' — '+g.linha+' — tema '+(g.tema||'')+'.');
-    const price=p?('%0A*Preço WhatsApp:* '+moeda(p.wha)):'';
+    const price=p?('%0A*Preço WhatsApp:* '+moeda(p.wha)):''; 
     const sku=g.sku?('%0A*SKU:* '+g.sku):''; const link=imgs[0]?('%0AImagem: '+imgs[0]):'';
     return header+item+price+sku+link;
   }
