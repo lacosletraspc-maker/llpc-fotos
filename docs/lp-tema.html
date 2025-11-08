@@ -13,7 +13,7 @@
 <script type="module">
 const qs = new URLSearchParams(location.search);
 const slug = qs.get('tema') || '';
-const base = location.pathname.replace(//[^/]*$/,'');
+const base = location.pathname.replace(/\/[^/]*$/,'');
 const precosUrl = base + '/precos.json';
 const temaUrl = base + '/catalogo/' + slug + '.json';
 
@@ -37,7 +37,7 @@ function card(g, precos){
     <img src="${imgs[0]||''}" alt=""/>
     <a class="nav r">›</a>
     <span class="count">${total} foto${total>1?'s':''}</span>
-    ${priceTo?'<span class="price">'+moeda(priceTo)+' <small>('+(Math.round((1-(priceTo/(priceFrom||1)))*100))+'% OFF)</small></span>':''}
+    ${priceTo?'<span class="price>'+moeda(priceTo)+' <small>('+(Math.round((1-(priceTo/(priceFrom||1)))*100))+'% OFF)</small></span>':''}
   </div>
   <div class="meta">
     <div style="font-weight:700; margin-bottom:6px">${g.titulo} — ${g.linha} | LLPC</div>
