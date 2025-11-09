@@ -1,23 +1,223 @@
 <!doctype html>
-<html lang="pt-br"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LLPC • Tema</title><link rel="stylesheet" href="style.css"></head>
-<body><main class="container">
-<a class="back" href="./">← Temas</a><h1 id="titulo">LLPC • Tema</h1><section id="cards" class="grid-cards"></section>
-<footer class="footer">LLPC • Laços & Letras Papelaria Criativa</footer></main>
-<script>(function(){const qs=new URLSearchParams(location.search);const tema=qs.get('tema')||'';const slug=(s)=> (s||'').normalize('NFD').replace(/\p{Diacritic}/gu,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-document.getElementById('titulo').textContent = tema||'Tema';
-function fmt(x){const n=Number(String(x).replace(/[^0-9.,]/g,'').replace(',','.'));return isNaN(n)?String(x):n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
-function mkCarousel(imgs){const id='c'+Math.random().toString(36).slice(2);const w=document.createElement('div');w.className='carousel';w.innerHTML='<button class="nav left">‹</button><div class="track" id="'+id+'"></div><button class="nav right">›</button>';const tr=w.querySelector('#'+id);
-  imgs.forEach(u=>{const f=document.createElement('figure');f.className='slide';f.innerHTML='<img loading="lazy" src="'+u+'">';tr.appendChild(f);});
-  w.querySelector('.nav.left').onclick = ()=> tr.scrollBy({left:-tr.clientWidth,behavior:'smooth'});
-  w.querySelector('.nav.right').onclick= ()=> tr.scrollBy({left: tr.clientWidth,behavior:'smooth'}); return w;}
-async function load(){try{
-  const temaRes=await fetch('catalogo/'+slug(tema)+'.json?ts='+Date.now()); const obj=await temaRes.json();
-  const cards=Array.isArray(obj.cards)?obj.cards:[]; const wrap=document.getElementById('cards');
-  for(const c of cards){const el=document.createElement('article');el.className='card';
-    const imgs=Array.isArray(c.imagens)?c.imagens:[]; const de=c.preco_de||''; const por=c.preco_por||'';
-    const head=document.createElement('div');head.className='card-head'; head.innerHTML='<h3>'+c.titulo+' — '+(c.linha||'')+' | LLPC</h3>' + ((de&&por)?('<div class="precos"><span class="de">de '+fmt(de)+'</span><span class="por">'+fmt(por)+'</span></div>'):'<div class="precos"><span class="por">Preço sob consulta</span></div>');
-    el.appendChild(head); if(imgs.length) el.appendChild(mkCarousel(imgs));
-    const act=document.createElement('div');act.className='actions'; act.innerHTML='<a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/55?text='+encodeURIComponent('Olá! Gostei do item: '+c.titulo+' — Tema: '+tema)+'">Pedir no WhatsApp</a>';
-    el.appendChild(act); wrap.appendChild(el);} }catch(e){document.getElementById('cards').innerHTML='<div class="msg-erro">Erro ao carregar dados.</div>';console.error(e);} } load();})();</script>
-</body></html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>LLPC • Tema</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b1616; --card:#0f1f1f; --ink:#e6fffb; --muted:#99f6e4;
+    --brand:#14b8a6; --brand-ink:#022c22; --chip:#083d3d; --ok:#34d399;
+    --ring:rgba(20,184,166,.25);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Inter,system-ui,-apple-system,Segoe UI,Roboto}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:32px auto;padding:0 16px}
+  header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  header a{padding:8px 10px;border-radius:12px;background:var(--chip)}
+  h1{margin:0;font-size:28px;font-weight:800;letter-spacing:.3px}
+  .toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:14px 0 22px}
+  .chip{background:var(--chip);border:1px solid transparent;color:var(--muted);padding:8px 12px;border-radius:999px;cursor:pointer}
+  .chip.active{background:var(--brand);color:#052e2e;border-color:transparent}
+  .counter{margin-left:auto;color:var(--muted);font-size:14px}
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+  .card{background:var(--card);border:1px solid rgba(45,212,191,.15);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+  .card h3{margin:12px 16px 8px;font-size:16px;font-weight:700}
+  .badge{position:absolute;right:10px;top:10px;background:var(--brand);color:var(--brand-ink);padding:8px 10px;border-radius:999px;font-size:12px;font-weight:800}
+  .media{position:relative;isolation:isolate}
+  .slider{position:relative;overflow:hidden;background:#0003}
+  .slider img{display:block;width:100%;aspect-ratio:1/1.0;object-fit:cover}
+  .nav{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+  .nav button{pointer-events:auto;border:0;background:rgba(0,0,0,.35);color:#fff;width:34px;height:34px;border-radius:999px;margin:0 8px;display:grid;place-items:center;font-size:18px}
+  .track{display:flex;transition:transform .35s ease}
+  .dots{display:flex;gap:6px;align-items:center;justify-content:center;padding:8px}
+  .dot{width:8px;height:8px;border-radius:999px;background:#0b2929;outline:1px solid rgba(45,212,191,.2)}
+  .dot.active{background:var(--brand)}
+  .price{display:flex;align-items:center;gap:10px;margin:0 16px 12px}
+  .de{color:#94a3b8;text-decoration:line-through}
+  .por{font-weight:800;color:#eafff8}
+  .off{margin-left:auto;background:#064e3b;color:#a7f3d0;padding:3px 8px;border-radius:8px;font-size:12px}
+  .cta{display:flex;gap:10px;padding:0 16px 16px}
+  .cta a{flex:1;text-align:center;padding:10px 12px;border-radius:12px;border:1px solid rgba(45,212,191,.25)}
+  .cta .wa{background:var(--ok);color:#032a23;border-color:transparent;font-weight:700}
+  .muted{color:#93e3d6}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="./index.html">← Temas</a>
+      <h1 id="temaTitle">Tema</h1>
+    </header>
+
+    <div class="toolbar">
+      <div id="filters"></div>
+      <div class="counter" id="count">0 produtos</div>
+    </div>
+
+    <section class="grid" id="grid" aria-live="polite"></section>
+    <p class="muted" style="margin-top:28px">LLPC • Laços & Letras Papelaria Criativa</p>
+  </div>
+
+<script>
+(async function(){
+  // --- helpers
+  const q = new URLSearchParams(location.search);
+  const slug = (q.get('tema') || q.get('slug') || '').trim();
+  if(!slug){ document.getElementById('grid').innerHTML = '<p>Slug ausente.</p>'; return; }
+
+  const catUrl = 'catalogo/'+slug+'.json';
+  const precUrl = 'precos.json';
+
+  // carrega catálogo do tema + preços
+  const [temaRes, precRes] = await Promise.all([
+    fetch(catUrl).catch(_=>null),
+    fetch(precUrl).catch(_=>null)
+  ]);
+  if(!temaRes || !temaRes.ok){ document.getElementById('grid').innerHTML = '<p>Erro ao carregar dados.</p>'; return; }
+
+  const tema = await temaRes.json();
+  const precos = (precRes && precRes.ok) ? await precRes.json() : [];
+
+  // normaliza lista de fotos do JSON qualquer que seja o formato
+  const fotos = (Array.isArray(tema) ? tema :
+                Array.isArray(tema.fotos) ? tema.fotos :
+                Array.isArray(tema.files) ? tema.files : []);
+
+  const items = fotos.map(x=>{
+    if(typeof x === 'string') return {cdn:x};
+    const cdn = x.cdn || x.raw || x.url || x.href || x.src;
+    return {...x, cdn};
+  }).filter(x=>x && x.cdn);
+
+  // agrupa por pasta do GitHub (linha + produto)
+  function dec(s){try{return decodeURIComponent(s)}catch(e){return s}}
+  const groups = new Map();
+
+  for(const f of items){
+    const u = new URL(f.cdn);
+    const parts = dec(u.pathname).split('/');
+    const iMain = parts.indexOf('main');
+    const segs = parts.slice(iMain+1); // [Tema, "Kit 01 - Essencial", "Caixa Milk Essencial", "arquivo.jpg"]
+    if(segs.length < 3) continue;
+
+    const themeFolder   = segs[0];
+    const lineFolder    = segs[1]; // "Kit 01 - Essencial"
+    const productFolder = segs[2]; // "Caixa Milk Essencial"
+    const fileName      = segs[segs.length-1];
+
+    // Nome da linha (Essencial / Clássico / Premium / Luxo)
+    const lineName = (lineFolder.split('-')[1]||'').trim();
+
+    // tenta descobrir um SKU base (LLPC-<TIPO>-<E/C/P/L>) a partir do arquivo
+    const mTipo = fileName.match(/-(TB|MK|PR|ML|CC|PS|TP|TG|CT|CB|VE|CX|BX|CM|CP|PC|PL|PO|DS|TS|BR|DC|SC|PB|PP|PA|FD|UR|DZ|KT|TO|TR|PI|LK|GG|GL|CA|CR|LA|LV|PD|KC)-/i);
+    const tipo  = mTipo ? mTipo[1].toUpperCase() : null;
+    const abrev = { 'Essencial':'E','Clássico':'C','Classico':'C','Premium':'P','Luxo':'L' };
+    const linha = abrev[lineName] || '';
+    const skuBase = (tipo && linha) ? `LLPC-${tipo}-${linha}` : null;
+    const preco = skuBase ? (precos.find(p=>p.sku===skuBase) || null) : null;
+
+    const key = lineFolder+'|'+productFolder;
+    if(!groups.has(key)){
+      groups.set(key,{
+        themeFolder,lineFolder,productFolder,lineName,skuBase,preco,imgs:[]
+      });
+    }
+    groups.get(key).imgs.push(f.cdn);
+  }
+
+  // prepara dados e UI
+  const data = Array.from(groups.values())
+    .sort((a,b)=> a.lineFolder.localeCompare(b.lineFolder) || a.productFolder.localeCompare(b.productFolder));
+
+  document.getElementById('temaTitle').textContent =
+    (tema.tema || slug.replace(/-/g,' ')).replace(/\b\w/g,m=>m.toUpperCase());
+
+  const filtros = ['Todos','Essencial','Clássico','Premium','Luxo'];
+  const filtersEl = document.getElementById('filters');
+  filtersEl.innerHTML = filtros.map(f=>`<button class="chip" data-f="${f}">${f}</button>`).join('');
+  let current='Todos';
+  filtersEl.addEventListener('click',ev=>{
+    const b = ev.target.closest('.chip'); if(!b) return;
+    current = b.dataset.f;
+    document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('active',c===b));
+    render();
+  });
+  document.querySelector('.chip').classList.add('active');
+
+  function fmt(n){ return n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}) }
+  function priceBlock(preco){
+    if(!preco) return `<div class="price"><span class="por">Preço sob consulta</span></div>`;
+    const off = Math.round((1-(preco.preco_por/preco.preco_de))*100);
+    return `<div class="price">
+      <span class="de">de R$ ${fmt(preco.preco_de)}</span>
+      <span class="por">R$ ${fmt(preco.preco_por)}</span>
+      <span class="off">${off}% OFF</span>
+    </div>`;
+  }
+
+  function cardHTML(it){
+    const id = Math.random().toString(36).slice(2);
+    const title = `${it.productFolder} — ${it.lineFolder}`;
+    const wamsg = encodeURIComponent(`Olá! Quero este item do tema "${tema.tema||slug}": ${it.productFolder} (${it.lineName}).`);
+    const img0 = it.imgs[0];
+    return `
+    <article class="card" id="c-${id}">
+      <div class="media">
+        ${it.preco ? '' : '<div class="badge">Preço sob consulta</div>'}
+        <div class="slider" data-idx="0">
+          <div class="track">
+            ${it.imgs.map(src=>`<img loading="lazy" src="${src}" alt="${title}">`).join('')}
+          </div>
+          <div class="nav">
+            <button class="prev" aria-label="Anterior">‹</button>
+            <button class="next" aria-label="Próxima">›</button>
+          </div>
+        </div>
+        <div class="dots">${it.imgs.map((_,i)=>`<span class="dot ${i? '' : 'active'}"></span>`).join('')}</div>
+      </div>
+
+      <h3>${title}</h3>
+      ${priceBlock(it.preco)}
+      <div class="cta">
+        <a class="wa" target="_blank" rel="noopener" href="https://wa.me/5519999999999?text=${wamsg}">Pedir no WhatsApp</a>
+        <a class="ghost" target="_blank" rel="noopener" href="${img0}">Abrir imagem</a>
+      </div>
+    </article>`;
+  }
+
+  function attachSliders(scope){
+    scope.querySelectorAll('.slider').forEach(sl=>{
+      const track = sl.querySelector('.track');
+      const dots  = sl.parentElement.querySelectorAll('.dot');
+      const imgs = track.children.length;
+      function go(i){
+        i = (i+imgs)%imgs;
+        sl.dataset.idx = i;
+        track.style.transform = `translateX(${-i*100}%)`;
+        dots.forEach((d,k)=>d.classList.toggle('active',k===i));
+      }
+      sl.querySelector('.prev').onclick = ()=>go(Number(sl.dataset.idx||0)-1);
+      sl.querySelector('.next').onclick = ()=>go(Number(sl.dataset.idx||0)+1);
+      go(0);
+    });
+  }
+
+  function render(){
+    const grid = document.getElementById('grid');
+    grid.innerHTML = '';
+    const list = current==='Todos' ? data : data.filter(x => x.lineName.toLowerCase() === current.toLowerCase());
+    for(const it of list) grid.insertAdjacentHTML('beforeend', cardHTML(it));
+    attachSliders(grid);
+    document.getElementById('count').textContent = `${list.length} produtos`;
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
