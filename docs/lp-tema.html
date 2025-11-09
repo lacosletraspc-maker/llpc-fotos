@@ -1,1 +1,66 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>LLPC • Tema</title><link rel="stylesheet" href="style.css"></head><body><main class="container"><nav><a class="back" href="./">← Temas</a></nav><h1 id="h1">LLPC • Tema</h1><div id="grid" class="grid cards"></div><footer>LLPC • Laços &amp; Letras Papelaria Criativa</footer></main><script>(async()=>{const p=new URLSearchParams(location.search);const slug=p.get('tema');const H=document.getElementById('h1'),G=document.getElementById('grid');function money(n){return n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}try{const [tR,prR]=await Promise.all([fetch('catalogo/'+slug+'.json',{cache:'no-store'}),fetch('precos.json',{cache:'no-store'})]);if(!tR.ok) throw new Error('Tema não encontrado');const itens=await tR.json();const precArr=prR.ok?await prR.json():[];const prec={};(precArr||[]).forEach(p=>prec[(p.sku||'').toUpperCase()]=p);H.textContent=(slug||'').replaceAll('-',' ');if(!Array.isArray(itens)||!itens.length){G.innerHTML='<p class="empty">Sem itens publicados para este tema.</p>';return;}const map={};function key(it){const isC=(it.tags||'').toLowerCase().includes('conjunto');return (isC?'CONJ':'SKU')+'|'+(String(it.sku||'').toUpperCase()||it.nome_arquivo);}itens.forEach(it=>{const k=key(it);(map[k]=map[k]||{rep:it,imgs:[]}).imgs.push(it.url_jsdelivr)});for(const k of Object.keys(map)){const g=map[k];const it=g.rep;const imgs=g.imgs.slice(0,7);const card=document.createElement('article');card.className='card produto';const sku=String(it.sku||'').toUpperCase();let price=null;if(sku&&prec[sku])price=prec[sku];card.innerHTML='<div class="caro"><img src="'+(imgs[0]||'')+'" alt="Imagem"><span class="badge">'+imgs.length+' fotos</span></div><h3>'+(it.descricao_curta||it.nome_arquivo||'Produto')+'</h3>';const box=document.createElement('div');box.className='price';if(price){box.innerHTML+='<div class="de">de '+money(price.preco_de)+'</div>';box.innerHTML+='<div class="por">'+money(price.preco_por)+' <span class="off">('+Math.max(0,Math.round((1-price.preco_por/price.preco_de)*100))+'% OFF)</span></div>';}else{box.innerHTML+='<div class="por">Preço sob consulta</div>';}card.appendChild(box);const ctas=document.createElement('div');ctas.className='cta';const wa=document.createElement('a');wa.className='btn';wa.target='_blank';wa.rel='noopener';wa.textContent='Pedir no WhatsApp';wa.href=it.url_whatsapp||'#';ctas.appendChild(wa);if(imgs[0]){const op=document.createElement('a');op.className='btn ghost';op.target='_blank';op.rel='noopener';op.textContent='Abrir imagem';op.href=imgs[0];ctas.appendChild(op);}card.appendChild(ctas);G.appendChild(card);} }catch(e){console.error(e);G.innerHTML='<p class="empty">Erro ao carregar dados.</p>';}})();</script></body></html>
+<!doctype html>
+<html lang="pt-br">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LLPC • Tema</title>
+<link rel="stylesheet" href="../style.css">
+<body>
+  <header class="wrap"><h1 id="h1"></h1><p>Clique nos cards para ver fotos e pedir pelo WhatsApp.</p></header>
+  <main class="wrap grid" id="grid"></main>
+  <script>
+  const Q = new URLSearchParams(location.search);
+  const slug = Q.get('slug') || (location.pathname.split('/').pop().replace('.html',''));
+  const CDN = location.origin + location.pathname.split('/docs/')[0] + '/docs'; // fallback p/ GitHub Pages
+  const money = v => v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+
+  async function loadJSON(u){ const r = await fetch(u); return r.json(); }
+  async function main(){
+    const tema = await loadJSON('../catalogo/'+slug+'.json');
+    const precos = await loadJSON('../precos.json').catch(()=>({}));
+    document.getElementById('h1').textContent = tema.tema;
+
+    // monta grid
+    const G = document.getElementById('grid');
+    G.innerHTML = '';
+    const cards = tema.cards || [];
+    for(const c of cards){
+      const imgs = c.imagens || [];
+      const first = imgs[0] || '';
+      // preço via SKU
+      const p = (precos[c.sku]||{});
+      const de = +p.preco_publico||0, off = +(p.desc_pct||0);
+      const por = de ? Math.round(de*(1-off)*100)/100 : 0;
+
+      const el = document.createElement('article');
+      el.className = 'card';
+      el.innerHTML = `
+        <div class="caro" data-idx="0" data-imgs="${imgs.join('|')}">
+          <img src="${first}" alt="">
+          ${imgs.length>1?'<button class="nav l" aria-label="anterior">‹</button><button class="nav r" aria-label="próxima">›</button>':''}
+          <span class="badge">${imgs.length||0} fotos</span>
+        </div>
+        <h3>${c.titulo} — ${c.linha} | LLPC</h3>
+        ${de?('<div class="price"><span class="de">de '+money(de)+'</span><div class="por">'+money(por)+' ('+Math.round(off*100)+'% OFF)</div></div>'):'<div class="price">Preço sob consulta</div>'}
+        <div class="actions">
+          <a class="btn" target="_blank" href="https://wa.me/55?text=${encodeURIComponent('Quero '+c.titulo+' — '+c.linha+' (tema: '+tema.tema+')')}">Pedir no WhatsApp</a>
+          ${first?('<a class="btn ghost" target="_blank" href="'+first+'">Abrir imagem</a>'):''}
+        </div>`;
+      G.appendChild(el);
+    }
+
+    // carrossel
+    G.addEventListener('click', ev=>{
+      const b = ev.target.closest('.nav'); if(!b) return;
+      const box = b.closest('.caro');
+      const imgs = (box.dataset.imgs||'').split('|').filter(Boolean);
+      if(!imgs.length) return;
+      let i = +box.dataset.idx||0;
+      i = b.classList.contains('l') ? (i-1+imgs.length)%imgs.length : (i+1)%imgs.length;
+      box.dataset.idx = i;
+      box.querySelector('img').src = imgs[i];
+    });
+  }
+  main();
+  </script>
+</body>
+</html>
