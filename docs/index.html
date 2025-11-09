@@ -1,39 +1,14 @@
 <!doctype html>
-<html lang="pt-br">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LLPC • Catálogo de temas</title>
-<link rel="stylesheet" href="./style.css">
-<body>
-  <header class="wrap">
-    <h1>LLPC • Catálogo de temas</h1>
-    <p>Clique no tema para ver todas as fotos com preços e pedir pelo WhatsApp.</p>
-  </header>
-  <main class="wrap grid" id="temas"></main>
-  <script>
-  const money = v => v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-  async function load(){ 
-    const temas = await (await fetch('./catalogo/index.json')).json();
-    const el = document.getElementById('temas');
-    el.innerHTML='';
-    for(const t of temas){
-      const a = document.createElement('a');
-      a.className='theme';
-      a.href = './lp-tema.html?slug='+t.slug;
-      a.innerHTML = `
-        <div class="theme-thumb">${t.thumb?('<img src="'+t.thumb+'" alt="">'):'<div class="noimg">LLPC</div>'}</div>
-        <div class="theme-txt"><strong>${t.tema}</strong><span>${t.total} fotos</span></div>`;
-      el.appendChild(a);
-    }
-  }
-  load();
-  </script>
-  <style>
-    .theme{display:flex;gap:14px;align-items:center;padding:14px;border:1px solid #123f44;border-radius:14px;background:#0b1416}
-    .theme-thumb{width:88px;height:66px;overflow:hidden;border-radius:10px;background:#0e2022;display:flex;align-items:center;justify-content:center}
-    .theme-thumb img{width:100%;height:100%;object-fit:cover}
-    .theme-txt strong{display:block}
-    .noimg{opacity:.5}
-  </style>
-</body>
-</html>
+<html lang="pt-br"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLPC • Catálogo de temas</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="container">
+<h1>LLPC • Catálogo de temas</h1><p class="sub">Clique no tema para ver todas as fotos com preços e pedir pelo WhatsApp.</p>
+<section id="temas" class="grid-temas"></section><footer class="footer">LLPC • Laços & Letras Papelaria Criativa</footer>
+</main>
+<script>(function(){const el=document.querySelector('#temas');function slug(s){return (s||'').normalize('NFD').replace(/\p{Diacritic}/gu,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+async function load(){try{const r=await fetch('catalogo/index.json?ts='+Date.now());const list=await r.json();
+  for(const t of list){const tema=t.tema||t.name||'';const s=t.slug||slug(tema);const thumb=t.thumb||'';const total=t.total||t.count||0;
+    const a=document.createElement('a');a.className='tema-card';a.href='lp-tema.html?tema='+encodeURIComponent(tema);
+    a.innerHTML='<div class="imgwrap">'+(thumb?('<img loading="lazy" src="'+thumb+'">'):'<div class="noimg">LLPC</div>')+'</div><div class="t">'+tema+'</div><div class="c">'+total+' fotos</div>';
+    el.appendChild(a);} }catch(e){el.innerHTML='<div class="msg-erro">Erro ao carregar dados.</div>';console.error(e);} } load();})();</script>
+</body></html>
