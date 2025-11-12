@@ -1,0 +1,328 @@
+{
+  "tema": "Kit A Bela e a Fera",
+  "slug": "kit-a-bela-e-a-fera",
+  "colecoes": [
+    {
+      "nome": "Luxo",
+      "slug": "luxo",
+      "cards": [
+        {
+          "card": "Kit 04 - Luxo",
+          "skus": "LLPC-TB-L-+-5x-LLPC-CL-MT-L-ou-5x-LLPC-CL-PM-L-+-LLPC-F-C-+-LLPC-TT-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/LLPC-C-L-a-bela-e-a-fera-hero-LLPC-TB-L-%2B-5x-LLPC-CL-MT-L-ou-5x-LLPC-CL-PM-L-%2B-LLPC-F-C-%2B-LLPC-TT-C.jpg"
+          ]
+        },
+        {
+          "card": "Topo de Bolo",
+          "skus": "LLPC-TB-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-angulo3-4-LLPC-TB-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-verso-LLPC-TB-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-variacao-LLPC-TB-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-hero-LLPC-TB-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-escala-LLPC-TB-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-a-bela-e-a-fera-detalhe-LLPC-TB-L.jpg"
+          ]
+        },
+        {
+          "card": "Maleta Porta",
+          "skus": "LLPC-ML-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-L-PC-a-bela-e-a-fera-hero-LLPC-ML-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-L-PC-a-bela-e-a-fera-escala-LLPC-ML-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-L-PC-a-bela-e-a-fera-detalhe-LLPC-ML-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-L-PC-a-bela-e-a-fera-variacao-LLPC-ML-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-L-PC-a-bela-e-a-fera-verso-LLPC-ML-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Porta%20Cofre%20Luxo/LLPC-ML-L-PC-a-bela-e-a-fera-angulo3-4-LLPC-ML-L.jpg"
+          ]
+        },
+        {
+          "card": "Maleta Cenário Shaker",
+          "skus": "LLPC-CL-MT-L-ou-LLPC-CL-PM-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-CL-L-CS-a-bela-e-a-fera-variacao-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-CL-L-CS-a-bela-e-a-fera-verso-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-CL-L-CS-a-bela-e-a-fera-hero-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-CL-L-CS-a-bela-e-a-fera-escala-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-CL-L-CS-a-bela-e-a-fera-detalhe-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Maleta%20Cen%C3%A1rio%20Shaker%20Luxo/LLPC-CL-L-CS-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Pirâmide Shaker",
+          "skus": "LLPC-CL-MT-L-ou-LLPC-CL-PM-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-hero-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-escala-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-detalhe-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-variacao-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-verso-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg"
+          ]
+        },
+        {
+          "card": "Caixa em Pé",
+          "skus": "LLPC-CL-MT-L-ou-LLPC-CL-PM-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-CP-a-bela-e-a-fera-detalhe-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-CP-a-bela-e-a-fera-escala-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-CP-a-bela-e-a-fera-hero-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-CP-a-bela-e-a-fera-variacao-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-CP-a-bela-e-a-fera-verso-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20em%20P%C3%A9%20Luxo/LLPC-CL-L-CP-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Cenário",
+          "skus": "LLPC-CL-MT-L-ou-LLPC-CL-PM-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-detalhe-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-escala-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-hero-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-variacao-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-verso-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo%20/LLPC-CL-L-C-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Premium",
+      "slug": "premium",
+      "cards": [
+        {
+          "card": "Kit 03 - Premium",
+          "skus": "LLPC-TB-P-+-4x-LLPC-CL-MT-P-ou-4x-LLPC-CL-PM-P-+-LLPC-F-C-+-LLPC-TT-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/LLPC-C-P-a-bela-e-a-fera-hero-LLPC-TB-P-%2B-4x-LLPC-CL-MT-P-ou-4x-LLPC-CL-PM-P-%2B-LLPC-F-C-%2B-LLPC-TT-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Porta Bis Duplo",
+          "skus": "LLPC-CL-MT-P-ou-LLPC-CL-PM-P",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-PBD-a-bela-e-a-fera-detalhe-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-PBD-a-bela-e-a-fera-hero-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-PBD-a-bela-e-a-fera-escala-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-PBD-a-bela-e-a-fera-variacao-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-PBD-a-bela-e-a-fera-verso-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Porta%20Bis%20Duplo%20Premium/LLPC-CL-P-PBD-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Tubete",
+          "skus": "LLPC-CL-MT-P-ou-LLPC-CL-PM-P",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-detalhe-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-hero-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-frontal-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-escala-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-verso-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Milk",
+          "skus": "LLPC-CL-MT-P-ou-LLPC-CL-PM-P",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-detalhe-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-hero-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-escala-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-variacao-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-verso-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Milk%20Premium/LLPC-CL-P-MK-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Pirâmide",
+          "skus": "LLPC-CL-MT-P-ou-LLPC-CL-PM-P",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-verso-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-hero-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-frontal-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-escala-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-detalhe-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium/LLPC-CL-P-P-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg"
+          ]
+        },
+        {
+          "card": "Topo de Bolo",
+          "skus": "LLPC-TB-P",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-angulo3-4-LLPC-TB-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-verso-LLPC-TB-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-variacao-LLPC-TB-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-escala-LLPC-TB-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-hero-LLPC-TB-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-a-bela-e-a-fera-detalhe-LLPC-TB-P.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Clássico",
+      "slug": "classico",
+      "cards": [
+        {
+          "card": "Kit 02 - Clássico",
+          "skus": "LLPC-TB-C-+-4x-LLPC-CL-MT-C-ou-4x-LLPC-CL-PM-C-+-LLPC-F-C-+-LLPC-TT-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/LLPC-C-C-a-bela-e-a-fera-hero-LLPC-TB-C-%2B-4x-LLPC-CL-MT-C-ou-4x-LLPC-CL-PM-C-%2B-LLPC-F-C-%2B-LLPC-TT-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Porta Bis Duplo",
+          "skus": "LLPC-CL-MT-C-ou-LLPC-CL-PM-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-PBD-a-bela-e-a-fera-hero-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-PBD-a-bela-e-a-fera-escala-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-PBD-a-bela-e-a-fera-detalhe-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-PBD-a-bela-e-a-fera-variacao-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-PBD-a-bela-e-a-fera-verso-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Porta%20Bis%20Duplo%20Cl%C3%A1ssico/LLPC-CL-C-PBD-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Tubete",
+          "skus": "LLPC-CL-MT-C-ou-LLPC-CL-PM-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-detalhe-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-hero-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-escala-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-variacao-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-verso-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Milk",
+          "skus": "LLPC-CL-MT-C-ou-LLPC-CL-PM-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-verso-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-variacao-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-hero-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-escala-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-detalhe-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Pirâmide",
+          "skus": "LLPC-CL-MT-C-ou-LLPC-CL-PM-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-verso-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-variacao-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-hero-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-escala-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-detalhe-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico/LLPC-CL-C-P-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg"
+          ]
+        },
+        {
+          "card": "Topo de Bolo",
+          "skus": "LLPC-TB-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-detalhe-LLPC-TB-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-escala-LLPC-TB-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-hero-LLPC-TB-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-variacao-LLPC-TB-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-verso-LLPC-TB-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-a-bela-e-a-fera-angulo3-4-LLPC-TB-C.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Essencial",
+      "slug": "essencial",
+      "cards": [
+        {
+          "card": "Kit 01 - Essencial",
+          "skus": "LLPC-TB-E-e-4x-LLPC-CL-MT-E-ou-4x-LLPC-CL-PM-E-e-LLPC-F-C-e-LLPC-TT-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/LLPC-C-E-a-bela-e-a-fera-hero-LLPC-TB-E-e-4x-LLPC-CL-MT-E-ou-4x-LLPC-CL-PM-E-e-LLPC-F-C-e-LLPC-TT-C.jpg"
+          ]
+        },
+        {
+          "card": "Topper",
+          "skus": "LLPC-TT-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topper%20Essencial/LLPC-TT-C-a-bela-e-a-fera-angulo3-4-LLPC-TT-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topper%20Essencial/LLPC-TT-C-a-bela-e-a-fera-verso-LLPC-TT-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topper%20Essencial/LLPC-TT-C-a-bela-e-a-fera-hero-LLPC-TT-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topper%20Essencial/LLPC-TT-C-a-bela-e-a-fera-escala-LLPC-TT-C.jpg"
+          ]
+        },
+        {
+          "card": "Forminha",
+          "skus": "LLPC-F-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Forminha%20Essencial/LLPC-F-C-a-bela-e-a-fera-verso-LLPC-F-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Forminha%20Essencial/LLPC-F-C-a-bela-e-a-fera-hero-LLPC-F-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Tubete",
+          "skus": "LLPC-CL-MT-E-ou-LLPC-CL-PM-E",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-hero-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-hero-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-escala-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-detalhe-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-verso-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-a-bela-e-a-fera-variacao-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Pirâmide",
+          "skus": "LLPC-CL-MT-E-ou-LLPC-CL-PM-E",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-escala-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-detalhe-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-verso-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-variacao-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-hero-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Milk",
+          "skus": "LLPC-CL-MT-E-ou-LLPC-CL-PM-E",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-variacao-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-escala-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-detalhe-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-hero-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-verso-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg"
+          ]
+        },
+        {
+          "card": "Caixa em Pé",
+          "skus": "LLPC-CL-MT-E-ou-LLPC-CL-PM-E",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-detalhe-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-escala-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-hero-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-lateral-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-verso-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Caixa%20em%20P%C3%A9%20Essencial/LLPC-CL-E-CP-a-bela-e-a-fera-angulo3-4-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg"
+          ]
+        },
+        {
+          "card": "Topo de Bolo",
+          "skus": "LLPC-TB-E",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-angulo3-4-LLPC-TB-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-verso-LLPC-TB-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-variacao-LLPC-TB-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-hero-LLPC-TB-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-escala-LLPC-TB-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20A%20Bela%20e%20a%20Fera/Kit%2001%20-%20Essencial%20/Topo%20de%20Bolo%20Essencial%20/LLPC-TB-E-a-bela-e-a-fera-detalhe-LLPC-TB-E.jpg"
+          ]
+        }
+      ]
+    }
+  ]
+}
