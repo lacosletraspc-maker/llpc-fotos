@@ -1,0 +1,307 @@
+[
+  {
+    "sku": "LLPC-TB-E-K1",
+    "preco_de": 42.55,
+    "preco_por": 37.99
+  },
+  {
+    "sku": "LLPC-TB-E-K10",
+    "preco_de": 415.51,
+    "preco_por": 370.99
+  },
+  {
+    "sku": "LLPC-TB-E-K20",
+    "preco_de": 829.91,
+    "preco_por": 740.99
+  },
+  {
+    "sku": "LLPC-TB-E-K30",
+    "preco_de": 1244.31,
+    "preco_por": 1110.99
+  },
+  {
+    "sku": "LLPC-TB-C-K1",
+    "preco_de": 45.91,
+    "preco_por": 40.99
+  },
+  {
+    "sku": "LLPC-TB-C-K10",
+    "preco_de": 455.83,
+    "preco_por": 406.99
+  },
+  {
+    "sku": "LLPC-TB-C-K20",
+    "preco_de": 911.67,
+    "preco_por": 813.99
+  },
+  {
+    "sku": "LLPC-TB-C-K30",
+    "preco_de": 1366.39,
+    "preco_por": 1219.99
+  },
+  {
+    "sku": "LLPC-TB-P-K1",
+    "preco_de": 49.27,
+    "preco_por": 43.99
+  },
+  {
+    "sku": "LLPC-TB-P-K10",
+    "preco_de": 486.07,
+    "preco_por": 433.99
+  },
+  {
+    "sku": "LLPC-TB-P-K20",
+    "preco_de": 972.15,
+    "preco_por": 867.99
+  },
+  {
+    "sku": "LLPC-TB-P-K30",
+    "preco_de": 1458.23,
+    "preco_por": 1301.99
+  },
+  {
+    "sku": "LLPC-TB-L-K1",
+    "preco_de": 59.35,
+    "preco_por": 52.99
+  },
+  {
+    "sku": "LLPC-TB-L-K10",
+    "preco_de": 592.47,
+    "preco_por": 528.99
+  },
+  {
+    "sku": "LLPC-TB-L-K20",
+    "preco_de": 1183.83,
+    "preco_por": 1056.99
+  },
+  {
+    "sku": "LLPC-TB-L-K30",
+    "preco_de": 1776.31,
+    "preco_por": 1585.99
+  },
+  {
+    "sku": "LLPC-CL-MT-E-K1",
+    "preco_de": 21.27,
+    "preco_por": 18.99
+  },
+  {
+    "sku": "LLPC-CL-MT-E-K10",
+    "preco_de": 210.55,
+    "preco_por": 187.99
+  },
+  {
+    "sku": "LLPC-CL-MT-E-K20",
+    "preco_de": 419.99,
+    "preco_por": 374.99
+  },
+  {
+    "sku": "LLPC-CL-MT-E-K30",
+    "preco_de": 629.43,
+    "preco_por": 561.99
+  },
+  {
+    "sku": "LLPC-CL-MT-C-K1",
+    "preco_de": 24.63,
+    "preco_por": 21.99
+  },
+  {
+    "sku": "LLPC-CL-MT-C-K10",
+    "preco_de": 239.67,
+    "preco_por": 213.99
+  },
+  {
+    "sku": "LLPC-CL-MT-C-K20",
+    "preco_de": 479.35,
+    "preco_por": 427.99
+  },
+  {
+    "sku": "LLPC-CL-MT-C-K30",
+    "preco_de": 717.91,
+    "preco_por": 640.99
+  },
+  {
+    "sku": "LLPC-CL-MT-P-K1",
+    "preco_de": 26.87,
+    "preco_por": 23.99
+  },
+  {
+    "sku": "LLPC-CL-MT-P-K10",
+    "preco_de": 265.43,
+    "preco_por": 236.99
+  },
+  {
+    "sku": "LLPC-CL-MT-P-K20",
+    "preco_de": 529.75,
+    "preco_por": 472.99
+  },
+  {
+    "sku": "LLPC-CL-MT-P-K30",
+    "preco_de": 795.19,
+    "preco_por": 709.99
+  },
+  {
+    "sku": "LLPC-CL-MT-L-K1",
+    "preco_de": 38.07,
+    "preco_por": 33.99
+  },
+  {
+    "sku": "LLPC-CL-MT-L-K10",
+    "preco_de": 370.71,
+    "preco_por": 330.99
+  },
+  {
+    "sku": "LLPC-CL-MT-L-K20",
+    "preco_de": 741.43,
+    "preco_por": 661.99
+  },
+  {
+    "sku": "LLPC-CL-MT-L-K30",
+    "preco_de": 1112.15,
+    "preco_por": 992.99
+  },
+  {
+    "sku": "LLPC-CL-PM-E-K1",
+    "preco_de": 12.31,
+    "preco_por": 10.99
+  },
+  {
+    "sku": "LLPC-CL-PM-E-K10",
+    "preco_de": 115.35,
+    "preco_por": 102.99
+  },
+  {
+    "sku": "LLPC-CL-PM-E-K20",
+    "preco_de": 229.59,
+    "preco_por": 204.99
+  },
+  {
+    "sku": "LLPC-CL-PM-E-K30",
+    "preco_de": 344.95,
+    "preco_por": 307.99
+  },
+  {
+    "sku": "LLPC-CL-PM-C-K1",
+    "preco_de": 16.79,
+    "preco_por": 14.99
+  },
+  {
+    "sku": "LLPC-CL-PM-C-K10",
+    "preco_de": 160.15,
+    "preco_por": 142.99
+  },
+  {
+    "sku": "LLPC-CL-PM-C-K20",
+    "preco_de": 319.19,
+    "preco_por": 284.99
+  },
+  {
+    "sku": "LLPC-CL-PM-C-K30",
+    "preco_de": 479.35,
+    "preco_por": 427.99
+  },
+  {
+    "sku": "LLPC-CL-PM-P-K1",
+    "preco_de": 19.03,
+    "preco_por": 16.99
+  },
+  {
+    "sku": "LLPC-CL-PM-P-K10",
+    "preco_de": 185.91,
+    "preco_por": 165.99
+  },
+  {
+    "sku": "LLPC-CL-PM-P-K20",
+    "preco_de": 370.71,
+    "preco_por": 330.99
+  },
+  {
+    "sku": "LLPC-CL-PM-P-K30",
+    "preco_de": 555.51,
+    "preco_por": 495.99
+  },
+  {
+    "sku": "LLPC-CL-PM-L-K1",
+    "preco_de": 29.11,
+    "preco_por": 25.99
+  },
+  {
+    "sku": "LLPC-CL-PM-L-K10",
+    "preco_de": 291.19,
+    "preco_por": 259.99
+  },
+  {
+    "sku": "LLPC-CL-PM-L-K20",
+    "preco_de": 582.39,
+    "preco_por": 519.99
+  },
+  {
+    "sku": "LLPC-CL-PM-L-K30",
+    "preco_de": 872.47,
+    "preco_por": 778.99
+  },
+  {
+    "sku": "LLPC-CL-PM-L-K1",
+    "preco_de": 29.11,
+    "preco_por": 25.99
+  },
+  {
+    "sku": "LLPC-CL-PM-L-K10",
+    "preco_de": 291.19,
+    "preco_por": 259.99
+  },
+  {
+    "sku": "LLPC-CL-PM-L-K20",
+    "preco_de": 582.39,
+    "preco_por": 519.99
+  },
+  {
+    "sku": "LLPC-CL-PM-L-K30",
+    "preco_de": 872.47,
+    "preco_por": 778.99
+  },
+  {
+    "sku": "LLPC-F-C-K1",
+    "preco_de": 29.11,
+    "preco_por": 25.99
+  },
+  {
+    "sku": "LLPC-F-C-K10",
+    "preco_de": 285.59,
+    "preco_por": 254.99
+  },
+  {
+    "sku": "LLPC-F-C-K20",
+    "preco_de": 571.19,
+    "preco_por": 509.99
+  },
+  {
+    "sku": "LLPC-F-C-K30",
+    "preco_de": 856.79,
+    "preco_por": 764.99
+  },
+  {
+    "sku": "LLPC-TT-C-K1",
+    "preco_de": 31.35,
+    "preco_por": 27.99
+  },
+  {
+    "sku": "LLPC-TT-C-K10",
+    "preco_de": 304.63,
+    "preco_por": 271.99
+  },
+  {
+    "sku": "LLPC-TT-C-K20",
+    "preco_de": 609.27,
+    "preco_por": 543.99
+  },
+  {
+    "sku": "LLPC-TT-C-K30",
+    "preco_de": 913.91,
+    "preco_por": 815.99
+  },
+  {
+    "sku": "LLPC-B-L-K1",
+    "preco_de": 1.11,
+    "preco_por": 0.99
+  }
+]
