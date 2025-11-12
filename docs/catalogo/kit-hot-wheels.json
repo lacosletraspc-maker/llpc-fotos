@@ -1,0 +1,320 @@
+{
+  "tema": "Kit Hot Wheels",
+  "slug": "kit-hot-wheels",
+  "colecoes": [
+    {
+      "nome": "Luxo",
+      "slug": "luxo",
+      "cards": [
+        {
+          "card": "Kit 04 - Luxo",
+          "skus": "LLPC-TB-L-+-4x-LLPC-CL-MT-L-ou-4x-LLPC-CL-PM-L-+-LLPC-B-L-e-LLPC-F-C-+-LLPC-TT-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/LLPC-C-L-hot-wheels-hero-LLPC-TB-L-%2B-4x-LLPC-CL-MT-L-ou-4x-LLPC-CL-PM-L-%2B-LLPC-B-L-e-LLPC-F-C-%2B-LLPC-TT-C.jpg"
+          ]
+        },
+        {
+          "card": "Topo de Bolo",
+          "skus": "LLPC-TB-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-angulo3-4-LLPC-TB-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-detalhe-LLPC-TB-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-escala-LLPC-TB-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-hero-LLPC-TB-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-variacao-LLPC-TB-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Topo%20de%20Bolo%20Luxo/LLPC-TB-L-hot-wheels-verso-LLPC-TB-L.jpg"
+          ]
+        },
+        {
+          "card": "Maleta Ferramentas",
+          "skus": "LLPC-CL-MT-L-ou-LLPC-CL-PM-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Maleta%20Ferramentas%20Luxo/LLPC-CL-L-MF-hot-wheels-hero-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Maleta%20Ferramentas%20Luxo/LLPC-CL-L-MF-hot-wheels-verso-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Maleta%20Ferramentas%20Luxo/LLPC-CL-L-MF-hot-wheels-angulo3-4-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Pirâmide Shaker",
+          "skus": "LLPC-CL-MT-L-ou-LLPC-CL-PM-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-hot-wheels-angulo3-4-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-hot-wheels-detalhe-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-hot-wheels-hero-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-hot-wheels-escala-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-hot-wheels-variacao-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Pir%C3%A2mide%20Shaker%20Luxo/LLPC-CL-L-PS-hot-wheels-verso-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Milk",
+          "skus": "LLPC-CL-MT-L-ou-LLPC-CL-PM-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-L-MK-hot-wheels-detalhe-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-L-MK-hot-wheels-hero-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-L-MK-hot-wheels-escala-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-L-MK-hot-wheels-variacao-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-L-MK-hot-wheels-verso-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Milk%20Luxo/LLPC-CL-L-MK-hot-wheels-angulo3-4-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Cenário",
+          "skus": "LLPC-CL-MT-L-ou-LLPC-CL-PM-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-L-C-hot-wheels-detalhe-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-L-C-hot-wheels-hero-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-L-C-hot-wheels-escala-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-L-C-hot-wheels-variacao-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-L-C-hot-wheels-verso-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Cen%C3%A1rio%20Luxo/LLPC-CL-L-C-hot-wheels-angulo3-4-LLPC-CL-MT-L-ou-LLPC-CL-PM-L.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Blister",
+          "skus": "LLPC-B-L",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Blister%20Luxo/LLPC-B-L-BT-hot-wheels-detalhe-LLPC-B-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Blister%20Luxo/LLPC-B-L-BT-hot-wheels-hero-LLPC-B-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Blister%20Luxo/LLPC-B-L-BT-hot-wheels-escala-LLPC-B-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Blister%20Luxo/LLPC-B-L-BT-hot-wheels-verso-LLPC-B-L.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2004%20-%20Luxo/Caixa%20Blister%20Luxo/LLPC-B-L-BT-hot-wheels-angulo3-4-LLPC-B-L.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Premium",
+      "slug": "premium",
+      "cards": [
+        {
+          "card": "Kit 03 - Premium",
+          "skus": "LLPC-TB-P-+-4x-LLPC-CL-MT-P-ou-4x-LLPC-CL-PM-P-+-LLPC-F-C-+-LLPC-TT-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/LLPC-C-P-hot-wheels-hero-LLPC-TB-P-%2B-4x-LLPC-CL-MT-P-ou-4x-LLPC-CL-PM-P-%2B-LLPC-F-C-%2B-LLPC-TT-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Bala",
+          "skus": "LLPC-CL-MT-P-ou-LLPC-CL-PM-P",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Bala%20Premium%20/LLPC-CL-P-BL-hot-wheels-detalhe-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Bala%20Premium%20/LLPC-CL-P-BL-hot-wheels-escala-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Bala%20Premium%20/LLPC-CL-P-BL-hot-wheels-hero-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Bala%20Premium%20/LLPC-CL-P-BL-hot-wheels-angulo3-4-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Sacolinha",
+          "skus": "LLPC-CL-MT-P-ou-LLPC-CL-PM-P",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-CS-hot-wheels-detalhe-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-CS-hot-wheels-hero-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-CS-hot-wheels-escala-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-CS-hot-wheels-variacao-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-CS-hot-wheels-verso-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Sacolinha%20Premium%20/LLPC-CL-P-CS-hot-wheels-angulo3-4-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Tubete",
+          "skus": "LLPC-CL-MT-P-ou-LLPC-CL-PM-P",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-detalhe-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-escala-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-hero-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-variacao-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-verso-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Tubete%20Premium/LLPC-CL-P-T-hot-wheels-angulo3-4-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Pirâmide",
+          "skus": "LLPC-CL-MT-P-ou-LLPC-CL-PM-P",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-hero-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-frontal-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-escala-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-detalhe-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-verso-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Caixa%20Pir%C3%A2mide%20Premium%20/LLPC-CL-P-P-hot-wheels-angulo3-4-LLPC-CL-MT-P-ou-LLPC-CL-PM-P.jpg"
+          ]
+        },
+        {
+          "card": "Topo de Bolo",
+          "skus": "LLPC-TB-P",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-angulo3-4-LLPC-TB-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-verso-LLPC-TB-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-variacao-LLPC-TB-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-detalhe-LLPC-TB-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-escala-LLPC-TB-P.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2003%20-%20Premium/Topo%20de%20Bolo%20Premium/LLPC-TB-P-hot-wheels-hero-LLPC-TB-P.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Clássico",
+      "slug": "classico",
+      "cards": [
+        {
+          "card": "Kit 02 - Clássico",
+          "skus": "LLPC-TB-C-+-4x-LLPC-CL-MT-C-ou-4x-LLPC-CL-PM-C-+-LLPC-F-C-+-LLPC-TT-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/LLPC-C-C-hot-wheels-hero-LLPC-TB-C-%2B-4x-LLPC-CL-MT-C-ou-4x-LLPC-CL-PM-C-%2B-LLPC-F-C-%2B-LLPC-TT-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Tubete",
+          "skus": "LLPC-CL-MT-C-ou-LLPC-CL-PM-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-hot-wheels-detalhe-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-hot-wheels-hero-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-hot-wheels-frontal-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-hot-wheels-escala-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-hot-wheels-verso-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Tubete%20Cl%C3%A1ssico/LLPC-CL-C-T-hot-wheels-angulo3-4-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Sacolinha",
+          "skus": "LLPC-CL-MT-C-ou-LLPC-CL-PM-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-C-CS-hot-wheels-hero-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-C-CS-hot-wheels-escala-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-C-CS-hot-wheels-detalhe-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-C-CS-hot-wheels-variacao-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-C-CS-hot-wheels-verso-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Sacolinha%20Cl%C3%A1ssico/LLPC-CL-C-CS-hot-wheels-angulo3-4-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Milk",
+          "skus": "LLPC-CL-MT-C-ou-LLPC-CL-PM-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-hot-wheels-variacao-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-hot-wheels-hero-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-hot-wheels-escala-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-hot-wheels-detalhe-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-hot-wheels-verso-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Milk%20Cl%C3%A1ssico/LLPC-CL-C-MK-hot-wheels-angulo3-4-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Pirâmide",
+          "skus": "LLPC-CL-MT-C-ou-LLPC-CL-PM-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-C-P-hot-wheels-detalhe-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-C-P-hot-wheels-variacao-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-C-P-hot-wheels-verso-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-C-P-hot-wheels-hero-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-C-P-hot-wheels-escala-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Caixa%20Pir%C3%A2mide%20Cl%C3%A1ssico%20/LLPC-CL-C-P-hot-wheels-angulo3-4-LLPC-CL-MT-C-ou-LLPC-CL-PM-C.jpg"
+          ]
+        },
+        {
+          "card": "Topo de Bolo",
+          "skus": "LLPC-TB-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-angulo3-4-LLPC-TB-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-verso-LLPC-TB-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-variacao-LLPC-TB-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-escala-LLPC-TB-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-hero-LLPC-TB-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2002%20-%20Cl%C3%A1ssico/Topo%20de%20Bolo%20Cl%C3%A1ssico/LLPC-TB-C-hot-wheels-detalhe-LLPC-TB-C.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Essencial",
+      "slug": "essencial",
+      "cards": [
+        {
+          "card": "Kit 01 - Essencial",
+          "skus": "LLPC-TB-E-+-4x-LLPC-CL-MT-E-ou-4x-LLPC-CL-PM-E-+-LLPC-F-C-+-LLPC-TT-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/LLPC-C-E-hot-wheels-hero-LLPC-TB-E-%2B-4x-LLPC-CL-MT-E-ou-4x-LLPC-CL-PM-E-%2B-LLPC-F-C-%2B-LLPC-TT-C.jpg"
+          ]
+        },
+        {
+          "card": "Topper",
+          "skus": "LLPC-TT-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topper%20Essencial/LLPC-TT-C-hot-wheels-verso-LLPC-TT-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topper%20Essencial/LLPC-TT-C-hot-wheels-hero-LLPC-TT-C.jpg"
+          ]
+        },
+        {
+          "card": "Forminha",
+          "skus": "LLPC-F-C",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Forminha%20Essencial/LLPC-F-C-hot-wheels-hero-LLPC-F-C.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Forminha%20Essencial/LLPC-F-C-hot-wheels-verso-LLPC-F-C.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Tubete",
+          "skus": "LLPC-CL-MT-E-ou-LLPC-CL-PM-E",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-hot-wheels-detalhe-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-hot-wheels-hero-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-hot-wheels-escala-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-CL-E-T-hot-wheels-variacao-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-F-C-T-hot-wheels-verso-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Tubete%20Essencial/LLPC-F-C-T-hot-wheels-angulo3-4-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Sacolinha",
+          "skus": "LLPC-CL-MT-E-ou-LLPC-CL-PM-E",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-CS-hot-wheels-detalhe-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-CS-hot-wheels-escala-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-CS-hot-wheels-hero-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-CS-hot-wheels-variacao-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-CS-hot-wheels-verso-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Sacolinha%20Essencial/LLPC-CL-E-CS-hot-wheels-angulo3-4-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Pirâmide",
+          "skus": "LLPC-CL-MT-E-ou-LLPC-CL-PM-E",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-detalhe-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-hero-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-escala-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-variacao-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-verso-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Pir%C3%A2mide%20Essencial/LLPC-CL-E-P-hot-wheels-angulo3-4-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg"
+          ]
+        },
+        {
+          "card": "Caixa Milk",
+          "skus": "LLPC-CL-MT-E-ou-LLPC-CL-PM-E",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-detalhe-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-hero-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-escala-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-variacao-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-verso-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Caixa%20Milk%20Essencial/LLPC-CL-E-MK-hot-wheels-angulo3-4-LLPC-CL-MT-E-ou-LLPC-CL-PM-E.jpg"
+          ]
+        },
+        {
+          "card": "Topo de Bolo",
+          "skus": "LLPC-TB-E",
+          "imagens": [
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-verso-LLPC-TB-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-variacao-LLPC-TB-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-escala-LLPC-TB-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-hero-LLPC-TB-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-detalhe-LLPC-TB-E.jpg",
+            "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/Kit%20Hot%20Wheels/Kit%2001%20-%20Essencial/Topo%20de%20Bolo%20Essencial/LLPC-TB-E-hot-wheels-angulo3-4-LLPC-TB-E.jpg"
+          ]
+        }
+      ]
+    }
+  ]
+}
