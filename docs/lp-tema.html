@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>LLPC — Card</title><style>body{font-family:Arial;margin:20px;} .item{margin-bottom:20px;} img{max-width:280px;border-radius:10px;}</style></head><body><h1>Catálogo LLPC</h1><script>const params = new URLSearchParams(location.search);const cardSlug = params.get('card');
+async function load() {
+  try {
+    const r = await fetch('https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/docs/precos.json');
+    const precos = await r.json();
+
+    const cardItems = precos.filter(x=>x.card && x.card.toLowerCase().replace(/[^a-z0-9]+/g,'-')===cardSlug);
+
+    let html = "";
+    for(const it of cardItems){
+      const imgs = await fetchItemImages(it.skus);
+      html += "<div class='item'>";
+      html += "<h2>"+it.card+" — "+it.produto+"</h2>";
+      html += "<p><b>De:</b> R$ "+it.preco_de.toFixed(2)+" — <b>Por:</b> R$ "+it.preco_por.toFixed(2)+"</p>";
+      html += "<p><b>SKUs:</b> "+it.skus+"</p>";
+
+      for(const url of imgs){
+        html += "<img src='"+url+"'/><br>";
+      }
+
+      html += "</div>";
+    }
+
+    document.getElementById("content").innerHTML = html;
+
+  }catch(e){
+    document.getElementById("content").innerHTML = "<p>Erro ao carregar dados.</p>";
+  }
+}
+
+async function fetchItemImages(skuStr){
+  const list = skuStr.split(/[;,]+/).map(x=>x.trim()).filter(Boolean);
+  const urls = [];
+
+  for(const sk of list){
+    const base = "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/fotos/";
+    const folder = sk.toLowerCase();
+    urls.push(base+folder+"/hero.jpg");
+  }
+
+  return urls;
+}
+
+load();
+</script><div id='content'>Carregando...</div></body></html>
