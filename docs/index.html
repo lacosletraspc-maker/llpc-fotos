@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <header class="border-b bg-white/80 backdrop-blur sticky top-0 z-20">
+  <!-- Cabeçalho simples, NÃO sticky -->
+  <header class="border-b bg-white">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <span class="text-2xl">🌸</span>
@@ -28,7 +29,7 @@
   </header>
 
   <main class="max-w-6xl mx-auto px-4 pb-12">
-    <!-- HERO / Atenção -->
+    <!-- HERO -->
     <section class="mt-8 mb-6 text-center">
       <h2 class="text-3xl md:text-4xl font-extrabold text-emerald-700 mb-3">
         Catálogo Laços &amp; Letras Papelaria Criativa
@@ -47,7 +48,7 @@
       </div>
     </section>
 
-    <!-- Nossas linhas (upsell geral) -->
+    <!-- Nossas linhas -->
     <section id="linhas" class="mt-10 bg-white shadow-sm rounded-xl p-5 md:p-6">
       <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">
         Nossas linhas de papelaria — o mesmo tema em níveis diferentes de acabamento
@@ -60,8 +61,7 @@
         <article class="border rounded-lg p-3 flex flex-col gap-1">
           <h4 class="font-semibold text-emerald-700 mb-1">Essencial</h4>
           <p class="text-gray-600 text-xs md:text-sm">
-            Para quem quer uma festa bonita e econômica. Peças mais clean, menos camadas, acabamento caprichado
-            sem muitos apliques.
+            Para quem quer uma festa bonita e econômica. Peças mais clean, menos camadas, acabamento caprichado sem muitos apliques.
           </p>
         </article>
         <article class="border rounded-lg p-3 flex flex-col gap-1">
@@ -124,23 +124,18 @@
           var tema  = item.tema || item.nome || 'Tema';
           var total = item.total != null ? item.total : '';
           var foto  = item.thumb || item.capa || '';
-
           var linkTema = 'lp-tema.html?slug=' + encodeURIComponent(slug);
 
+          // Card inteiro clicável (a)
           return '' +
-            '<article class="bg-white shadow rounded-lg overflow-hidden flex flex-col hover:shadow-md transition-shadow">' +
+            '<a href="' + linkTema + '" class="block bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition-shadow focus:outline-none focus:ring-2 focus:ring-emerald-500">' +
               (foto ? '<img src="' + foto + '" alt="' + tema.replace(/"/g,'&quot;') + '" class="w-full h-48 object-cover">' : '') +
-              '<div class="p-4 flex flex-col flex-1 gap-2">' +
+              '<div class="p-4 flex flex-col gap-2">' +
                 '<h2 class="font-semibold text-lg text-emerald-700 truncate">' + tema + '</h2>' +
                 (total !== '' ? '<p class="text-sm text-gray-600">' + total + ' fotos no catálogo</p>' : '') +
-                '<p class="text-xs text-gray-500 mt-1">Clique para ver kits, linhas (Essencial ao Luxo) e falar com a Lale.</p>' +
-                '<div class="mt-auto pt-2">' +
-                  '<a href="' + linkTema + '" class="inline-flex items-center justify-center px-3 py-1.5 rounded-md bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700">' +
-                    'Ver detalhes ✨' +
-                  '</a>' +
-                '</div>' +
+                '<p class="text-xs text-gray-500 mt-1">Clique em qualquer lugar deste card para ver kits, linhas (Essencial ao Luxo) e falar com a Lale.</p>' +
               '</div>' +
-            '</article>';
+            '</a>';
         }).join('');
       } catch (e) {
         console.error(e);
