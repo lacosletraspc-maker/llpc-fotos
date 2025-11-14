@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <header class="border-b bg-white/80 backdrop-blur sticky top-0 z-20">
+  <!-- Cabeçalho simples, NÃO sticky -->
+  <header class="border-b bg-white">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <span class="text-2xl">🌸</span>
@@ -31,45 +32,45 @@
       </div>
     </section>
 
-    <!-- LINHAS VISUAIS POR TEMA (fotos dos KIT* por linha) -->
+    <!-- LINHAS VISUAIS (KIT* por linha) -->
     <section id="linhas-tema-visuais" class="mt-10">
       <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2">
         Veja este tema nas diferentes linhas LLPC
       </h2>
       <p class="text-sm text-gray-600 mb-4">
         Usamos as fotos dos <strong>kits</strong> (Kit Essencial, Kit Clássico, Kit Premium, Kit Luxo)
-        para mostrar, na prática, como o mesmo tema pode aparecer com níveis diferentes de acabamento. Assim, você
-        escolhe a linha que combina com o seu estilo e com o seu orçamento.
+        para mostrar, na prática, como o mesmo tema pode aparecer com níveis diferentes de acabamento.
+        Assim, você escolhe a linha que combina com o seu estilo e com o seu orçamento.
       </p>
       <div id="linhas-tema-cards" class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <p class="col-span-full text-center text-gray-500 text-sm">Carregando visual das linhas…</p>
       </div>
     </section>
 
-    <!-- PRODUTOS DO TEMA (preços) -->
+    <!-- PRODUTOS / KITS COM PREÇOS -->
     <section class="mt-10">
       <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2">
         Kits e produtos disponíveis neste tema
       </h2>
       <p class="text-sm text-gray-600 mb-4">
         Aqui você vê o que podemos montar neste tema: kits completos, topos de bolo, caixinhas e outros itens.
-        Os valores servem como referência e podem variar conforme personalizações e quantidade de itens — a Lale ajusta tudo
-        para caber no seu bolso.
+        Os valores servem como referência e podem variar conforme personalizações e quantidade de itens —
+        a Lale ajusta tudo para caber no seu bolso.
       </p>
       <div id="produtos-tema" class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <p class="col-span-full text-center text-gray-500 text-sm">Carregando produtos…</p>
       </div>
     </section>
 
-    <!-- EXPLICAÇÃO DAS LINHAS (texto) -->
+    <!-- EXPLICAÇÃO DAS LINHAS -->
     <section class="mt-10 bg-white shadow-sm rounded-xl p-5 md:p-6">
       <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">
         Como funcionam as linhas Essencial, Clássica, Premium e Luxo
       </h2>
       <p class="text-sm text-gray-600 mb-4">
         Em todos os temas da LLPC você pode escolher a linha que faz mais sentido para o seu momento.
-        Em vez de trocar de fornecedor, você ajusta apenas o nível de acabamento: quantidade de camadas, uso de papéis especiais,
-        brilho, glitter e apliques.
+        Em vez de trocar de fornecedor, você ajusta apenas o nível de acabamento: quantidade de camadas,
+        uso de papéis especiais, brilho, glitter e apliques.
       </p>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
         <article class="border rounded-lg p-3">
@@ -124,16 +125,18 @@
 
   <script>
     (function() {
-      var container = document.getElementById('detalhe-tema');
+      var container   = document.getElementById('detalhe-tema');
       var produtosBox = document.getElementById('produtos-tema');
-      var ctaWhats = document.getElementById('cta-whats');
-      var linhasBox = document.getElementById('linhas-tema-cards');
+      var ctaWhats    = document.getElementById('cta-whats');
+      var linhasBox   = document.getElementById('linhas-tema-cards');
+
+      // Mapa card → foto para este tema
+      var cardFotosMap = {};
 
       function getSlug() {
         var params = new URLSearchParams(window.location.search);
         return params.get('slug');
       }
-
       var slug = getSlug();
       if (!slug) {
         container.innerHTML = '<div class="bg-white shadow rounded-xl p-6 text-center text-red-600 text-sm">Link inválido: nenhum tema informado.</div>';
@@ -146,7 +149,7 @@
         if (typeof v === 'number') {
           try {
             return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-          } catch (e) {
+          } catch(e) {
             return 'R$ ' + v.toFixed(2).replace('.', ',');
           }
         }
@@ -156,7 +159,7 @@
 
       (async function carregarTemaEProdutos() {
         try {
-          // 1) Busca catálogo para achar o tema
+          // 1) Catálogo para achar o tema
           var resCat = await fetch('catalogo/index.json');
           if (!resCat.ok) throw new Error('HTTP catálogo ' + resCat.status);
           var lista = await resCat.json();
@@ -165,7 +168,6 @@
           var temaObj = lista.find(function(t) {
             return (t.slug || '').toString().toLowerCase() === slug.toLowerCase();
           });
-
           if (!temaObj) {
             container.innerHTML =
               '<div class="bg-white shadow rounded-xl p-6 text-center text-red-600 text-sm">Tema não encontrado.</div>';
@@ -179,10 +181,9 @@
           var total = temaObj.total != null ? temaObj.total : '';
           var nomeLower = nome.toString().toLowerCase();
 
-          // Descrições específicas para A Bela e a Fera / Hot Wheels
+          // Textos especiais para A Bela e a Fera / Hot Wheels
           var heroDesc1 = 'Imagine a mesa da sua festa montada com esse tema, cheia de detalhes em papel que deixam tudo mais acolhedor e fotogênico.';
           var heroDesc2 = 'Você escolhe a linha (Essencial, Clássica, Premium ou Luxo) e nós adaptamos o kit ao seu orçamento, sem perder o encanto.';
-
           if (nomeLower.indexOf('bela') !== -1 && nomeLower.indexOf('fera') !== -1) {
             heroDesc1 = 'Rosas encantadas, livros, castelo e muito dourado: a versão LLPC de A Bela e a Fera foi pensada para criar uma mesa elegante e acolhedora, do topo de bolo às caixinhas de lembrancinha.';
             heroDesc2 = 'Nas quatro linhas (Essencial, Clássica, Premium e Luxo) você escolhe se prefere algo mais delicado e econômico ou um visual de castelo real, com muitas camadas, brilho e detalhes em 3D — sempre com opções que cabem no seu bolso.';
@@ -216,15 +217,16 @@
               '</div>' +
             '</div>';
 
-          // 2) Linhas/fotos por tema (usando KIT* por linha)
+          // 2) Linhas (KIT* por linha) + carregar cards.json para mapear fotos por card
           try {
+            // LINHAS
             var resLinhas = await fetch('catalogo/linhas.json');
             if (resLinhas.ok) {
               var linhas = await resLinhas.json();
               if (Array.isArray(linhas)) {
                 var linhasTema = linhas.filter(function(l) {
                   var slugLinha = (l.tema_slug || '').toString().toLowerCase();
-                  var temaNome = (l.tema || '').toString().toLowerCase();
+                  var temaNome  = (l.tema || '').toString().toLowerCase();
                   return slugLinha === slug.toLowerCase() || temaNome === nomeLower;
                 });
 
@@ -234,33 +236,30 @@
                     var col = l.colecao || 'Linha';
                     var keyCol = col.toString().toLowerCase();
                     if (!gruposLinhas[keyCol]) {
-                      gruposLinhas[keyCol] = {
-                        colecao: col,
-                        foto: l.foto,
-                        card: l.card
-                      };
+                      gruposLinhas[keyCol] = { colecao: col, foto: l.foto, card: l.card };
                     }
                   });
 
                   var descLinhas = {
                     'essencial': 'Versão mais econômica do tema, com menos camadas e acabamento clean, perfeita para festas menores ou quando você quer concentrar o investimento em outros itens.',
-                    'clássica': 'Equilíbrio entre preço e impacto visual: mais recortes, composição de papéis e detalhes que dão volume sem pesar tanto no orçamento.',
-                    'classica': 'Equilíbrio entre preço e impacto visual: mais recortes, composição de papéis e detalhes que dão volume sem pesar tanto no orçamento.',
-                    'premium': 'Mais camadas, uso de papéis especiais e elementos em 3D. Ótima para mesas de destaque e festas principais do ano.',
-                    'luxo': 'Máximo de camadas, brilho, texturas e apliques. É a versão de impacto, para quem quer um resultado digno de capa de revista.'
+                    'clássica':  'Equilíbrio entre preço e impacto visual: mais recortes, composição de papéis e detalhes que dão volume sem pesar tanto no orçamento.',
+                    'classica':  'Equilíbrio entre preço e impacto visual: mais recortes, composição de papéis e detalhes que dão volume sem pesar tanto no orçamento.',
+                    'premium':   'Mais camadas, uso de papéis especiais e elementos em 3D. Ótima para mesas de destaque e festas principais do ano.',
+                    'luxo':      'Máximo de camadas, brilho, texturas e apliques. É a versão de impacto, para quem quer um resultado digno de capa de revista.'
                   };
 
                   var htmlLinhas = '';
                   Object.keys(gruposLinhas).sort().forEach(function(keyCol) {
-                    var info = gruposLinhas[keyCol];
-                    var nomeLinha = info.colecao;
-                    var desc = descLinhas[keyCol] || descLinhas[nomeLinha.toLowerCase()] || 'Personalização pensada para esse tema, ajustando camadas e detalhes ao seu orçamento.';
+                    var infoL = gruposLinhas[keyCol];
+                    var nomeLinha = infoL.colecao;
+                    var desc = descLinhas[keyCol] || descLinhas[nomeLinha.toLowerCase()] ||
+                               'Personalização pensada para esse tema, ajustando camadas e detalhes ao seu orçamento.';
                     var textoOrc = 'Quero o tema ' + nome + ' na linha ' + nomeLinha + ' com a Lale da Laços & Letras Papelaria Criativa.';
                     var wa = 'https://wa.me/?text=' + encodeURIComponent(textoOrc);
 
                     htmlLinhas +=
                       '<article class="bg-white border rounded-lg overflow-hidden flex flex-col hover:shadow-sm transition-shadow">' +
-                        (info.foto ? '<img src="' + info.foto + '" alt="' + nomeLinha.replace(/"/g,'&quot;') + ' - ' + nome.replace(/"/g,'&quot;') + '" class="w-full h-44 object-cover">' : '') +
+                        (infoL.foto ? '<img src="' + infoL.foto + '" alt="' + nomeLinha.replace(/"/g,'&quot;') + ' - ' + nome.replace(/"/g,'&quot;') + '" class="w-full h-44 object-cover">' : '') +
                         '<div class="p-3 flex flex-col gap-2 text-sm">' +
                           '<h3 class="font-semibold text-emerald-700 text-sm md:text-base">Linha ' + nomeLinha + '</h3>' +
                           '<p class="text-gray-600 text-xs md:text-sm">' + desc + '</p>' +
@@ -284,13 +283,36 @@
               linhasBox.innerHTML =
                 '<p class="col-span-full text-center text-gray-500 text-xs">Não foi possível carregar as fotos por linha agora. As quatro linhas continuam disponíveis — converse com a Lale.</p>';
             }
+
+            // CARDS (fotos por produto)
+            try {
+              var resCards = await fetch('catalogo/cards.json');
+              if (resCards.ok) {
+                var cards = await resCards.json();
+                if (Array.isArray(cards)) {
+                  cards.forEach(function(c) {
+                    var temaSlug = (c.tema_slug || '').toString().toLowerCase();
+                    var temaNome = (c.tema || '').toString().toLowerCase();
+                    if (temaSlug === slug.toLowerCase() || temaNome === nomeLower) {
+                      var keyCard = (c.card || '').toString().trim().toLowerCase();
+                      if (keyCard && !cardFotosMap[keyCard]) {
+                        cardFotosMap[keyCard] = c.foto;
+                      }
+                    }
+                  });
+                }
+              }
+            } catch (eCards) {
+              console.error('Erro ao carregar cards.json', eCards);
+            }
+
           } catch (eLinhas) {
             console.error(eLinhas);
             linhasBox.innerHTML =
               '<p class="col-span-full text-center text-gray-500 text-xs">Não foi possível carregar as fotos por linha agora. As quatro linhas continuam disponíveis — converse com a Lale.</p>';
           }
 
-          // 3) Busca preços (Desejo)
+          // 3) Produtos / preços
           try {
             var resPrecos = await fetch('precos.json');
             if (!resPrecos.ok) throw new Error('HTTP preços ' + resPrecos.status);
@@ -336,8 +358,15 @@
                 var precoPor = p.preco_por;
                 var temDesconto = precoDe && precoPor && precoDe !== precoPor;
 
+                var cardKey  = (p.card || '').toString().trim().toLowerCase();
+                var fotoProd = cardFotosMap[cardKey] || '';
+
                 htmlProdutos +=
-                  '<div class="border rounded-md p-3 flex flex-col gap-2 text-sm">' +
+                  '<div class="border rounded-md p-3 flex flex-col gap-2 text-sm bg-white hover:shadow-sm transition-shadow">' +
+                    (fotoProd
+                      ? '<img src="' + fotoProd + '" alt="' + titulo.replace(/"/g,'&quot;') + ' - ' + nome.replace(/"/g,'&quot;') + '" class="w-full h-32 object-cover rounded mb-2">'
+                      : ''
+                    ) +
                     '<div>' +
                       '<p class="font-semibold text-gray-800">' + titulo + '</p>' +
                       (tipo ? '<p class="text-xs text-gray-500">' + tipo + '</p>' : '') +
