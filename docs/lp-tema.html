@@ -7,22 +7,107 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <header class="text-center py-6">
-    <h1 class="text-3xl font-bold text-emerald-700">🌸 Laços &amp; Letras Papelaria Criativa</h1>
-    <p class="mt-2 text-sm text-gray-600">
-      Detalhes do tema escolhido.
-    </p>
+  <header class="border-b bg-white/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">🌸</span>
+        <div>
+          <h1 class="text-xl md:text-2xl font-bold text-emerald-700">Laços &amp; Letras Papelaria Criativa</h1>
+          <p class="text-xs md:text-sm text-gray-500">Detalhes do tema escolhido.</p>
+        </div>
+      </div>
+      <a href="index.html" class="hidden sm:inline-flex text-xs md:text-sm text-gray-600 hover:text-gray-800">
+        ← Voltar para os temas
+      </a>
+    </div>
   </header>
 
-  <main class="max-w-3xl mx-auto px-4 pb-10">
-    <section id="detalhe-tema" class="bg-white shadow rounded-lg overflow-hidden">
-      <div class="p-6 text-center text-gray-500">Carregando tema…</div>
+  <main class="max-w-6xl mx-auto px-4 pb-12">
+    <!-- HERO DINÂMICO -->
+    <section id="detalhe-tema" class="mt-8">
+      <div class="bg-white shadow rounded-xl p-6 text-center text-gray-500">
+        Carregando tema…
+      </div>
+    </section>
+
+    <!-- PRODUTOS DO TEMA (preços) -->
+    <section class="mt-10">
+      <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2">
+        Kits e produtos disponíveis neste tema
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Aqui você vê o que podemos montar neste tema: kits completos, topos de bolo e caixinhas. Os valores podem variar
+        conforme personalizações e quantidade de itens, mas já dão uma referência clara do investimento.
+      </p>
+      <div id="produtos-tema" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <p class="col-span-full text-center text-gray-500 text-sm">Carregando produtos…</p>
+      </div>
+    </section>
+
+    <!-- EXPLICAÇÃO DAS LINHAS (upsell) -->
+    <section class="mt-10 bg-white shadow-sm rounded-xl p-5 md:p-6">
+      <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">
+        Escolha a linha que combina com sua festa
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">
+        O mesmo tema pode aparecer em diferentes linhas. Assim, você escolhe se quer focar em economia, equilíbrio
+        ou naquele “Uau!” na mesa de doces. Se tiver dúvida, a Lale te ajuda a decidir.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+        <article class="border rounded-lg p-3">
+          <h3 class="font-semibold text-emerald-700 mb-1">Essencial</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Ideal para festas menores ou orçamento mais enxuto. Peças clean, menos camadas, mantendo o tema lindo nas fotos.
+          </p>
+        </article>
+        <article class="border rounded-lg p-3">
+          <h3 class="font-semibold text-emerald-700 mb-1">Clássica</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Equilíbrio entre custo e impacto. Mais detalhes, recortes extras e composição de papéis que dão volume.
+          </p>
+        </article>
+        <article class="border rounded-lg p-3">
+          <h3 class="font-semibold text-emerald-700 mb-1">Premium</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Mais camadas 3D, uso de papéis especiais e elementos decorativos para uma mesa cheia de presença.
+          </p>
+        </article>
+        <article class="border rounded-lg p-3">
+          <h3 class="font-semibold text-emerald-700 mb-1">Luxo</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Máximo de brilho e detalhes: glitter, laços, acetato e muitos apliques. Perfeita para festas instagramáveis.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="mt-10 text-center">
+      <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+        Vamos montar seu kit neste tema?
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Clique no botão abaixo, conte como será a festa (data, idade, orçamento) e a Lale sugere os kits e a linha
+        ideal para você — sem compromisso.
+      </p>
+      <a id="cta-whats"
+         href="https://wa.me/?text=Quero%20montar%20um%20kit%20personalizado%20com%20a%20Lale."
+         target="_blank" rel="noopener"
+         class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-emerald-600 text-white text-sm md:text-base font-semibold hover:bg-emerald-700">
+        💬 Falar com a Lale sobre este tema
+      </a>
     </section>
   </main>
+
+  <footer class="border-t py-4 text-center text-xs text-gray-500">
+    Laços &amp; Letras Papelaria Criativa — cada detalhe pensado com carinho.
+  </footer>
 
   <script>
     (function() {
       var container = document.getElementById('detalhe-tema');
+      var produtosBox = document.getElementById('produtos-tema');
+      var ctaWhats = document.getElementById('cta-whats');
 
       function getSlug() {
         var params = new URLSearchParams(window.location.search);
@@ -31,56 +116,158 @@
 
       var slug = getSlug();
       if (!slug) {
-        container.innerHTML = '<div class="p-6 text-center text-red-600">Link inválido: nenhum tema informado.</div>';
+        container.innerHTML = '<div class="bg-white shadow rounded-xl p-6 text-center text-red-600 text-sm">Link inválido: nenhum tema informado.</div>';
+        produtosBox.innerHTML = '';
         return;
       }
 
-      (async function carregarTema() {
+      function formatMoney(v) {
+        if (typeof v === 'number') {
+          try {
+            return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          } catch (e) {
+            return 'R$ ' + v.toFixed(2).replace('.', ',');
+          }
+        }
+        if (!v) return '';
+        return v; // já formatado
+      }
+
+      (async function carregarTemaEProdutos() {
         try {
-          var res = await fetch('catalogo/index.json');
-          if (!res.ok) throw new Error('HTTP ' + res.status);
-          var dados = await res.json();
-          if (!Array.isArray(dados)) throw new Error('JSON inesperado');
+          // 1) Busca catálogo para achar o tema
+          var resCat = await fetch('catalogo/index.json');
+          if (!resCat.ok) throw new Error('HTTP catálogo ' + resCat.status);
+          var lista = await resCat.json();
+          if (!Array.isArray(lista)) throw new Error('JSON catálogo inesperado');
 
-          var tema = dados.find(function(t){ return t.slug === slug; });
+          var temaObj = lista.find(function(t) {
+            return (t.slug || '').toString().toLowerCase() === slug.toLowerCase();
+          });
 
-          if (!tema) {
-            container.innerHTML = '<div class="p-6 text-center text-red-600">Tema não encontrado.</div>';
+          if (!temaObj) {
+            container.innerHTML =
+              '<div class="bg-white shadow rounded-xl p-6 text-center text-red-600 text-sm">Tema não encontrado.</div>';
+            produtosBox.innerHTML = '';
             return;
           }
 
-          var foto  = tema.thumb || '';
-          var nome  = tema.tema || '';
-          var total = tema.total != null ? tema.total : '';
+          var nome  = temaObj.tema || temaObj.nome || 'Tema personalizado';
+          var foto  = temaObj.hero || temaObj.thumb || temaObj.capa || '';
+          var total = temaObj.total != null ? temaObj.total : '';
 
-          var msgWhats = 'Quero o tema ' + nome + ' da Laços & Letras Papelaria Criativa.';
+          // 2) Monta o HERO (Atenção + Interesse)
+          var msgWhats = 'Quero montar um kit no tema ' + nome + ' com a Lale da Laços & Letras Papelaria Criativa.';
           var urlWhats = 'https://wa.me/?text=' + encodeURIComponent(msgWhats);
+          ctaWhats.href = urlWhats;
 
-          container.innerHTML = '' +
-            '<div class="flex flex-col md:flex-row">' +
+          container.innerHTML =
+            '<div class="bg-white shadow rounded-xl overflow-hidden flex flex-col md:flex-row">' +
               (foto ? '<div class="md:w-1/2 bg-gray-100"><img src="' + foto + '" alt="' + nome.replace(/"/g,'&quot;') + '" class="w-full h-full object-cover"></div>' : '') +
               '<div class="md:w-1/2 p-6 flex flex-col gap-4">' +
                 '<div>' +
-                  '<h2 class="text-2xl font-bold text-emerald-700 mb-1">' + nome + '</h2>' +
+                  '<h2 class="text-2xl md:text-3xl font-bold text-emerald-700 mb-1">' + nome + '</h2>' +
                   (total !== '' ? '<p class="text-sm text-gray-600">' + total + ' fotos no catálogo.</p>' : '') +
                 '</div>' +
+                '<p class="text-sm text-gray-700 leading-relaxed">' +
+                  'Imagine a mesa da sua festa montada com esse tema, cheia de detalhes em papel que deixam tudo mais acolhedor e fotogênico. ' +
+                  'A Lale cria topos de bolo, caixinhas, tags e outros personalizados sob medida para a sua celebração.' +
+                '</p>' +
                 '<p class="text-sm text-gray-700">' +
-                  'Clique no botão abaixo para falar com a Lale no WhatsApp e montar seu kit personalizado nesse tema.' +
+                  'Você escolhe a linha (Essencial, Clássica, Premium ou Luxo) e nós adaptamos o kit ao seu orçamento, sem perder o encanto.' +
                 '</p>' +
                 '<div class="mt-auto flex flex-wrap gap-3">' +
                   '<a href="' + urlWhats + '" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700">' +
-                    '💬 Falar com a Lale' +
+                    '💬 Falar com a Lale sobre este tema' +
                   '</a>' +
-                  '<a href="index.html" class="inline-flex items-center justify-center px-4 py-2 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-gray-100">' +
+                  '<a href="index.html" class="inline-flex items-center justify-center px-4 py-2 rounded-md border border-gray-300 text-xs md:text-sm text-gray-700 hover:bg-gray-100">' +
                     '← Voltar para os temas' +
                   '</a>' +
                 '</div>' +
               '</div>' +
             '</div>';
+
+          // 3) Busca preços (Desejo)
+          try {
+            var resPrecos = await fetch('precos.json');
+            if (!resPrecos.ok) throw new Error('HTTP preços ' + resPrecos.status);
+            var precos = await resPrecos.json();
+            if (!Array.isArray(precos)) throw new Error('JSON preços inesperado');
+
+            var nomeLower = nome.toString().toLowerCase();
+            var produtosTema = precos.filter(function(p) {
+              var temaPreco = (p.tema || '').toString().toLowerCase();
+              var slugPreco = (p.slug || p.tema_slug || '').toString().toLowerCase();
+              return temaPreco === nomeLower || slugPreco === slug.toLowerCase();
+            });
+
+            if (!produtosTema.length) {
+              produtosBox.innerHTML =
+                '<p class="col-span-full text-center text-gray-500 text-sm">Ainda não temos uma tabela de preços publicada para este tema. Fale com a Lale para montar um orçamento personalizado.</p>';
+              return;
+            }
+
+            // Agrupa por coleção/linha
+            var grupos = {};
+            produtosTema.forEach(function(p) {
+              var colecao = p.colecao || 'Linha única';
+              if (!grupos[colecao]) grupos[colecao] = [];
+              grupos[colecao].push(p);
+            });
+
+            var htmlProdutos = '';
+            Object.keys(grupos).sort().forEach(function(colecao) {
+              var listaProd = grupos[colecao];
+              htmlProdutos +=
+                '<article class="col-span-full border rounded-lg bg-white p-4 mb-2">' +
+                  '<div class="flex items-center justify-between mb-2">' +
+                    '<h3 class="font-semibold text-emerald-700 text-sm md:text-base">' +
+                      'Linha ' + colecao +
+                    '</h3>' +
+                    '<span class="text-[11px] md:text-xs text-gray-500">Valores de referência — podem variar conforme personalização.</span>' +
+                  '</div>' +
+                  '<div class="grid grid-cols-1 md:grid-cols-2 gap-3">';
+
+              listaProd.forEach(function(p) {
+                var titulo = p.card || p.produto || 'Produto';
+                var tipo   = p.tipo || '';
+                var precoDe  = p.preco_de;
+                var precoPor = p.preco_por;
+                var temDesconto = precoDe && precoPor && precoDe !== precoPor;
+
+                htmlProdutos +=
+                  '<div class="border rounded-md p-3 flex flex-col gap-2 text-sm">' +
+                    '<div>' +
+                      '<p class="font-semibold text-gray-800">' + titulo + '</p>' +
+                      (tipo ? '<p class="text-xs text-gray-500">' + tipo + '</p>' : '') +
+                    '</div>' +
+                    '<div class="mt-1">' +
+                      (temDesconto
+                        ? '<p class="text-xs text-gray-500 line-through">de ' + formatMoney(precoDe) + '</p>' +
+                          '<p class="text-base font-semibold text-emerald-700">por ' + formatMoney(precoPor) + '</p>'
+                        : '<p class="text-base font-semibold text-emerald-700">' + formatMoney(precoPor || precoDe) + '</p>'
+                      ) +
+                    '</div>' +
+                    '<p class="text-[11px] text-gray-500">Valores para referência. Confirme quantidade e personalizações com a Lale.</p>' +
+                  '</div>';
+              });
+
+              htmlProdutos += '</div></article>';
+            });
+
+            produtosBox.innerHTML = htmlProdutos;
+
+          } catch (ePrecos) {
+            console.error(ePrecos);
+            produtosBox.innerHTML =
+              '<p class="col-span-full text-center text-gray-500 text-sm">Não foi possível carregar os preços agora. Fale com a Lale para receber um orçamento atualizado.</p>';
+          }
+
         } catch (e) {
           console.error(e);
           container.innerHTML =
-            '<div class="p-6 text-center text-red-600 text-sm">Erro ao carregar o tema. Tente novamente em alguns instantes.</div>';
+            '<div class="bg-white shadow rounded-xl p-6 text-center text-red-600 text-sm">Erro ao carregar o tema. Tente novamente em alguns instantes.</div>';
+          produtosBox.innerHTML = '';
         }
       })();
     })();
