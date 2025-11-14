@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo LLPC — Temas</title>
+  <meta name="description" content="Catálogo de temas da Laços &amp; Letras Papelaria Criativa. Escolha um tema e veja opções de topos de bolo, caixinhas, toppers e kits que cabem no seu bolso.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <header class="border-b bg-white/80 backdrop-blur">
+  <header class="border-b bg-white/80 backdrop-blur sticky top-0 z-20">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <span class="text-2xl">🌸</span>
@@ -16,9 +17,13 @@
           <p class="text-xs md:text-sm text-gray-500">Papelaria personalizada para festas que contam histórias.</p>
         </div>
       </div>
-      <a href="#linhas" class="hidden sm:inline-flex text-xs md:text-sm text-emerald-700 font-semibold hover:underline">
-        Nossas linhas
-      </a>
+      <nav class="flex items-center gap-3 text-xs md:text-sm">
+        <a href="#temas" class="text-gray-600 hover:text-gray-900">Temas</a>
+        <a href="#linhas" class="text-gray-600 hover:text-gray-900">Nossas linhas</a>
+        <a href="#contato" class="hidden sm:inline-flex text-emerald-700 font-semibold hover:underline">
+          Fale com a Lale
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -29,13 +34,13 @@
         Catálogo Laços &amp; Letras Papelaria Criativa
       </h2>
       <p class="max-w-2xl mx-auto text-sm md:text-base text-gray-600">
-        Escolha um tema para ver os detalhes, kits disponíveis e falar com a Lale pelo WhatsApp.
-        Nós cuidamos da papelaria criativa para você curtir a festa.
+        Comece escolhendo um tema. Depois, adaptamos os detalhes de papelaria para a linha que faz sentido
+        para o seu momento — da opção que <strong>cabe no bolso</strong> à mesa “Uau!” das fotos.
       </p>
     </section>
 
     <!-- GRID DE TEMAS -->
-    <section class="mt-4">
+    <section id="temas" class="mt-4">
       <h3 class="text-lg font-semibold text-gray-800 mb-3">Temas disponíveis</h3>
       <div id="lista-temas" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <p class="col-span-full text-center text-gray-500 text-sm">Carregando temas…</p>
@@ -45,50 +50,49 @@
     <!-- Nossas linhas (upsell geral) -->
     <section id="linhas" class="mt-10 bg-white shadow-sm rounded-xl p-5 md:p-6">
       <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">
-        Nossas linhas de papelaria — da opção que cabe no bolso à mesa “Uau!”
+        Nossas linhas de papelaria — o mesmo tema em níveis diferentes de acabamento
       </h3>
       <p class="text-sm text-gray-600 mb-4">
-        Todos os temas podem ser adaptados para uma das quatro linhas. Assim você escolhe o visual da festa
-        de acordo com o seu orçamento e com o impacto que deseja na mesa e nas fotos.
+        Em todos os temas você pode escolher entre quatro linhas. Assim, o mesmo topo de bolo ou kit pode ser
+        produzido com menos ou mais camadas, brilho e apliques — sempre com opções que cabem no seu bolso.
       </p>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
-        <article class="border rounded-lg p-3">
+        <article class="border rounded-lg p-3 flex flex-col gap-1">
           <h4 class="font-semibold text-emerald-700 mb-1">Essencial</h4>
           <p class="text-gray-600 text-xs md:text-sm">
-            Para quem quer uma festa bonita e econômica. Peças mais clean, menos camadas, acabamento
-            caprichado sem muitos apliques.
+            Para quem quer uma festa bonita e econômica. Peças mais clean, menos camadas, acabamento caprichado
+            sem muitos apliques.
           </p>
         </article>
-        <article class="border rounded-lg p-3">
+        <article class="border rounded-lg p-3 flex flex-col gap-1">
           <h4 class="font-semibold text-emerald-700 mb-1">Clássica</h4>
           <p class="text-gray-600 text-xs md:text-sm">
             Equilíbrio entre custo e impacto visual. Mais detalhes, recortes extras e combinação de papéis que dão volume.
           </p>
         </article>
-        <article class="border rounded-lg p-3">
+        <article class="border rounded-lg p-3 flex flex-col gap-1">
           <h4 class="font-semibold text-emerald-700 mb-1">Premium</h4>
           <p class="text-gray-600 text-xs md:text-sm">
-            Para quem ama fotos cheias de informação visual. Mais camadas 3D, uso de papéis especiais e
-            elementos decorativos.
+            Para quem ama fotos cheias de informação visual. Mais camadas 3D, uso de papéis especiais e elementos decorativos.
           </p>
         </article>
-        <article class="border rounded-lg p-3">
+        <article class="border rounded-lg p-3 flex flex-col gap-1">
           <h4 class="font-semibold text-emerald-700 mb-1">Luxo</h4>
           <p class="text-gray-600 text-xs md:text-sm">
-            A versão mais completa, com máximo de camadas, brilho, glitter e apliques. Ideal para quem quer
-            aquele “Uau!” dos convidados.
+            A versão mais completa, com máximo de camadas, brilho, glitter e apliques. Ideal para quem quer aquele “Uau!” dos convidados.
           </p>
         </article>
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="mt-10 text-center">
+    <section id="contato" class="mt-10 text-center">
       <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">
         Não achou seu tema ou quer ajuda para escolher a linha?
       </h3>
       <p class="text-sm text-gray-600 mb-4">
-        Fale com a Lale e conte como será a sua festa. Nós sugerimos o tema, a linha e o kit ideais para o seu momento.
+        Fale com a Lale e conte como será a sua festa (data, idade, estilo e orçamento).
+        Nós sugerimos o tema, a linha e o kit ideais para o seu momento — sem compromisso.
       </p>
       <a href="https://wa.me/?text=Quero%20montar%20meu%20kit%20de%20festa%20com%20a%20Lale%20da%20La%C3%A7os%20%26%20Letras."
          target="_blank" rel="noopener"
@@ -124,12 +128,12 @@
           var linkTema = 'lp-tema.html?slug=' + encodeURIComponent(slug);
 
           return '' +
-            '<article class="bg-white shadow rounded-lg overflow-hidden flex flex-col">' +
+            '<article class="bg-white shadow rounded-lg overflow-hidden flex flex-col hover:shadow-md transition-shadow">' +
               (foto ? '<img src="' + foto + '" alt="' + tema.replace(/"/g,'&quot;') + '" class="w-full h-48 object-cover">' : '') +
               '<div class="p-4 flex flex-col flex-1 gap-2">' +
-                '<h2 class="font-semibold text-lg text-emerald-700">' + tema + '</h2>' +
+                '<h2 class="font-semibold text-lg text-emerald-700 truncate">' + tema + '</h2>' +
                 (total !== '' ? '<p class="text-sm text-gray-600">' + total + ' fotos no catálogo</p>' : '') +
-                '<p class="text-xs text-gray-500 mt-1">Clique para ver kits, preços e opções de linha.</p>' +
+                '<p class="text-xs text-gray-500 mt-1">Clique para ver kits, linhas (Essencial ao Luxo) e falar com a Lale.</p>' +
                 '<div class="mt-auto pt-2">' +
                   '<a href="' + linkTema + '" class="inline-flex items-center justify-center px-3 py-1.5 rounded-md bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700">' +
                     'Ver detalhes ✨' +
