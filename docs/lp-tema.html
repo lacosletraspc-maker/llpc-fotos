@@ -1,45 +1,89 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'><title>LLPC — Card</title><style>body{font-family:Arial;margin:20px;} .item{margin-bottom:20px;} img{max-width:280px;border-radius:10px;}</style></head><body><h1>Catálogo LLPC</h1><script>const params = new URLSearchParams(location.search);const cardSlug = params.get('card');
-async function load() {
-  try {
-    const r = await fetch('https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/docs/precos.json');
-    const precos = await r.json();
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLPC — Detalhes do Tema</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="text-center py-6">
+    <h1 class="text-3xl font-bold text-emerald-700">🌸 Laços &amp; Letras Papelaria Criativa</h1>
+    <p class="mt-2 text-sm text-gray-600">
+      Detalhes do tema escolhido.
+    </p>
+  </header>
 
-    const cardItems = precos.filter(x=>x.card && x.card.toLowerCase().replace(/[^a-z0-9]+/g,'-')===cardSlug);
+  <main class="max-w-3xl mx-auto px-4 pb-10">
+    <section id="detalhe-tema" class="bg-white shadow rounded-lg overflow-hidden">
+      <div class="p-6 text-center text-gray-500">Carregando tema…</div>
+    </section>
+  </main>
 
-    let html = "";
-    for(const it of cardItems){
-      const imgs = await fetchItemImages(it.skus);
-      html += "<div class='item'>";
-      html += "<h2>"+it.card+" — "+it.produto+"</h2>";
-      html += "<p><b>De:</b> R$ "+it.preco_de.toFixed(2)+" — <b>Por:</b> R$ "+it.preco_por.toFixed(2)+"</p>";
-      html += "<p><b>SKUs:</b> "+it.skus+"</p>";
+  <script>
+    (function() {
+      var container = document.getElementById('detalhe-tema');
 
-      for(const url of imgs){
-        html += "<img src='"+url+"'/><br>";
+      function getSlug() {
+        var params = new URLSearchParams(window.location.search);
+        return params.get('slug');
       }
 
-      html += "</div>";
-    }
+      var slug = getSlug();
+      if (!slug) {
+        container.innerHTML = '<div class="p-6 text-center text-red-600">Link inválido: nenhum tema informado.</div>';
+        return;
+      }
 
-    document.getElementById("content").innerHTML = html;
+      (async function carregarTema() {
+        try {
+          var res = await fetch('catalogo/index.json');
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          var dados = await res.json();
+          if (!Array.isArray(dados)) throw new Error('JSON inesperado');
 
-  }catch(e){
-    document.getElementById("content").innerHTML = "<p>Erro ao carregar dados.</p>";
-  }
-}
+          var tema = dados.find(function(t){ return t.slug === slug; });
 
-async function fetchItemImages(skuStr){
-  const list = skuStr.split(/[;,]+/).map(x=>x.trim()).filter(Boolean);
-  const urls = [];
+          if (!tema) {
+            container.innerHTML = '<div class="p-6 text-center text-red-600">Tema não encontrado.</div>';
+            return;
+          }
 
-  for(const sk of list){
-    const base = "https://raw.githubusercontent.com/lacosletraspc-maker/llpc-fotos/main/fotos/";
-    const folder = sk.toLowerCase();
-    urls.push(base+folder+"/hero.jpg");
-  }
+          var foto  = tema.thumb || '';
+          var nome  = tema.tema || '';
+          var total = tema.total != null ? tema.total : '';
 
-  return urls;
-}
+          var msgWhats = 'Quero o tema ' + nome + ' da Laços & Letras Papelaria Criativa.';
+          var urlWhats = 'https://wa.me/?text=' + encodeURIComponent(msgWhats);
 
-load();
-</script><div id='content'>Carregando...</div></body></html>
+          container.innerHTML = '' +
+            '<div class="flex flex-col md:flex-row">' +
+              (foto ? '<div class="md:w-1/2 bg-gray-100"><img src="' + foto + '" alt="' + nome.replace(/"/g,'&quot;') + '" class="w-full h-full object-cover"></div>' : '') +
+              '<div class="md:w-1/2 p-6 flex flex-col gap-4">' +
+                '<div>' +
+                  '<h2 class="text-2xl font-bold text-emerald-700 mb-1">' + nome + '</h2>' +
+                  (total !== '' ? '<p class="text-sm text-gray-600">' + total + ' fotos no catálogo.</p>' : '') +
+                '</div>' +
+                '<p class="text-sm text-gray-700">' +
+                  'Clique no botão abaixo para falar com a Lale no WhatsApp e montar seu kit personalizado nesse tema.' +
+                '</p>' +
+                '<div class="mt-auto flex flex-wrap gap-3">' +
+                  '<a href="' + urlWhats + '" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700">' +
+                    '💬 Falar com a Lale' +
+                  '</a>' +
+                  '<a href="index.html" class="inline-flex items-center justify-center px-4 py-2 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-gray-100">' +
+                    '← Voltar para os temas' +
+                  '</a>' +
+                '</div>' +
+              '</div>' +
+            '</div>';
+        } catch (e) {
+          console.error(e);
+          container.innerHTML =
+            '<div class="p-6 text-center text-red-600 text-sm">Erro ao carregar o tema. Tente novamente em alguns instantes.</div>';
+        }
+      })();
+    })();
+  </script>
+</body>
+</html>
