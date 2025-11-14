@@ -1,1 +1,66 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'><title>LLPC — Temas</title><style>body{font-family:Arial;margin:20px;} .tema{margin-bottom:30px;} .cards{margin-left:20px;}</style></head><body><h1>Catálogo LLPC — Temas</h1></body></html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo LLPC — Temas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="text-center py-6">
+    <h1 class="text-3xl font-bold text-emerald-700">🌸 Catálogo Laços &amp; Letras Papelaria Criativa</h1>
+    <p class="mt-2 text-sm text-gray-600">
+      Escolha um tema para ver os detalhes e falar com a Lale pelo WhatsApp.
+    </p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 pb-10">
+    <section id="lista-temas" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <p class="col-span-full text-center text-gray-500">Carregando temas…</p>
+    </section>
+  </main>
+
+  <script>
+    (async function carregarTemas() {
+      var container = document.getElementById('lista-temas');
+      try {
+        var res = await fetch('catalogo/index.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        var dados = await res.json();
+
+        if (!Array.isArray(dados) || !dados.length) {
+          container.innerHTML = '<p class="col-span-full text-center text-gray-500">Nenhum tema publicado ainda.</p>';
+          return;
+        }
+
+        container.innerHTML = dados.map(function(item){
+          var slug  = item.slug || '';
+          var total = item.total != null ? item.total : '';
+          var foto  = item.thumb || '';
+          var tema  = item.tema || '';
+
+          var linkTema = 'lp-tema.html?slug=' + encodeURIComponent(slug);
+
+          return '' +
+            '<article class="bg-white shadow rounded-lg overflow-hidden flex flex-col">' +
+              (foto ? '<img src="' + foto + '" alt="' + tema.replace(/"/g,'&quot;') + '" class="w-full h-48 object-cover">' : '') +
+              '<div class="p-4 flex flex-col flex-1 gap-2">' +
+                '<h2 class="font-semibold text-lg text-emerald-700">' + tema + '</h2>' +
+                (total !== '' ? '<p class="text-sm text-gray-600">' + total + ' fotos no catálogo</p>' : '') +
+                '<div class="mt-auto pt-2">' +
+                  '<a href="' + linkTema + '" class="inline-flex items-center justify-center px-3 py-1.5 rounded-md bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700">' +
+                    'Ver detalhes ✨' +
+                  '</a>' +
+                '</div>' +
+              '</div>' +
+            '</article>';
+        }).join('');
+      } catch (e) {
+        console.error(e);
+        container.innerHTML =
+          '<p class="col-span-full text-center text-red-600 text-sm">Erro ao carregar o catálogo. Tente novamente em alguns instantes.</p>';
+      }
+    })();
+  </script>
+</body>
+</html>
