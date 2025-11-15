@@ -1,0 +1,2283 @@
+/***************************************************************************************
+ *  LLPC Code.gs — v3j+k FINAL (2025-11-13 + ajustes site/LP)
+ *  Autor: ChatGPT + Gabriel Mattano
+ *
+ *  FINALIZADO — OPÇÃO C (Arquivo único, hiper-documentado, com índice estruturado)
+ *
+ *  Este arquivo é a espinha dorsal da automação LLPC:
+ *    • Indexação e padronização de fotos (Acerto)
+ *    • Sincronização Drive → GitHub (CDN jsDelivr)
+ *    • Publicação de catálogos (cards, coleções, temas)
+ *    • Exportação completa de preços (Preços_WhatsApp)
+ *    • Exportação de combos (Kits) e promoções (Promo_WhatsApp)
+ *    • Geração da aba de promoções (semente)
+ *    • Publicação do site estático (docs/index.html + docs/lp-tema.html)
+ *
+ *  ###################################################################################
+ *  #                         Í N D I C E   D O   A R Q U I V O                     #
+ *  ###################################################################################
+ *
+ *   1. CONFIGURAÇÕES E CONSTANTES
+ *      1.1 Propriedades do Script (token, repositório, pasta Drive)
+ *      1.2 Nomes das abas usadas no projeto
+ *      1.3 Parâmetros globais do sistema
+ *
+ *   2. UTILITÁRIOS (UTILS)
+ *      2.1 Normalização de caminhos (Drive + GitHub)
+ *      2.2 Geração de slugs
+ *      2.3 Acesso seguro ao Drive
+ *      2.4 Conversões auxiliares (CSV, textos, etc.)
+ *
+ *   3. API GITHUB (CRUD de arquivos)
+ *      3.1 putFile
+ *      3.2 getContent
+ *      3.3 copy
+ *      3.4 tree recursivo
+ *
+ *   4. MÓDULO ACERTO (Fotos)
+ *      4.1 Recriar aba a partir do Drive
+ *      4.2 Preencher colunas O..S (Drive/CDN/descrição curta/WhatsApp/tags)
+ *      4.3 Auditoria Planilha × Drive
+ *
+ *   5. SYNC (Drive → GitHub)
+ *      5.1 Sincronização incremental com cursor persistente
+ *      5.2 Controle de orçamento de tempo (quase-imune a timeout)
+ *
+ *   6. PREÇOS (Preços_WhatsApp → JSON)
+ *      6.1 publicarPrecosWhatsapp()
+ *      6.2 publicarKitsWhatsapp()
+ *      6.3 publicarPromosWhatsapp()
+ *      6.4 _fetchPricesToMap() compatível com formato antigo e novo
+ *
+ *   7. PROMOÇÕES (Promo_WhatsApp)
+ *      7.1 promoSeedWhatsapp()
+ *
+ *   8. SITE LLPC (Gerador HTML + JSON de catálogo)
+ *      8.1 _montarCatalogoJsons()
+ *      8.2 publicarSite() → docs/index.html + docs/lp-tema.html
+ *
+ *   9. MENU (onOpen)
+ *      9.1 Montagem completa
+ *      9.2 Ações de configuração
+ *
+ * ###################################################################################
+ *                            I N I C I O   D O   A R Q U I V O
+ * ###################################################################################
+ */
+
+
+/* ============================================================================
+ * 1) CONFIGURAÇÕES E CONSTANTES
+ * ============================================================================*/
+
+/**
+ * Atalhos para propriedades persistentes do Apps Script.
+ * Usadas para manter token GitHub, pasta Drive, repositório etc.
+ */
+const SP = PropertiesService.getScriptProperties();
+
+/** Retorna propriedade ou valor padrão */
+function _p(key, def){
+  const v = SP.getProperty(key);
+  return (v==null || String(v).trim()==='') ? (def ?? '') : String(v);
+}
+
+/** Define propriedade */
+function _set(key, val){
+  SP.setProperty(key, String(val));
+}
+
+/** Remove propriedade */
+function _del(key){
+  SP.deleteProperty(key);
+}
+
+/** Retorna valor obrigatório */
+function _req(key){
+  const v = _p(key,'');
+  if(!v) throw new Error("Propriedade obrigatória ausente: "+key);
+  return v;
+}
+
+/** Retorna a primeira propriedade disponível em uma lista */
+function _pAny(list, required=true){
+  for(const k of list){
+    const v = SP.getProperty(k);
+    if(v && String(v).trim() !== '')
+      return String(v).trim();
+  }
+  if(required) throw new Error("Nenhuma das propriedades seguintes existe: "+list.join(", "));
+  return '';
+}
+
+/** Nomes das abas — confirmados pelo usuário */
+const SHEET_ACERTO = "Fotos-Catalogo-AcertoNomenclatura";
+const SHEET_PRECOS = "Preços_WhatsApp";
+const SHEET_PROMOS = "Promos_WhatsApp";
+const SHEET_MASTER = "Base_Master";
+
+/** Configurações gerais */
+const WHATSAPP_PHONE = "5519989848246";
+const WHATSAPP_MSG_PREFIX = "Olá! Vim pelo catálogo LLPC e gostaria destes itens:";
+
+const IMG_EXT_RE = /\.(jpe?g|png|gif|webp)$/i;
+
+
+/* ============================================================================
+ * 2) UTILITÁRIOS (UTILS)
+ * ============================================================================*/
+
+/**
+ * Transforma string em slug sem acentos.
+ */
+function _slug(s){
+  return String(s||'')
+    .normalize("NFD").replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g,'-')
+    .replace(/^-+|-+$/g,'');
+}
+
+/**
+ * Normaliza caminhos para Drive/GitHub (remove duplos, acentos etc.)
+ */
+function _normPath(s){
+  if(!s) return "";
+  return String(s)
+    .normalize("NFKD").replace(/[\u0300-\u036f]/g,'')
+    .replace(/[–—]/g,'-')
+    .replace(/\s+/g,' ')
+    .replace(/ *\/+ */g,'/')
+    .replace(/^\/+|\/+$/g,'')
+    .trim()
+    .toLowerCase();
+}
+
+/** sleep */
+function _sleep(ms){ Utilities.sleep(ms); }
+
+/**
+ * Busca arquivo no Drive pela árvore completa.
+ */
+function _driveFileByPath(rootId, rel){
+  const parts = rel.replace(/^\//,'').split("/").filter(Boolean);
+  if(!parts.length) return null;
+
+  let folder = DriveApp.getFolderById(rootId);
+
+  for(let i=0;i<parts.length-1;i++){
+    const q = folder.getFoldersByName(parts[i]);
+    if(!q.hasNext()) return null;
+    folder = q.next();
+  }
+
+  const ff = folder.getFilesByName(parts[parts.length-1]);
+  return ff.hasNext() ? ff.next() : null;
+}
+
+/**
+ * Lista recursivamente apenas imagens dentro de uma pasta Drive.
+ */
+function _listDriveImages(rootId){
+  const out=[];
+  (function walk(folder, prefix){
+    const folders = folder.getFolders();
+    while(folders.hasNext()){
+      const f = folders.next();
+      walk(f, prefix ? prefix+"/"+f.getName() : f.getName());
+    }
+    const files = folder.getFiles();
+    while(files.hasNext()){
+      const f = files.next();
+      const n = f.getName();
+      if(IMG_EXT_RE.test(n)){
+        out.push((prefix?prefix+"/":"")+n);
+      }
+    }
+  })(DriveApp.getFolderById(rootId), "");
+  return out;
+}
+
+
+/* ============================================================================
+ * 3) API GITHUB
+ * ============================================================================*/
+
+/** Configurações GitHub agrupadas */
+const GH = {
+  owner : () => _pAny(["OWNER","GITHUB_OWNER"]),
+  repo  : () => _pAny(["REPO","GITHUB_REPO"]),
+  branch: () => _pAny(["BRANCH","GITHUB_BRANCH"], false) || "main",
+  token : () => _pAny(["GITHUB_TOKEN","TOKEN"]),
+  cdn   : () => {
+    const explicit = _p("CDN_BASE","").trim();
+    if(explicit) return explicit.replace(/\/+$/,'');
+    return "https://raw.githubusercontent.com/"+GH.owner()+"/"+GH.repo()+"/"+GH.branch();
+  }
+};
+
+/**
+ * Headers padrão para API GitHub.
+ */
+function _ghHeaders(json){
+  const h={
+    "Authorization": "Bearer "+GH.token(),
+    "Accept": "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+  if(json) h["Content-Type"]="application/json";
+  return h;
+}
+
+function _ghUrl(path){
+  return "https://api.github.com/repos/"+GH.owner()+"/"+GH.repo()+path;
+}
+
+/**
+ * Wrapper geral do UrlFetch para API GitHub.
+ */
+function _ghFetch(path, method, payload){
+  const res = UrlFetchApp.fetch(_ghUrl(path), {
+    method: method || "get",
+    muteHttpExceptions: true,
+    headers: _ghHeaders(method!=="get"),
+    payload: payload ? JSON.stringify(payload) : undefined
+  });
+
+  const code = res.getResponseCode();
+  const text = res.getContentText("utf-8");
+
+  if(code>=200 && code<300){
+    return text ? JSON.parse(text) : {};
+  }
+
+  throw new Error("GitHub "+method+" "+path+" → "+code+": "+text);
+}
+
+/** Obtém conteúdo de arquivo remoto */
+function _ghGetContent(path){
+  try{
+    return _ghFetch("/contents/"+encodeURIComponent(path)+"?ref="+encodeURIComponent(GH.branch()),"get");
+  }catch(e){
+    return null;
+  }
+}
+
+/** PUT (criação/atualização) de arquivo no repositório */
+function _ghPutFile(path, blobOrText, message, mime){
+  const existing = _ghGetContent(path);
+  const sha = existing && existing.sha ? existing.sha : null;
+
+  const blob = (typeof blobOrText==="string")
+    ? Utilities.newBlob(blobOrText, mime||"text/plain")
+    : blobOrText;
+
+  const b64 = Utilities.base64Encode(blob.getBytes());
+
+  const payload = {
+    message: message || ("LLPC upsert "+path),
+    content: b64,
+    branch : GH.branch()
+  };
+  if(sha) payload.sha=sha;
+
+  return _ghFetch("/contents/"+encodeURIComponent(path),"put",payload);
+}
+
+/** Árvore completa do repositório */
+function _ghTreeRecursive(){
+  const url =
+    "https://api.github.com/repos/" +
+    GH.owner() + "/" +
+    GH.repo()  +
+    "/git/trees/" + GH.branch() +
+    "?recursive=1";
+
+  const res = UrlFetchApp.fetch(url, {
+    headers: _ghHeaders(false),
+    muteHttpExceptions: true
+  });
+
+  const code = res.getResponseCode();
+  const txt  = res.getContentText("utf-8");
+
+  if (code >= 200 && code < 300) {
+    try {
+      return JSON.parse(txt);
+    } catch (e) {
+      throw new Error("Falha ao decodificar árvore GitHub: " + e + "\n" + txt);
+    }
+  }
+
+  throw new Error("GitHub git/trees erro " + code + ": " + txt);
+}
+
+
+/* ============================================================================
+ * 4) MÓDULO ACERTO (Fotos: indexação + O..S + auditoria)
+ * ============================================================================*/
+
+/**
+ * Estrutura de colunas do Acerto.
+ * Mantido para compatibilidade absoluta com a planilha atual.
+ */
+const ACERTO = {
+  SHEET: SHEET_ACERTO,
+  COL: {
+    NOME_ATUAL: 1,
+    NOME_NOVO: 2,
+    CAM_REL:   3,
+    TEMA:      4,
+    COLECAO:   5,
+    CARD:      6,
+    SKUS:     13,
+    URL_DRIVE:15,
+    URL_CDN:  16,
+    DESC_CURTA:17,
+    URL_WA:   18,
+    TAGS:     19
+  }
+};
+
+/* ----------------------------------------------------------------------------
+ * 4.1) acertoRecriarAbaAPartirDoDrive()
+ * ---------------------------------------------------------------------------*/
+function acertoRecriarAbaAPartirDoDrive(){
+  const ui = SpreadsheetApp.getUi();
+  const confirm = ui.alert(
+    "Recriar aba do Drive",
+    "Isto irá APAGAR completamente a aba '"+SHEET_ACERTO+"'. Continuar?",
+    ui.ButtonSet.OK_CANCEL
+  );
+  if(confirm !== ui.Button.OK) return;
+
+  const ss = SpreadsheetApp.getActive();
+  let sh = ss.getSheetByName(SHEET_ACERTO);
+  if(!sh) sh = ss.insertSheet(SHEET_ACERTO);
+  sh.clear();
+
+  const headers = [
+    "nome_atual", "NomeNovo", "caminho_relativo", "Tema",
+    "Menu/Coleção", "Card",
+    "Parte_1","Parte_2","Parte_3","Parte_4","Parte_5","Parte_6","Parte_7", "",
+    "url_drive","url_jsdelivr","descricao_curta","url_whatsapp","tags"
+  ];
+  sh.getRange(1,1,1,headers.length).setValues([headers]);
+
+  const rootId = _req("FOTOS_DRIVE_FOLDER_ID");
+  const out=[];
+
+  (function walk(folder, prefix){
+    const files = folder.getFiles();
+    while(files.hasNext()){
+      const f = files.next();
+      const name = f.getName();
+      if(!IMG_EXT_RE.test(name)) continue;
+
+      const rel = prefix;
+      const parts = rel.split("/").filter(Boolean);
+      const tema  = parts[0] || "";
+      const card  = parts[parts.length-1] || "";
+      const menu  = tema;
+
+      const row = new Array(19).fill("");
+      row[ACERTO.COL.NOME_ATUAL-1] = name;
+      row[ACERTO.COL.NOME_NOVO -1] = name;
+      row[ACERTO.COL.CAM_REL   -1] = rel;
+      row[ACERTO.COL.TEMA      -1] = tema;
+      row[ACERTO.COL.COLECAO   -1] = menu;
+      row[ACERTO.COL.CARD      -1] = card;
+
+      out.push(row);
+    }
+
+    const subs = folder.getFolders();
+    while(subs.hasNext()){
+      const sub = subs.next();
+      walk(sub, prefix ? prefix+"/"+sub.getName() : sub.getName());
+    }
+  })(DriveApp.getFolderById(rootId), "");
+
+  if(out.length)
+    sh.getRange(2,1,out.length,out[0].length).setValues(out);
+
+  sh.setFrozenRows(1);
+  sh.autoResizeColumns(1,8);
+
+  SpreadsheetApp.getActive().toast(`Indexação concluída: ${out.length} imagens.`, "LLPC", 6);
+}
+
+/* ----------------------------------------------------------------------------
+ * 4.2) acertoPreencherOS()
+ * ---------------------------------------------------------------------------*/
+function acertoPreencherOS(){
+  const ss = SpreadsheetApp.getActive();
+  const sh = ss.getSheetByName(SHEET_ACERTO);
+  if(!sh) throw new Error(`Aba '${SHEET_ACERTO}' não encontrada.`);
+
+  const last = sh.getLastRow();
+  if(last < 2){
+    SpreadsheetApp.getActive().toast("Nada para processar (Aba vazia).", "LLPC", 5);
+    return;
+  }
+
+  const cols = Math.max(19, sh.getLastColumn());
+  const A = sh.getRange(2,1,last-1,cols).getValues();
+
+  const out = new Array(A.length).fill(null).map(()=>["","","","",""]);
+  const rootId = _req("FOTOS_DRIVE_FOLDER_ID");
+
+  for(let i=0;i<A.length;i++){
+    const r = A[i];
+    const cam  = String(r[ACERTO.COL.CAM_REL-1] || "").replace(/^\//,'');
+    const nome = String(r[ACERTO.COL.NOME_NOVO-1] || r[ACERTO.COL.NOME_ATUAL-1] || "").trim();
+
+    if(!cam || !nome){
+      out[i][0] = r[ACERTO.COL.URL_DRIVE-1]||"";
+      out[i][1] = r[ACERTO.COL.URL_CDN  -1]||"";
+      out[i][2] = r[ACERTO.COL.DESC_CURTA-1]||"";
+      out[i][3] = r[ACERTO.COL.URL_WA    -1]||"";
+      out[i][4] = r[ACERTO.COL.TAGS      -1]||"";
+      continue;
+    }
+
+    try{
+      const rel = cam+"/"+nome;
+      const f   = _driveFileByPath(rootId, rel);
+
+      const urlDrive = f
+        ? ("https://drive.google.com/file/d/"+f.getId()+"/view?usp=drivesdk")
+        : (r[ACERTO.COL.URL_DRIVE-1]||"");
+
+      const urlCdn = GH.cdn() + "/" +
+        rel.split("/").map(encodeURIComponent).join("/");
+
+      let desc = r[ACERTO.COL.DESC_CURTA-1]||"";
+      desc = String(desc).trim();
+      if(!desc){
+        const tema = String(r[ACERTO.COL.TEMA-1]||"").trim();
+        const col  = String(r[ACERTO.COL.COLECAO-1]||"").trim();
+        const card = String(r[ACERTO.COL.CARD-1]   ||"").trim();
+        const base = card || nome.replace(/\.[^.]+$/, "");
+        desc = `${base}${tema?" — "+tema:""}${col?" — "+col:""} | LLPC`;
+      }
+
+      const skus = String(r[ACERTO.COL.SKUS-1]||"").trim();
+      const msg  = WHATSAPP_MSG_PREFIX+"\n• "+desc+(skus?(" (SKUs "+skus+")"):"")+"\n"+urlCdn;
+      const urlWa = "https://wa.me/"+WHATSAPP_PHONE+"?text="+encodeURIComponent(msg);
+
+      let tags = r[ACERTO.COL.TAGS-1]||"";
+      if(!tags){
+        const tema = r[ACERTO.COL.TEMA-1]||"";
+        const col  = r[ACERTO.COL.COLECAO-1]||"";
+        const card = r[ACERTO.COL.CARD-1]||"";
+        tags = ["LLPC",tema,col,card].filter(Boolean).join(", ");
+      }
+
+      out[i] = [urlDrive,urlCdn,desc,urlWa,tags];
+
+    }catch(e){
+      Logger.log("Falha na linha "+(i+2)+": "+e);
+      out[i][0] = r[ACERTO.COL.URL_DRIVE-1]||"";
+      out[i][1] = r[ACERTO.COL.URL_CDN  -1]||"";
+      out[i][2] = r[ACERTO.COL.DESC_CURTA-1]||"";
+      out[i][3] = r[ACERTO.COL.URL_WA    -1]||"";
+      out[i][4] = r[ACERTO.COL.TAGS      -1]||"";
+    }
+  }
+
+  sh.getRange(2,ACERTO.COL.URL_DRIVE,out.length,5).setValues(out);
+  SpreadsheetApp.getActive().toast("Preenchimento de O..S concluído.","LLPC",6);
+}
+
+/* ----------------------------------------------------------------------------
+ * 4.3) acertoAuditarPlanilhaDrive()
+ * ---------------------------------------------------------------------------*/
+function acertoAuditarPlanilhaDrive(){
+  const ss = SpreadsheetApp.getActive();
+  const sh = ss.getSheetByName(SHEET_ACERTO);
+  if(!sh) throw new Error("Aba '"+SHEET_ACERTO+"' não encontrada.");
+
+  const last = sh.getLastRow();
+  if(last < 2){
+    SpreadsheetApp.getActive().toast("Aba vazia.", "LLPC", 5);
+    return;
+  }
+
+  const rows = sh.getRange(2,1,last-1,Math.max(19,sh.getLastColumn())).getValues();
+  const rootId = _req("FOTOS_DRIVE_FOLDER_ID");
+
+  const planSet = new Set();
+  const report = [];
+
+  for(const r of rows){
+    const cam  = String(r[ACERTO.COL.CAM_REL-1]||"").replace(/^\/+/,'');
+    const nome = String(r[ACERTO.COL.NOME_NOVO-1]||r[ACERTO.COL.NOME_ATUAL-1]||"").trim();
+    if(!cam || !nome) continue;
+
+    const rel = cam+"/"+nome;
+    planSet.add(_normPath(rel));
+
+    const f = _driveFileByPath(rootId, rel);
+
+    report.push([
+      rel,
+      f ? "OK" : "MISSING_IN_DRIVE",
+      f ? ""   : "Arquivo não encontrado no Google Drive",
+      r[ACERTO.COL.TEMA-1]||"",
+      r[ACERTO.COL.URL_DRIVE-1]||"",
+      r[ACERTO.COL.URL_CDN-1]  ||""
+    ]);
+  }
+
+  const allDrive = _listDriveImages(rootId);
+  const extras = allDrive.filter(p=>!planSet.has(_normPath(p)));
+
+  let audit = ss.getSheetByName("Auditoria_Acerto");
+  if(!audit) audit = ss.insertSheet("Auditoria_Acerto");
+
+  audit.clear();
+
+  const head = [
+    "caminho_relativo+nome","status","observacao",
+    "tema(planilha)","url_drive(planilha)","url_jsdelivr(planilha)"
+  ];
+  audit.getRange(1,1,1,head.length).setValues([head]);
+
+  if(report.length)
+    audit.getRange(2,1,report.length,head.length).setValues(report);
+
+  const start2 = 2 + report.length + 1;
+
+  if(extras.length){
+    audit.getRange(start2,1,1,1).setValue("Extras no Drive (não listadas na planilha)");
+    audit.getRange(start2+1,1,extras.length,1).setValues(extras.map(x=>[x]));
+  }
+
+  SpreadsheetApp.getActive().toast(
+    `Auditoria: OK=${report.filter(r=>r[1]==='OK').length}, Faltando=${report.filter(r=>r[1]==='MISSING_IN_DRIVE').length}, Extras=${extras.length}.`,
+    "LLPC",8
+  );
+}
+
+
+/* ============================================================================
+ * 5) SYNC — Sincronização incremental Drive → GitHub
+ * ============================================================================*/
+
+function acertoSyncParaGitHub(){
+  acertoSyncParaGitHubLotes();
+}
+
+function acertoSyncParaGitHubLotes(){
+  const ss = SpreadsheetApp.getActive();
+  const sh = ss.getSheetByName(SHEET_ACERTO);
+  if(!sh) throw new Error("Aba '"+SHEET_ACERTO+"' não encontrada.");
+
+  const last = sh.getLastRow();
+  if(last < 2){
+    SpreadsheetApp.getActive().toast("Nada para enviar.","LLPC",5);
+    return;
+  }
+
+  const A = sh.getRange(2,1,last-1,Math.max(19,sh.getLastColumn())).getValues();
+  const rootId = _req("FOTOS_DRIVE_FOLDER_ID");
+
+  const rels=[];
+  for(const r of A){
+    const cam = String(r[ACERTO.COL.CAM_REL-1]||"").replace(/^\//,'');
+    const nome=String(r[ACERTO.COL.NOME_NOVO-1]||r[ACERTO.COL.NOME_ATUAL-1]||"").trim();
+    if(cam && nome) rels.push(cam+"/"+nome);
+  }
+
+  const TOTAL = rels.length;
+  const BATCH = Math.max(1, parseInt(_p("SYNC_BATCH_SIZE","40"),10) || 40);
+  const TIME_LIMIT = 270000;
+  const t0 = Date.now();
+
+  const tree = _ghTreeRecursive();
+  const ghSet = new Set(
+    (tree.tree||[])
+      .filter(t=>t.type==="blob" && IMG_EXT_RE.test(t.path))
+      .map(t=>_normPath(t.path))
+  );
+
+  let cursor = parseInt(_p("SYNC_CURSOR","0"),10)||0;
+  if(cursor>=TOTAL) cursor=0;
+
+  let sent=0, miss=0, err=0, processed=0;
+
+  for(let i=cursor;i<TOTAL;i++){
+    const rel = rels[i];
+    const file = _driveFileByPath(rootId, rel);
+
+    if(!file){
+      miss++;
+      continue;
+    }
+
+    try{
+      if(ghSet.has(_normPath(rel))){
+        const meta = _ghGetContent(rel);
+        const b64  = Utilities.base64Encode(file.getBlob().getBytes());
+        const payload={
+          message: "LLPC sync update "+rel,
+          content: b64,
+          branch : GH.branch()
+        };
+        if(meta && meta.sha) payload.sha=meta.sha;
+        _ghFetch("/contents/"+encodeURIComponent(rel),"put",payload);
+      }else{
+        _ghPutFile(rel, file.getBlob(), "LLPC sync upload "+rel);
+      }
+      sent++;
+    }catch(e){
+      err++;
+      Logger.log("erro sync "+rel+": "+e);
+    }
+
+    processed++;
+    if(processed>=BATCH || (Date.now()-t0)>TIME_LIMIT){
+      _set("SYNC_CURSOR", String(i+1));
+      SpreadsheetApp.getActive().toast(
+        `Sync parcial: enviados ${sent}, restantes ${TOTAL-(i+1)}`,
+        "LLPC",6
+      );
+      return;
+    }
+  }
+
+  _del("SYNC_CURSOR");
+  SpreadsheetApp.getActive().toast(
+    `Sync concluído: enviados=${sent}, não encontrados=${miss}, erros=${err}.`,
+    "LLPC",8
+  );
+}
+
+
+/* ============================================================================
+ * 6) PREÇOS (Preços_WhatsApp → docs/*.json)
+ * ============================================================================*/
+
+function _fetchPricesToMap(){
+  const meta = _ghGetContent("docs/precos.json");
+  if(!meta || !meta.content) return new Map();
+
+  const txt = Utilities.newBlob(
+    Utilities.base64Decode(meta.content)
+  ).getDataAsString("utf-8");
+
+  let json=[];
+  try{ json = JSON.parse(txt); }catch(e){
+    Logger.log("precos.json inválido: "+e);
+    return new Map();
+  }
+
+  const map = new Map();
+
+  for(const item of json){
+    if(item.skus){
+      const list = String(item.skus)
+        .split(/[;,]+/).map(x=>x.trim().toUpperCase()).filter(Boolean);
+
+      for(const sk of list){
+        map.set(sk, {
+          de : +item.preco_de  || 0,
+          por: +item.preco_por || 0
+        });
+      }
+      continue;
+    }
+
+    if(item.sku){
+      const sk = String(item.sku).toUpperCase();
+      map.set(sk, {
+        de : +item.preco_de  || 0,
+        por: +item.preco_por || 0
+      });
+    }
+  }
+
+  return map;
+}
+
+/* ----------------------------------------------------------------------------
+ * 6.1) publicarPrecosWhatsapp()
+ * ---------------------------------------------------------------------------*/
+function publicarPrecosWhatsapp(){
+  const ss = SpreadsheetApp.getActive();
+  const sh = ss.getSheetByName(SHEET_PRECOS);
+
+  if (!sh) {
+    SpreadsheetApp.getActive().toast(
+      "Aba '" + SHEET_PRECOS + "' não encontrada.",
+      "LLPC",
+      6
+    );
+    return;
+  }
+
+  const A = sh.getDataRange().getValues();
+  if (A.length < 2) {
+    SpreadsheetApp.getActive().toast("Aba vazia (sem dados).", "LLPC", 6);
+    return;
+  }
+
+  function _norm(h) {
+    return String(h || "")
+      .toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/[_–—-]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  let headerRow = 0;
+  let Hnorm = A[0].map(_norm);
+
+  if (!Hnorm.includes("tema")) {
+    headerRow = -1;
+    for (let r = 1; r < Math.min(10, A.length); r++) {
+      const rowNorm = A[r].map(_norm);
+      if (rowNorm.includes("tema")) {
+        headerRow = r;
+        Hnorm = rowNorm;
+        break;
+      }
+    }
+    if (headerRow === -1) {
+      SpreadsheetApp.getActive().toast(
+        "Cabeçalho com 'Tema' não encontrado nas primeiras linhas da aba " + SHEET_PRECOS,
+        "LLPC",
+        8
+      );
+      return;
+    }
+  }
+
+  const rows = A.slice(headerRow + 1);
+
+  function col() {
+    const names = Array.prototype.slice.call(arguments);
+    for (const nm of names) {
+      const idx = Hnorm.indexOf(_norm(nm));
+      if (idx >= 0) return idx;
+    }
+    return -1;
+  }
+
+  const iTema    = col("tema");
+  const iCol     = col("colecao", "coleção");
+  const iCard    = col("card");
+  const iProd    = col("produto");
+  const iTipo    = col("tipo");
+  const iSkus    = col("skus", "sku(s)", "sku");
+  const iDe      = col("preco_de_exibicao", "preço_de_exibição", "preco de exibicao");
+  const iPor     = col("preco_final_canal", "preço_final_canal", "preco final canal");
+  const iLid     = col("margem lid (%)", "margem_lid (%)", "margem lid");
+  const iAlvo    = col("margem alvo (%)", "margem_alvo (%)", "margem alvo");
+  const iDescPct = col("desc_% (manual)", "desc % (manual)", "desc_pct", "desconto_manual");
+  const iDescMax = col("desc_max (%)", "desc max (%)", "desc_max");
+  const iPromo   = col("promo_id", "promo id", "id_promo");
+
+  if (iTema < 0) {
+    SpreadsheetApp.getActive().toast(
+      "Coluna 'Tema' não encontrada na aba " + SHEET_PRECOS,
+      "LLPC",
+      8
+    );
+    return;
+  }
+
+  const out = [];
+
+  for (let i = 0; i < rows.length; i++) {
+    const r = rows[i];
+    const tema = r[iTema];
+    if (!tema) continue;
+
+    out.push({
+      tema        : r[iTema]    || "",
+      colecao     : iCol     >= 0 ? (r[iCol]     || "") : "",
+      card        : iCard    >= 0 ? (r[iCard]    || "") : "",
+      produto     : iProd    >= 0 ? (r[iProd]    || "") : "",
+      tipo        : iTipo    >= 0 ? (r[iTipo]    || "") : "",
+      skus        : iSkus    >= 0 ? String(r[iSkus] || "") : "",
+      preco_de    : iDe      >= 0 ? +((r[iDe]      ?? 0) || 0) : 0,
+      preco_por   : iPor     >= 0 ? +((r[iPor]     ?? 0) || 0) : 0,
+      margem_lid  : iLid     >= 0 ? +((r[iLid]     ?? 0) || 0) : 0,
+      margem_alvo : iAlvo    >= 0 ? +((r[iAlvo]    ?? 0) || 0) : 0,
+      desc_pct    : iDescPct >= 0 ? +((r[iDescPct] ?? 0) || 0) : 0,
+      desc_max    : iDescMax >= 0 ? +((r[iDescMax] ?? 0) || 0) : 0,
+      promo_id    : iPromo   >= 0 ? (r[iPromo]    || "") : ""
+    });
+  }
+
+  _ghPutFile(
+    "docs/precos.json",
+    JSON.stringify(out, null, 2),
+    "LLPC preços (Preços_WhatsApp)",
+    "application/json"
+  );
+
+  SpreadsheetApp.getActive().toast(
+    `${out.length} registros enviados para docs/precos.json`,
+    "LLPC",
+    8
+  );
+}
+
+/* ----------------------------------------------------------------------------
+ * 6.2) publicarKitsWhatsapp()
+ * ---------------------------------------------------------------------------*/
+function publicarKitsWhatsapp(){
+  const ss = SpreadsheetApp.getActive();
+  const sh = ss.getSheetByName(SHEET_PRECOS);
+
+  if(!sh){
+    SpreadsheetApp.getActive().toast(
+      "Aba '"+SHEET_PRECOS+"' não encontrada.","LLPC",6
+    );
+    return;
+  }
+
+  const A = sh.getDataRange().getValues();
+  if(A.length < 2){
+    SpreadsheetApp.getActive().toast("Aba vazia.","LLPC",6);
+    return;
+  }
+
+  const H = A[0].map(h=>String(h).trim().toLowerCase());
+  const col = name => H.indexOf(name.toLowerCase());
+
+  const iTipo = col("tipo");
+  const iSkus = col("skus");
+  const iCard = col("card");
+  const iTema = col("tema");
+
+  const out = [];
+
+  for(let i=1;i<A.length;i++){
+    const r = A[i];
+    const tipo = String(r[iTipo]||"").toLowerCase();
+
+    if(["kit","conjunto","combo"].includes(tipo)){
+      out.push({
+        tema: r[iTema]||"",
+        card: r[iCard]||"",
+        tipo: r[iTipo]||"",
+        skus: String(r[iSkus]||"")
+      });
+    }
+  }
+
+  _ghPutFile(
+    "docs/kits.json",
+    JSON.stringify(out,null,2),
+    "LLPC kits (Preços_WhatsApp)",
+    "application/json"
+  );
+
+  SpreadsheetApp.getActive().toast(
+    `${out.length} kits enviados para docs/kits.json`,
+    "LLPC",8
+  );
+}
+
+/* ----------------------------------------------------------------------------
+ * 6.3) publicarPromosWhatsapp()
+ * ---------------------------------------------------------------------------*/
+function publicarPromosWhatsapp(){
+  const ss = SpreadsheetApp.getActive();
+  const sh = ss.getSheetByName(SHEET_PROMOS);
+
+  if(!sh){
+    SpreadsheetApp.getActive().toast(
+      "Aba '"+SHEET_PROMOS+"' não encontrada.",
+      "LLPC",6
+    );
+    return;
+  }
+
+  const A = sh.getDataRange().getValues();
+  if(A.length < 2){
+    SpreadsheetApp.getActive().toast("Aba vazia.","LLPC",6);
+    return;
+  }
+
+  const H = A[0].map(h=>String(h).trim().toLowerCase());
+  const col = n => H.indexOf(n.toLowerCase());
+
+  const iId   = col("promo_id");
+  const iTema = col("tema");
+  const iCard = col("card");
+  const iTipo = col("tipo");
+  const iVal  = col("valor");
+  const iMin  = col("min_qtd");
+  const iIni  = col("inicio");
+  const iFim  = col("fim");
+  const iAtv  = col("ativo");
+
+  const out=[];
+
+  for(let i=1;i<A.length;i++){
+    const r = A[i];
+    const ativo = String(r[iAtv]).toLowerCase()==="true";
+    if(!ativo) continue;
+
+    out.push({
+      promo_id: r[iId]  || "",
+      tema    : r[iTema]|| "",
+      card    : r[iCard]|| "",
+      tipo    : r[iTipo]|| "",
+      valor   : +((r[iVal]??0)||0),
+      min_qtd : +((r[iMin]??0)||0),
+      inicio  : r[iIni] || "",
+      fim     : r[iFim] || ""
+    });
+  }
+
+  _ghPutFile(
+    "docs/promos.json",
+    JSON.stringify(out,null,2),
+    "LLPC promos.json",
+    "application/json"
+  );
+
+  SpreadsheetApp.getActive().toast(
+    `${out.length} promoções ativas enviadas.`,
+    "LLPC",8
+  );
+}
+
+/* ----------------------------------------------------------------------------
+ * 7) promoSeedWhatsapp()
+ * ---------------------------------------------------------------------------*/
+function promoSeedWhatsapp(){
+  const ss  = SpreadsheetApp.getActive();
+  const shP = ss.getSheetByName(SHEET_PRECOS);
+
+  if (!shP) {
+    SpreadsheetApp.getActive().toast(
+      "Aba '" + SHEET_PRECOS + "' não encontrada.",
+      "LLPC",
+      6
+    );
+    return;
+  }
+
+  const A = shP.getDataRange().getValues();
+  if (A.length < 2) {
+    SpreadsheetApp.getActive().toast("Nada a semear.", "LLPC", 6);
+    return;
+  }
+
+  function _norm(h) {
+    return String(h || "")
+      .toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/[_–—-]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  let headerRow = 0;
+  let Hnorm = A[0].map(_norm);
+
+  if (!Hnorm.includes("tema")) {
+    headerRow = -1;
+    for (let r = 1; r < Math.min(10, A.length); r++) {
+      const rowNorm = A[r].map(_norm);
+      if (rowNorm.includes("tema")) {
+        headerRow = r;
+        Hnorm = rowNorm;
+        break;
+      }
+    }
+    if (headerRow === -1) {
+      SpreadsheetApp.getActive().toast(
+        "Cabeçalho com 'Tema' não encontrado na aba " + SHEET_PRECOS,
+        "LLPC",
+        8
+      );
+      return;
+    }
+  }
+
+  const rows = A.slice(headerRow + 1);
+
+  function col() {
+    const names = Array.prototype.slice.call(arguments);
+    for (const nm of names) {
+      const idx = Hnorm.indexOf(_norm(nm));
+      if (idx >= 0) return idx;
+    }
+    return -1;
+  }
+
+  const iTema   = col("tema");
+  const iCard   = col("card");
+  const iDescMx = col("desc_max (%)", "desc max (%)", "desc_max");
+  const iId     = col("promo_id", "promo id", "id_promo");
+
+  if (iTema < 0) {
+    SpreadsheetApp.getActive().toast(
+      "Coluna 'Tema' não encontrada na aba " + SHEET_PRECOS,
+      "LLPC",
+      8
+    );
+    return;
+  }
+
+  const existentes = {};
+  let shPromo = ss.getSheetByName(SHEET_PROMOS);
+
+  if (shPromo) {
+    const P = shPromo.getDataRange().getValues();
+    if (P.length > 1) {
+      const H2 = P[0].map(_norm);
+      const cPid   = H2.indexOf("promo_id");
+      const cTipo  = H2.indexOf("tipo");
+      const cValor = H2.indexOf("valor");
+      const cMin   = H2.indexOf("min_qtd");
+      const cIni   = H2.indexOf("inicio");
+      const cFim   = H2.indexOf("fim");
+      const cAtivo = H2.indexOf("ativo");
+
+      for (let i = 1; i < P.length; i++) {
+        const r = P[i];
+        const pid = cPid >= 0 ? (r[cPid] || "") : "";
+        if (!pid) continue;
+        existentes[String(pid).trim()] = {
+          tipo   : cTipo  >= 0 ? (r[cTipo]  || "") : "",
+          valor  : cValor >= 0 ? (r[cValor] || "") : "",
+          min_qtd: cMin   >= 0 ? (r[cMin]   || "") : "",
+          inicio : cIni   >= 0 ? (r[cIni]   || "") : "",
+          fim    : cFim   >= 0 ? (r[cFim]   || "") : "",
+          ativo  : cAtivo >= 0 ? !!r[cAtivo]       : false
+        };
+      }
+    }
+  }
+
+  if (!shPromo) shPromo = ss.insertSheet(SHEET_PROMOS);
+  shPromo.clear();
+
+  const head = ["promo_id","tema","card","tipo","valor","min_qtd","inicio","fim","ativo"];
+  shPromo.getRange(1, 1, 1, head.length).setValues([head]);
+
+  const out = [];
+  const novosIds = [];
+
+  for (let i = 0; i < rows.length; i++) {
+    const r = rows[i];
+    const tema = r[iTema];
+    if (!tema) continue;
+
+    const card = iCard >= 0 ? (r[iCard] || "") : "";
+
+    let pid = "";
+    if (iId >= 0 && r[iId]) {
+      pid = String(r[iId]).trim();
+    }
+    if (!pid) {
+      pid = Utilities.getUuid();
+      if (iId >= 0) {
+        const rowNumber = headerRow + 2 + i;
+        novosIds.push({ row: rowNumber, id: pid });
+      }
+    }
+
+    const cfgAntiga = existentes[pid] || {};
+
+    let descMax = 0;
+    if (iDescMx >= 0) {
+      let v = r[iDescMx];
+      if (typeof v === "string") {
+        v = v.replace(",", ".");
+        const num = parseFloat(v);
+        if (!isNaN(num)) descMax = num;
+      } else if (typeof v === "number") {
+        descMax = v;
+      }
+    }
+
+    const valor = (cfgAntiga.valor !== "" && cfgAntiga.valor != null)
+      ? cfgAntiga.valor
+      : descMax;
+
+    out.push([
+      pid,
+      tema,
+      card,
+      cfgAntiga.tipo || "PCT",
+      valor,
+      cfgAntiga.min_qtd || "",
+      cfgAntiga.inicio || "",
+      cfgAntiga.fim || "",
+      cfgAntiga.ativo === true
+    ]);
+  }
+
+  if (out.length) {
+    shPromo.getRange(2, 1, out.length, head.length).setValues(out);
+  }
+
+  if (iId >= 0 && novosIds.length) {
+    const colId = iId + 1;
+    novosIds.forEach(e => {
+      shP.getRange(e.row, colId).setValue(e.id);
+    });
+  }
+
+  SpreadsheetApp.getActive().toast(
+    `Promo_WhatsApp gerada: ${out.length} linhas.`,
+    "LLPC",
+    8
+  );
+}
+
+
+/* ============================================================================
+ * 8) SITE LLPC — Geração de JSON de catálogo + index.html + lp-tema.html
+ * ============================================================================*/
+
+/**
+ * Monta HTML seguro (escapado).
+ */
+function _htmlEscape(s){
+  return String(s||"")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+}
+
+/* ----------------------------------------------------------------------------
+ * 8.1) _montarCatalogoJsons()
+ *
+ * Gera:
+ *   - docs/catalogo/index.json
+ *       [{ tema, slug, total, thumb }]
+ *   - docs/catalogo/linhas.json
+ *       [{ tema, tema_slug, colecao, card, foto }]
+ *
+ * Regras:
+ *   • Temas são extraídos da aba Preços_WhatsApp (coluna "Tema").
+ *   • total = nº de fotos na aba Acerto (Tema correspondente).
+ *   • thumb (capa do tema) = primeira foto cujo Card começa com "Kit" para o tema,
+ *     senão, primeira foto qualquer do tema.
+ *   • linhas.json: uma entrada por combinação Tema + Linha (Coleção) em que o Card
+ *     começa com "Kit". A foto vem de url_jsdelivr (URL_CDN).
+ * ---------------------------------------------------------------------------*/
+/**
+ * Gera JSONs de catálogo:
+ *  - docs/catalogo/index.json  → lista de temas (nome, slug, total de fotos, thumb)
+ *  - docs/catalogo/linhas.json → foto “oficial” de cada linha (Essencial/Clássica/Premium/Luxo) usando os KIT*
+ *  - docs/catalogo/cards.json  → foto por card (produto), para mostrar imagem nos cards de preços
+ */
+function _montarCatalogoJsons() {
+  const ss = SpreadsheetApp.getActive();
+  const shP = ss.getSheetByName(SHEET_PRECOS);
+  if (!shP) {
+    throw new Error("Aba '" + SHEET_PRECOS + "' não encontrada; não é possível montar catálogo.");
+  }
+
+  const dataP = shP.getDataRange().getValues();
+  if (dataP.length < 2) {
+    throw new Error("Aba '" + SHEET_PRECOS + "' sem dados; não é possível montar catálogo.");
+  }
+
+  const header = dataP[0].map(function (h) {
+    return String(h).toLowerCase().trim();
+  });
+
+  function colIndex(nome) {
+    return header.indexOf(String(nome).toLowerCase());
+  }
+
+  const iTema = colIndex("tema");
+  if (iTema < 0) {
+    throw new Error("Coluna 'Tema' não encontrada na aba " + SHEET_PRECOS);
+  }
+
+  // Mapa de temas encontrados na aba de preços
+  const temasMap = new Map(); // keyLower → { tema, slug, totalFotos, thumb, _fallbackThumb }
+
+  for (var i = 1; i < dataP.length; i++) {
+    var temaRaw = dataP[i][iTema];
+    if (!temaRaw) continue;
+    var tema = String(temaRaw).trim();
+    if (!tema) continue;
+
+    var key = tema.toLowerCase();
+    if (!temasMap.has(key)) {
+      temasMap.set(key, {
+        tema: tema,
+        slug: _slug(tema),
+        totalFotos: 0,
+        thumb: "",
+        _fallbackThumb: ""
+      });
+    }
+  }
+
+  if (!temasMap.size) {
+    _ghPutFile("docs/catalogo/index.json", JSON.stringify([], null, 2), "LLPC catálogo vazio", "application/json");
+    _ghPutFile("docs/catalogo/linhas.json", JSON.stringify([], null, 2), "LLPC linhas vazio", "application/json");
+    _ghPutFile("docs/catalogo/cards.json", JSON.stringify([], null, 2), "LLPC cards vazio", "application/json");
+    return;
+  }
+
+  // Ler aba de fotos para contar fotos, definir thumbs, linhas e cards (com TODAS as fotos)
+  const shA = ss.getSheetByName(SHEET_ACERTO);
+  const linhasMap = new Map(); // temaKey|colecaoKey → { tema, tema_slug, colecao, card, foto }
+  const cardsMap = new Map();  // temaKey|cardKey    → { tema, tema_slug, colecao, card, fotos[] }
+
+  if (shA) {
+    const last = shA.getLastRow();
+    if (last > 1) {
+      const colsA = Math.max(ACERTO.COL.TAGS, shA.getLastColumn());
+      const dataA = shA.getRange(2, 1, last - 1, colsA).getValues();
+
+      for (var rIdx = 0; rIdx < dataA.length; rIdx++) {
+        var r = dataA[rIdx];
+
+        var temaA = r[ACERTO.COL.TEMA - 1];
+        if (!temaA) continue;
+        var temaStr = String(temaA).trim();
+        if (!temaStr) continue;
+
+        var temaKey = temaStr.toLowerCase();
+        var info = temasMap.get(temaKey);
+        if (!info) continue; // ignora tema que não aparece na aba de preços
+
+        var urlCdn = r[ACERTO.COL.URL_CDN - 1] || "";
+        var cardRaw = r[ACERTO.COL.CARD - 1] || "";
+        var colRaw = r[ACERTO.COL.COLECAO - 1] || "";
+
+        var cardStr = String(cardRaw).trim();
+        var colecaoStr = String(colRaw).trim();
+
+        // Contagem de fotos do tema
+        if (urlCdn) {
+          info.totalFotos = (info.totalFotos || 0) + 1;
+
+          // thumb de fallback = primeira foto qualquer
+          if (!info._fallbackThumb) {
+            info._fallbackThumb = urlCdn;
+          }
+
+          // thumb "oficial" do tema = primeira foto de KIT*
+          if (cardStr && /^kit/i.test(cardStr) && !info.thumb) {
+            info.thumb = urlCdn;
+          }
+        }
+
+        // LINHAS: 1 foto por combinação Tema + Coleção (usando qualquer KIT* daquele par)
+        if (urlCdn && cardStr && /^kit/i.test(cardStr) && colecaoStr) {
+          var colecaoKey = colecaoStr.toLowerCase();
+          var keyLin = temaKey + "|" + colecaoKey;
+          if (!linhasMap.has(keyLin)) {
+            linhasMap.set(keyLin, {
+              tema: info.tema,
+              tema_slug: info.slug,
+              colecao: colecaoStr,
+              card: cardStr,
+              foto: urlCdn
+            });
+          }
+        }
+
+        // CARDS: TODAS as fotos por card (Tema + Card)
+        if (urlCdn && cardStr) {
+          var cardKey = temaKey + "|" + cardStr.toLowerCase();
+          var cardInfo = cardsMap.get(cardKey);
+          if (!cardInfo) {
+            cardInfo = {
+              tema: info.tema,
+              tema_slug: info.slug,
+              colecao: colecaoStr,
+              card: cardStr,
+              fotos: []
+            };
+            cardsMap.set(cardKey, cardInfo);
+          }
+          cardInfo.fotos.push(urlCdn);
+        }
+      }
+    }
+  }
+
+  // Array final de temas
+  const catalogoArr = [];
+  temasMap.forEach(function (info) {
+    if (!info.thumb && info._fallbackThumb) {
+      info.thumb = info._fallbackThumb;
+    }
+    catalogoArr.push({
+      tema: info.tema,
+      slug: info.slug,
+      total: info.totalFotos || 0,
+      thumb: info.thumb || ""
+    });
+  });
+
+  // Arrays de linhas e cards
+  const linhasArr = [];
+  linhasMap.forEach(function (l) {
+    linhasArr.push(l);
+  });
+
+  const cardsArr = [];
+  cardsMap.forEach(function (c) {
+    cardsArr.push({
+      tema: c.tema,
+      tema_slug: c.tema_slug,
+      colecao: c.colecao,
+      card: c.card,
+      fotos: c.fotos,
+      total: c.fotos.length,
+      capa: c.fotos.length ? c.fotos[0] : ""
+    });
+  });
+
+  // Gravar JSONs no GitHub
+  _ghPutFile(
+    "docs/catalogo/index.json",
+    JSON.stringify(catalogoArr, null, 2),
+    "LLPC catálogo de temas",
+    "application/json"
+  );
+
+  _ghPutFile(
+    "docs/catalogo/linhas.json",
+    JSON.stringify(linhasArr, null, 2),
+    "LLPC linhas por tema",
+    "application/json"
+  );
+
+  _ghPutFile(
+    "docs/catalogo/cards.json",
+    JSON.stringify(cardsArr, null, 2),
+    "LLPC cards por tema (todas as fotos por Card)",
+    "application/json"
+  );
+}
+
+
+/* ----------------------------------------------------------------------------
+ * 8.2) publicarSite() — index.html + lp-tema.html
+ * ---------------------------------------------------------------------------*/
+function publicarSite() {
+  // 1) Atualiza os JSONs de catálogo (temas, linhas, cards, etc.)
+  try {
+    _montarCatalogoJsons();
+  } catch (e) {
+    Logger.log("Erro ao montar catálogo JSONs: " + e);
+  }
+
+  // ---------------- CABEÇALHO COMUM ----------------
+  // Usa LLPC-Logo-360x100.png direto na pasta docs/
+  var headerHtml = `
+<header class="fixed top-0 inset-x-0 z-20 border-b bg-white/90 backdrop-blur">
+  <div class="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between gap-3">
+    <a href="index.html" class="flex items-center gap-2">
+      <img src="LLPC-Logo-360x100.png"
+           alt="Laços &amp; Letras Papelaria Criativa"
+           class="h-9 w-auto rounded-sm bg-white object-contain">
+      <div class="hidden sm:block">
+        <p class="text-sm md:text-base font-bold text-emerald-700">
+          Laços &amp; Letras Papelaria Criativa
+        </p>
+        <p class="text-[11px] md:text-xs text-gray-500">
+          Papelaria personalizada para festas que contam histórias.
+        </p>
+      </div>
+    </a>
+    <nav class="flex items-center gap-2 sm:gap-3 text-[11px] sm:text-xs md:text-sm">
+      <a href="index.html#temas" class="text-gray-700 hover:text-emerald-700">🎨 Temas</a>
+      <a href="linhas.html#essencial" class="text-gray-700 hover:text-emerald-700">✨ Essencial</a>
+      <a href="linhas.html#classico"  class="text-gray-700 hover:text-emerald-700">💠 Clássico</a>
+      <a href="linhas.html#premium"  class="text-gray-700 hover:text-emerald-700">🌟 Premium</a>
+      <a href="linhas.html#luxo"     class="text-gray-700 hover:text-emerald-700">👑 Luxo</a>
+      <a href="https://wa.me/?text=Quero%20montar%20meu%20kit%20de%20festa%20com%20a%20Lale%20da%20La%C3%A7os%20%26%20Letras."
+         target="_blank"
+         rel="noopener"
+         class="inline-flex items-center px-2.5 py-1 rounded-full bg-emerald-600 text-white font-semibold hover:bg-emerald-700">
+        💬 WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>`;
+
+  // ---------------- INDEX (lista de temas) ----------------
+  // pt-32/md:pt-36 para não ficar nada atrás do cabeçalho
+  // CSS com scroll-margin-top para #temas não ficar escondido ao usar #temas
+  var indexHtml = `
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo LLPC — Temas</title>
+  <meta name="description"
+        content="Catálogo de temas da Laços &amp; Letras Papelaria Criativa. Escolha um tema e veja opções de topos de bolo, caixinhas, toppers e kits que cabem no seu bolso.">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    #temas { scroll-margin-top: 6rem; } /* evita que o cabeçalho fixe por cima do título */
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  ${headerHtml}
+  <main class="max-w-6xl mx-auto px-4 pb-12 pt-32 md:pt-36">
+    <section class="mt-2 mb-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-emerald-700 mb-3">
+        LLPC • Catálogo de temas
+      </h1>
+      <p class="max-w-2xl mx-auto text-sm md:text-base text-gray-600">
+        Comece escolhendo um tema 🌈. Depois, adaptamos os detalhes de papelaria para a linha que faz sentido
+        para o seu momento — da opção que <strong>cabe no bolso</strong> à mesa “Uau!” das fotos 📸.
+      </p>
+    </section>
+
+    <section id="temas" class="mt-4">
+      <h2 class="text-lg font-semibold text-gray-800 mb-3">Temas disponíveis</h2>
+      <div id="lista-temas"
+           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <p class="col-span-full text-center text-gray-500 text-sm">
+          Carregando temas…
+        </p>
+      </div>
+    </section>
+
+    <section id="linhas" class="mt-10 bg-white shadow-sm rounded-xl p-5 md:p-6">
+      <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">
+        Nossas linhas de papelaria — o mesmo tema em níveis diferentes de acabamento
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Em todos os temas você pode escolher entre quatro linhas ✨. Assim, o mesmo topo de bolo ou kit pode ser produzido
+        com menos ou mais camadas, brilho e apliques — sempre com opções que cabem no seu bolso.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+        <article class="border rounded-lg p-3 flex flex-col gap-1">
+          <h3 class="font-semibold text-emerald-700 mb-1">Essencial</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Para quem quer uma festa bonita e econômica 💚. Peças mais clean, menos camadas,
+            acabamento caprichado sem muitos apliques.
+          </p>
+        </article>
+        <article class="border rounded-lg p-3 flex flex-col gap-1">
+          <h3 class="font-semibold text-emerald-700 mb-1">Clássica</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Equilíbrio entre custo e impacto visual ⚖️. Mais detalhes, recortes extras e combinação
+            de papéis que dão volume.
+          </p>
+        </article>
+        <article class="border rounded-lg p-3 flex flex-col gap-1">
+          <h3 class="font-semibold text-emerald-700 mb-1">Premium</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Para quem ama fotos cheias de informação visual ✨. Mais camadas 3D, uso de papéis
+            especiais e elementos decorativos.
+          </p>
+        </article>
+        <article class="border rounded-lg p-3 flex flex-col gap-1">
+          <h3 class="font-semibold text-emerald-700 mb-1">Luxo</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            A versão mais completa 👑, com máximo de camadas, brilho, glitter e apliques.
+            Ideal para quem quer aquele “Uau!” dos convidados.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="mt-10 text-center">
+      <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+        Não achou seu tema ou quer ajuda para escolher a linha?
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Fale com a Lale e conte como será a sua festa (data, idade, estilo e orçamento).
+        Nós sugerimos o tema, a linha e o kit ideais para o seu momento — sem compromisso 💌.
+      </p>
+      <a href="https://wa.me/?text=Quero%20montar%20meu%20kit%20de%20festa%20com%20a%20Lale%20da%20La%C3%A7os%20%26%20Letras."
+         target="_blank"
+         rel="noopener"
+         class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-emerald-600 text-white text-sm md:text-base font-semibold hover:bg-emerald-700">
+        💬 Falar com a Lale no WhatsApp
+      </a>
+    </section>
+  </main>
+  <footer class="border-t py-4 text-center text-xs text-gray-500">
+    Laços &amp; Letras Papelaria Criativa — feito com carinho em papel. ✂️
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>`;
+
+  // ---------------- LP DO TEMA (HTML) ----------------
+  var lpTemaHtml = `
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLPC — Detalhes do Tema</title>
+  <meta name="description"
+        content="Veja os detalhes do tema, opções de linhas (Essencial, Clássica, Premium e Luxo), kits e referências de valores para montar seu kit de festa com a Lale.">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  ${headerHtml}
+  <main class="max-w-6xl mx-auto px-4 pb-12 pt-32 md:pt-36">
+    <section id="detalhe-tema" class="mt-4">
+      <div class="bg-white shadow rounded-xl overflow-hidden flex flex-col md:flex-row">
+        <div class="md:w-1/2 bg-gray-100" id="tema-foto-box">
+          <img id="tema-foto"
+               src=""
+               alt=""
+               class="w-full h-full object-cover hidden">
+          <div id="tema-foto-loading"
+               class="w-full h-52 flex items-center justify-center text-gray-400 text-sm">
+            Carregando tema…
+          </div>
+        </div>
+        <div class="md:w-1/2 p-6 flex flex-col gap-4">
+          <div>
+            <h1 id="tema-nome"
+                class="text-2xl md:text-3xl font-bold text-emerald-700 mb-1">
+              Carregando tema…
+            </h1>
+            <p id="tema-total" class="text-sm text-gray-600"></p>
+          </div>
+          <p id="tema-desc1"
+             class="text-sm text-gray-700 leading-relaxed"></p>
+          <p id="tema-desc2"
+             class="text-sm text-gray-700 leading-relaxed"></p>
+          <div class="mt-auto flex flex-wrap gap-3">
+            <a id="tema-cta-whats"
+               href="#"
+               target="_blank"
+               rel="noopener"
+               class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700">
+              💬 Falar com a Lale sobre este tema
+            </a>
+            <a href="index.html#temas"
+               class="inline-flex items-center justify-center px-4 py-2 rounded-md border border-gray-300 text-xs md:text-sm text-gray-700 hover:bg-gray-100">
+              ← Voltar para os temas
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2">
+        Veja este tema nas diferentes linhas LLPC
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Usamos as fotos dos <strong>kits</strong> (Kit Essencial, Kit Clássico, Kit Premium, Kit Luxo)
+        para mostrar, na prática, como o mesmo tema pode aparecer com níveis diferentes de acabamento.
+        Assim, você escolhe a linha que combina com o seu estilo e com o seu orçamento 💸.
+      </p>
+      <div id="linhas-tema-cards"
+           class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <p class="col-span-full text-center text-gray-500 text-sm">
+          Em breve vamos mostrar aqui as fotos dos kits por linha para este tema.
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2">
+        Kits e produtos disponíveis neste tema
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Aqui você vê o que podemos montar neste tema: kits completos, topos de bolo, caixinhas e outros itens 🎁.
+        Os valores servem como referência e podem variar conforme personalizações e quantidade de itens —
+        a Lale ajusta tudo para caber no seu bolso.
+      </p>
+      <div id="produtos-tema"
+           class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <p class="col-span-full text-center text-gray-500 text-sm">
+          Carregando produtos…
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-10 bg-white shadow-sm rounded-xl p-5 md:p-6">
+      <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">
+        Como funcionam as linhas Essencial, Clássica, Premium e Luxo
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Em todos os temas da LLPC você pode escolher a linha que faz mais sentido para o seu momento.
+        Em vez de trocar de fornecedor, você ajusta apenas o nível de acabamento: quantidade de camadas,
+        uso de papéis especiais, brilho, glitter e apliques ✨.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+        <article class="border rounded-lg p-3">
+          <h3 class="font-semibold text-emerald-700 mb-1">Essencial</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Ideal para festas menores ou orçamento mais enxuto 💚. Peças clean, com menos camadas,
+            mas com o tema bem presente nas fotos.
+          </p>
+        </article>
+        <article class="border rounded-lg p-3">
+          <h3 class="font-semibold text-emerald-700 mb-1">Clássica</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Equilíbrio entre preço e impacto visual: mais recortes, composição de papéis e detalhes
+            que dão volume sem pesar tanto no orçamento.
+          </p>
+        </article>
+        <article class="border rounded-lg p-3">
+          <h3 class="font-semibold text-emerald-700 mb-1">Premium</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Mais camadas, uso de papéis especiais e elementos em 3D. Ótima para mesas de destaque
+            e festas principais do ano 🎉.
+          </p>
+        </article>
+        <article class="border rounded-lg p-3">
+          <h3 class="font-semibold text-emerald-700 mb-1">Luxo</h3>
+          <p class="text-gray-600 text-xs md:text-sm">
+            Máximo de camadas, brilho, texturas e apliques 👑. É a versão de impacto,
+            para quem quer um resultado digno de capa de revista.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t py-4 text-center text-xs text-gray-500">
+    Laços &amp; Letras Papelaria Criativa — cada detalhe pensado com carinho. 💖
+  </footer>
+
+  <script src="lp-tema.js"></script>
+</body>
+</html>`;
+
+  // ---------------- PÁGINA DAS LINHAS ----------------
+  var linhasHtml = `
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLPC — Linhas Essencial, Clássica, Premium e Luxo</title>
+  <meta name="description"
+        content="Entenda as diferenças entre as linhas Essencial, Clássica, Premium e Luxo da Laços &amp; Letras Papelaria Criativa e escolha o nível de acabamento que cabe no seu bolso ou gera o Uau.">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  ${headerHtml}
+  <main class="max-w-6xl mx-auto px-4 pb-12 pt-32 md:pt-36">
+    <section class="mt-4 mb-6">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-emerald-700 mb-3">
+        Linhas LLPC — do Essencial ao Luxo
+      </h1>
+      <p class="max-w-3xl text-sm md:text-base text-gray-600">
+        Em vez de mudar de fornecedor a cada orçamento, você escolhe o <strong>nível de acabamento</strong>
+        que faz sentido para o seu momento. O mesmo tema pode ser produzido em versões mais simples
+        (que cabem no bolso 💚) ou mais elaboradas (para gerar aquele “Uau!” 🎉).
+      </p>
+    </section>
+
+    <section id="essencial" class="mt-6 bg-white rounded-xl shadow-sm p-5 md:p-6">
+      <h2 class="text-xl md:text-2xl font-semibold text-emerald-700 mb-2">✨ Linha Essencial</h2>
+      <p class="text-sm text-gray-600 mb-3">
+        Pensada para quem quer uma festa bonita, com o tema bem presente nas fotos, mas com investimento mais enxuto.
+        Menos camadas, menos apliques, foco no desenho e nas cores principais do tema.
+      </p>
+      <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+        <li>Peças mais clean, com 2D ou relevo leve.</li>
+        <li>Uso equilibrado de papéis, sem exagerar nos apliques.</li>
+        <li>Ótima opção para festas menores, escola ou comemorações íntimas.</li>
+      </ul>
+    </section>
+
+    <section id="classico" class="mt-6 bg-white rounded-xl shadow-sm p-5 md:p-6">
+      <h2 class="text-xl md:text-2xl font-semibold text-emerald-700 mb-2">💠 Linha Clássica</h2>
+      <p class="text-sm text-gray-600 mb-3">
+        É o meio-termo queridinho: equilíbrio entre <strong>custo</strong> e <strong>impacto visual</strong>.
+        Entram mais recortes, sobreposições e combinações de papéis que dão volume sem pesar tanto no orçamento.
+      </p>
+      <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+        <li>Mais detalhes e camadas do que a Essencial.</li>
+        <li>Acabamento que se destaca bem nas fotos.</li>
+        <li>Perfeita para festas em salão, condomínio ou área de lazer.</li>
+      </ul>
+    </section>
+
+    <section id="premium" class="mt-6 bg-white rounded-xl shadow-sm p-5 md:p-6">
+      <h2 class="text-xl md:text-2xl font-semibold text-emerald-700 mb-2">🌟 Linha Premium</h2>
+      <p class="text-sm text-gray-600 mb-3">
+        Aqui o objetivo é encantar quem olha a mesa ✨. Mais camadas em 3D, papéis especiais,
+        transparências, detalhes recortados e elementos que criam textura e movimento.
+      </p>
+      <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+        <li>Mais volume, profundidade e “informação visual”.</li>
+        <li>Uso de papéis especiais (metalizados, texturizados, acetatos etc.).</li>
+        <li>Ideal para festas principais do ano e ensaios fotográficos.</li>
+      </ul>
+    </section>
+
+    <section id="luxo" class="mt-6 bg-white rounded-xl shadow-sm p-5 md:p-6">
+      <h2 class="text-xl md:text-2xl font-semibold text-emerald-700 mb-2">👑 Linha Luxo</h2>
+      <p class="text-sm text-gray-600 mb-3">
+        Para quem quer o efeito “Uau!” sem medo de brilhar ✨. Máximo de camadas, brilho, glitter,
+        laços, apliques e recortes especiais. É a versão de capa de revista do seu tema.
+      </p>
+      <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+        <li>Peças ricas em detalhes e texturas.</li>
+        <li>Uso intensivo de técnicas 3D e elementos decorativos.</li>
+        <li>Perfeita para festas marcantes (1º ano, 15 anos, casamentos etc.).</li>
+      </ul>
+    </section>
+
+    <section class="mt-10 text-center">
+      <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+        Qual linha combina com o seu momento?
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Conte para a Lale como será a festa (tema, quantidade de convidados, estilo de mesa e orçamento).
+        Juntos, vocês escolhem a linha que faz mais sentido — do Essencial ao Luxo ✨.
+      </p>
+      <a href="https://wa.me/?text=Quero%20entender%20as%20op%C3%A7%C3%B5es%20de%20linhas%20(Essencial,%20Cl%C3%A1ssica,%20Premium%20e%20Luxo)%20da%20LLPC%20para%20a%20minha%20festa."
+         target="_blank"
+         rel="noopener"
+         class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-emerald-600 text-white text-sm md:text-base font-semibold hover:bg-emerald-700">
+        💬 Falar com a Lale sobre as linhas
+      </a>
+    </section>
+  </main>
+  <footer class="border-t py-4 text-center text-xs text-gray-500">
+    Laços &amp; Letras Papelaria Criativa — da ideia ao “Uau!” em papel. ✨
+  </footer>
+</body>
+</html>`;
+
+  // ---------------- JS INDEX (carrega temas) ----------------
+  var indexJs = `
+(function () {
+  "use strict";
+  var container = document.getElementById("lista-temas");
+  if (!container) return;
+
+  function asArray(obj, key) {
+    if (Array.isArray(obj)) return obj;
+    if (obj && key && Array.isArray(obj[key])) return obj[key];
+    return [];
+  }
+
+  fetch("catalogo/index.json")
+    .then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    })
+    .then(function (dados) {
+      var temas = asArray(dados, "temas");
+      if (!temas.length) {
+        container.innerHTML =
+          '<p class="col-span-full text-center text-gray-500 text-sm">Nenhum tema publicado ainda.</p>';
+        return;
+      }
+
+      container.innerHTML = temas
+        .map(function (item) {
+          var slug = (item.slug || "").toString();
+          var tema = item.tema || item.nome || "Tema";
+          var total = item.total != null ? item.total : "";
+          var foto = item.thumb || item.capa || item.hero || "";
+          var linkTema = "lp-tema.html?slug=" + encodeURIComponent(slug);
+
+          var fotosTexto =
+            total !== "" ? total + " fotos no catálogo" : "Veja todas as fotos do tema";
+
+          var imgHtml = "";
+          if (foto) {
+            imgHtml =
+              '<img src="' +
+              foto +
+              '" alt="' +
+              tema.replace(/"/g, "&quot;") +
+              '" class="w-full h-48 object-cover">';
+          }
+
+          return (
+            '<a href="' +
+            linkTema +
+            '" class="block bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition-shadow focus:outline-none focus:ring-2 focus:ring-emerald-500">' +
+            imgHtml +
+            '<div class="p-4 flex flex-col gap-2">' +
+            '<h2 class="font-semibold text-lg text-emerald-700 truncate">' +
+            tema +
+            "</h2>" +
+            '<p class="text-sm text-gray-600">' +
+            fotosTexto +
+            "</p>" +
+            '<p class="text-xs text-gray-500 mt-1">Clique em qualquer lugar deste card para ver kits, linhas (Essencial ao Luxo) e falar com a Lale ✨.</p>' +
+            "</div>" +
+            "</a>"
+          );
+        })
+        .join("");
+    })
+    .catch(function (err) {
+      console.error(err);
+      container.innerHTML =
+        '<p class="col-span-full text-center text-red-600 text-sm">Erro ao carregar o catálogo. Tente novamente em alguns instantes.</p>';
+    });
+})();`;
+
+  // ---------------- JS LP-TEMA (carrega tema + produtos) ----------------
+  var lpTemaJs = `
+(function () {
+  "use strict";
+
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  var fotoEl = $("tema-foto");
+  var fotoLoadingEl = $("tema-foto-loading");
+  var nomeEl = $("tema-nome");
+  var totalEl = $("tema-total");
+  var d1El = $("tema-desc1");
+  var d2El = $("tema-desc2");
+  var ctaEl = $("tema-cta-whats");
+  var produtosBox = $("produtos-tema");
+
+  function formatMoney(v) {
+    if (v == null || v === "") return "";
+    if (typeof v === "number") {
+      try {
+        return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+      } catch (e) {
+        return "R$ " + v.toFixed(2).replace(".", ",");
+      }
+    }
+    var num = parseFloat(
+      String(v)
+        .replace(/\\./g, "")
+        .replace(",", ".")
+    );
+    if (!isNaN(num)) {
+      try {
+        return num.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+      } catch (e2) {
+        return "R$ " + num.toFixed(2).replace(".", ",");
+      }
+    }
+    return String(v);
+  }
+
+  function asArray(obj, key) {
+    if (Array.isArray(obj)) return obj;
+    if (obj && key && Array.isArray(obj[key])) return obj[key];
+    return [];
+  }
+
+  function fetchJson(url) {
+    return fetch(url)
+      .then(function (res) {
+        if (!res.ok) return null;
+        return res.json();
+      })
+      .catch(function () {
+        return null;
+      });
+  }
+
+  function showError(msg) {
+    if (nomeEl) nomeEl.textContent = msg;
+    if (fotoLoadingEl) fotoLoadingEl.textContent = msg;
+    if (produtosBox) {
+      produtosBox.innerHTML =
+        '<p class="col-span-full text-center text-gray-500 text-sm">' +
+        msg +
+        "</p>";
+    }
+  }
+
+  var params = new URLSearchParams(window.location.search);
+  var slug = (params.get("slug") || "").toLowerCase();
+
+  if (!slug) {
+    showError("Tema não encontrado.");
+    return;
+  }
+
+  Promise.all([
+    fetchJson("catalogo/index.json"),
+    fetchJson("catalogo/cards.json"),
+    fetchJson("precos.json"),
+  ]).then(function (results) {
+    var temas = asArray(results[0], "temas");
+    var cardsData = asArray(results[1], "cards");
+    var precos = asArray(results[2], "precos");
+
+    var tema =
+      (temas || []).find(function (t) {
+        var s = (t.slug || "").toString().toLowerCase();
+        return s === slug;
+      }) || null;
+
+    var nomeTema =
+      (tema && (tema.tema || tema.nome)) || "Tema personalizado";
+    var nomeKey = nomeTema.toLowerCase();
+
+    // HERO
+    if (tema) {
+      var hero =
+        tema.hero || tema.thumb || tema.capa || "";
+      if (hero && fotoEl && fotoLoadingEl) {
+        fotoEl.src = hero;
+        fotoEl.alt = nomeTema;
+        fotoEl.classList.remove("hidden");
+        fotoLoadingEl.classList.add("hidden");
+      }
+      if (totalEl && tema.total != null) {
+        totalEl.textContent = tema.total + " fotos no catálogo.";
+      }
+    } else {
+      if (nomeEl) nomeEl.textContent = nomeTema;
+    }
+
+    // Descrições básicas (caso especial para Bela e a Fera / Hot Wheels)
+    var nomeLower = nomeTema.toLowerCase();
+    var desc1 = "";
+    var desc2 = "";
+
+    if (nomeLower.indexOf("bela") !== -1 && nomeLower.indexOf("fera") !== -1) {
+      desc1 =
+        "Rosas encantadas, livros, castelo e muito dourado ✨: a versão LLPC de A Bela e a Fera foi pensada para criar uma mesa elegante e acolhedora, do topo de bolo às caixinhas de lembrancinha.";
+      desc2 =
+        "Nas quatro linhas (Essencial, Clássica, Premium e Luxo) você escolhe se prefere algo mais delicado e econômico ou um visual de castelo real, com muitas camadas, brilho e detalhes em 3D — sempre com opções que cabem no seu bolso.";
+    } else if (
+      nomeLower.indexOf("hot") !== -1 &&
+      nomeLower.indexOf("wheel") !== -1
+    ) {
+      desc1 =
+        "Pistas, chamas e carrinhos em alta velocidade 🏎️: o tema Hot Wheels da LLPC destaca cores vibrantes e elementos em 3D para deixar a mesa com cara de corrida.";
+      desc2 =
+        "Você decide o nível de impacto: das versões Essencial e Clássica, mais econômicas, às versões Premium e Luxo, com mais camadas, brilho e sensação de movimento — sem perder o controle do orçamento.";
+    } else {
+      desc1 =
+        "Imagine a mesa da sua festa montada com esse tema, cheia de detalhes em papel que deixam tudo mais acolhedor e fotogênico.";
+      desc2 =
+        "Você escolhe a linha (Essencial, Clássica, Premium ou Luxo) e nós adaptamos o kit ao seu orçamento, sem perder o encanto.";
+    }
+
+    if (nomeEl) nomeEl.textContent = nomeTema;
+    if (d1El) d1El.textContent = desc1;
+    if (d2El) d2El.textContent = desc2;
+
+    // CTA WhatsApp geral do tema
+    if (ctaEl) {
+      var msgTema =
+        "Quero montar um kit no tema " +
+        nomeTema +
+        " com a Lale da Laços & Letras Papelaria Criativa.";
+      ctaEl.href =
+        "https://wa.me/?text=" + encodeURIComponent(msgTema);
+    }
+
+    // Mapa Card -> primeira foto (cards.json)
+    var cardFotosMap = {};
+    (cardsData || []).forEach(function (c) {
+      var s = (c.tema_slug || "").toString().toLowerCase();
+      var n = (c.tema || "").toString().toLowerCase();
+      if (s && s !== slug && n !== nomeKey) return;
+
+      var cardKey = (c.card || "").toString().trim().toLowerCase();
+      if (!cardKey) return;
+
+      if (!cardFotosMap[cardKey]) cardFotosMap[cardKey] = [];
+
+      if (Array.isArray(c.fotos)) {
+        c.fotos.forEach(function (u) {
+          if (u && cardFotosMap[cardKey].indexOf(u) === -1) {
+            cardFotosMap[cardKey].push(u);
+          }
+        });
+      } else if (c.url_jsdelivr) {
+        var u2 = String(c.url_jsdelivr);
+        if (u2 && cardFotosMap[cardKey].indexOf(u2) === -1) {
+          cardFotosMap[cardKey].push(u2);
+        }
+      }
+    });
+
+    // Produtos / preços (precos.json)
+    if (!Array.isArray(precos) || !precos.length) {
+      showError(
+        "Ainda não temos uma tabela de preços publicada para este tema. Fale com a Lale para montar um orçamento que caiba no seu bolso."
+      );
+      return;
+    }
+
+    var produtosTema = precos.filter(function (p) {
+      var t = (p.tema || "").toString().toLowerCase();
+      if (t && nomeKey && t === nomeKey) return true;
+      if (t && nomeKey && t.indexOf(nomeKey) !== -1) return true;
+
+      // fallback por slug, caso o campo tema seja diferente
+      if (t && slug && t.indexOf(slug.replace(/-/g, " ")) !== -1) return true;
+      return false;
+    });
+
+    if (!produtosTema.length) {
+      showError(
+        "Ainda não temos preços separados para este tema. Fale com a Lale para receber um orçamento personalizado."
+      );
+      return;
+    }
+
+    var grupos = {};
+    produtosTema.forEach(function (p) {
+      var col = p.colecao || "Linha única";
+      if (!grupos[col]) grupos[col] = [];
+      grupos[col].push(p);
+    });
+
+    var html = "";
+    Object.keys(grupos)
+      .sort()
+      .forEach(function (colecao) {
+        var lista = grupos[colecao];
+
+        html +=
+          '<article class="col-span-full border rounded-lg bg-white p-4 mb-2">';
+        html +=
+          '<div class="flex items-center justify-between mb-2 gap-2">';
+        html +=
+          '<h3 class="font-semibold text-emerald-700 text-sm md:text-base">Linha ' +
+          colecao +
+          "</h3>";
+        html +=
+          '<span class="text-[11px] md:text-xs text-gray-500 text-right">Valores de referência — podem variar conforme quantidade e personalização.</span>';
+        html += "</div>";
+        html += '<div class="grid grid-cols-1 md:grid-cols-2 gap-3">';
+
+        lista.forEach(function (p) {
+          var titulo = p.card || p.produto || "Produto";
+          var tipo = p.tipo || "";
+          var precoDe =
+            p.preco_de != null
+              ? p.preco_de
+              : p.precoDe != null
+              ? p.precoDe
+              : null;
+          var precoPor =
+            p.preco != null
+              ? p.preco
+              : p.preco_por != null
+              ? p.preco_por
+              : p.preco_whats != null
+              ? p.preco_whats
+              : null;
+
+          var temDesc =
+            precoDe != null &&
+            precoPor != null &&
+            String(precoDe) !== String(precoPor);
+
+          var cardKey = (p.card || "").toString().trim().toLowerCase();
+          var fotos = cardKey && cardFotosMap[cardKey]
+            ? cardFotosMap[cardKey]
+            : [];
+          var capa = fotos.length ? fotos[0] : "";
+
+          var msgItem =
+            'Quero um orçamento do item "' +
+            titulo +
+            '" no tema ' +
+            nomeTema +
+            " (Linha " +
+            colecao +
+            ") com a Lale da Laços & Letras Papelaria Criativa.";
+          var waItem =
+            "https://wa.me/?text=" + encodeURIComponent(msgItem);
+
+          html +=
+            '<div class="border rounded-md p-3 flex flex-col gap-2 text-sm bg-white hover:shadow-sm transition-shadow">';
+
+          if (capa) {
+            html +=
+              '<div class="mb-2"><img src="' +
+              capa +
+              '" alt="' +
+              titulo.replace(/"/g, "&quot;") +
+              " - " +
+              nomeTema.replace(/"/g, "&quot;") +
+              '" class="w-full h-32 object-cover rounded bg-gray-100"></div>';
+          }
+
+          html += "<div>";
+          html +=
+            '<p class="font-semibold text-gray-800">' +
+            titulo +
+            "</p>";
+          if (tipo) {
+            html +=
+              '<p class="text-xs text-gray-500">' +
+              tipo +
+              "</p>";
+          }
+          html += "</div>";
+
+          html += '<div class="mt-1">';
+          if (temDesc) {
+            html +=
+              '<p class="text-xs text-gray-500 line-through">de ' +
+              formatMoney(precoDe) +
+              "</p>";
+            html +=
+              '<p class="text-base font-semibold text-emerald-700">por ' +
+              formatMoney(precoPor) +
+              "</p>";
+          } else if (precoPor != null || precoDe != null) {
+            var base = precoPor != null ? precoPor : precoDe;
+            html +=
+              '<p class="text-base font-semibold text-emerald-700">' +
+              formatMoney(base) +
+              "</p>";
+          } else {
+            html +=
+              '<p class="text-sm text-gray-600">Preço sob consulta.</p>';
+          }
+          html += "</div>";
+
+          html +=
+            '<p class="text-[11px] text-gray-500">Valores para referência. Confirme quantidade, distância e personalizações com a Lale.</p>';
+          html +=
+            '<a href="' +
+            waItem +
+            '" target="_blank" rel="noopener" class="mt-1 inline-flex items-center justify-center px-3 py-1.5 rounded-md bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700">📲 Pedir este item pelo WhatsApp</a>';
+
+          html += "</div>";
+        });
+
+        html += "</div></article>";
+      });
+
+    produtosBox.innerHTML = html;
+  });
+})();`;
+
+  // ---------------- GRAVA OS ARQUIVOS NO GITHUB ----------------
+  _ghPutFile("docs/index.html", indexHtml, "LLPC index.html", "text/html");
+  _ghPutFile("docs/lp-tema.html", lpTemaHtml, "LLPC lp-tema.html", "text/html");
+  _ghPutFile("docs/linhas.html", linhasHtml, "LLPC linhas.html", "text/html");
+  _ghPutFile("docs/index.js", indexJs, "LLPC index.js", "application/javascript");
+  _ghPutFile("docs/lp-tema.js", lpTemaJs, "LLPC lp-tema.js", "application/javascript");
+
+  SpreadsheetApp.getActive().toast(
+    "Site publicado: index.html, lp-tema.html, linhas.html + JS atualizados.",
+    "LLPC",
+    8
+  );
+}
+
+/* ============================================================================
+ * 9) MENU (onOpen) + Ações de configuração
+ * ============================================================================*/
+
+function cfgSetDrive(){
+  const ui = SpreadsheetApp.getUi();
+  const r = ui.prompt("ID da pasta raiz de fotos no Drive:","");
+  if(r.getSelectedButton()==ui.Button.OK){
+    _set("FOTOS_DRIVE_FOLDER_ID", r.getResponseText().trim());
+    ui.alert("Pasta atualizada.");
+  }
+}
+
+function cfgSetToken(){
+  const ui = SpreadsheetApp.getUi();
+  const r = ui.prompt("Token PAT do GitHub:","");
+  if(r.getSelectedButton()==ui.Button.OK){
+    _set("GITHUB_TOKEN", r.getResponseText().trim());
+    ui.alert("Token atualizado.");
+  }
+}
+
+function cfgSetRepo(){
+  const ui = SpreadsheetApp.getUi();
+  const o = ui.prompt("GitHub OWNER:",_p("OWNER",""));
+  if(o.getSelectedButton()!=ui.Button.OK) return;
+
+  const r = ui.prompt("GitHub REPO:",_p("REPO",""));
+  if(r.getSelectedButton()!=ui.Button.OK) return;
+
+  const b = ui.prompt("BRANCH:",_p("BRANCH","main"));
+  if(b.getSelectedButton()!=ui.Button.OK) return;
+
+  _set("OWNER", o.getResponseText().trim());
+  _set("REPO",  r.getResponseText().trim());
+  _set("BRANCH",b.getResponseText().trim());
+
+  ui.alert("Repositório atualizado.");
+}
+
+function cfgSetCDN(){
+  const ui = SpreadsheetApp.getUi();
+  const r = ui.prompt("CDN Base (opcional):",_p("CDN_BASE",""));
+  if(r.getSelectedButton()==ui.Button.OK){
+    _set("CDN_BASE", r.getResponseText().trim());
+    ui.alert("CDN Base atualizada.");
+  }
+}
+
+function onOpen(){
+  const ui = SpreadsheetApp.getUi();
+  _menu(ui);
+}
+
+function _menu(ui){
+  const M = ui.createMenu("LLPC Fotos");
+
+  M.addItem("0.0) Recriar aba a partir do Drive","acertoRecriarAbaAPartirDoDrive");
+  M.addItem("0.1) Preencher O..S","acertoPreencherOS");
+  M.addItem("0.2) Auditoria Planilha × Drive","acertoAuditarPlanilhaDrive");
+
+  M.addSeparator();
+  M.addItem("1.0) Sync → GitHub","acertoSyncParaGitHub");
+  M.addItem("1.1) Reset cursor Sync","_delCursorSync");
+
+  M.addSeparator();
+  M.addItem("2) Publicar JSON (Acerto)","publicarJsonTodos_Acerto");
+
+  M.addSeparator();
+  M.addItem("3c) Publicar PREÇOS (Preços_WhatsApp)","publicarPrecosWhatsapp");
+  M.addItem("3d) Publicar KITS (Preços_WhatsApp)","publicarKitsWhatsapp");
+  M.addItem("3e) Publicar PROMOS (Promo_WhatsApp)","publicarPromosWhatsapp");
+  M.addItem("3f) Gerar SEMENTE Promo_WhatsApp","promoSeedWhatsapp");
+
+  M.addSeparator();
+  M.addItem("4) Publicar Site (index.html + lp-tema.html)","publicarSite");
+
+  const C = ui.createMenu("Configurar");
+  C.addItem("Definir pasta Drive","cfgSetDrive");
+  C.addItem("Definir token GitHub","cfgSetToken");
+  C.addItem("Definir OWNER/REPO/BRANCH","cfgSetRepo");
+  C.addItem("Definir CDN Base","cfgSetCDN");
+  M.addSubMenu(C);
+
+  M.addToUi();
+}
+
+function _delCursorSync(){
+  _del("SYNC_CURSOR");
+  SpreadsheetApp.getActive().toast("Cursor do Sync reiniciado.","LLPC",5);
+}
+
+/**
+ * Placeholder (mantido para compatibilidade com v3j)
+ * Gera JSONs baseado no Acerto (se você quiser usar no futuro).
+ */
+function publicarJsonTodos_Acerto(){
+  SpreadsheetApp.getActive().toast("Função Acerto/JSON ainda não utilizada na v3j+k.","LLPC",5);
+}
